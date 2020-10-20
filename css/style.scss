@@ -1,0 +1,190 @@
+@import 'color';
+@import 'fonts';
+
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration:none;
+}
+
+.wrapper {
+	padding: 0 40px;
+}
+
+.header-contact {
+	width: 100%;
+	height: 32px;
+	background: $light-grey;
+}
+
+.header-contact {
+	display: flex;
+	align-items: center;
+}
+
+.header-contact_phone, .header-contact_time-work {
+	margin-right: 40px;
+	@extend %r12;
+	color: $dark-grey;
+}
+
+.header-contact_phone > a{
+	@extend %r12;
+	color: $dark-grey;
+	cursor: pointer;
+}
+
+.header-top-nav {
+	display: flex;
+	justify-content: space-between;
+	widows: 100%;
+	height: 80px;
+	align-items: center;
+}
+
+.header-top-nav__search {
+	max-width: 330px;
+	width: 100%;
+	display: flex;
+}
+
+.header-top-nav__search input {
+	max-width: 304px;
+	width: 100%;
+	border: none;
+	border-bottom: solid 1px $grey;
+	@extend %r12;
+	color: $dark-grey;
+	outline: none;
+}
+
+.header-top-nav__search button {
+	background: none;
+	border: none;
+	outline: none;
+	cursor: pointer;
+}
+
+.header-top-nav__icon {
+	display: flex;
+}
+
+.header-top-nav__icon {
+	div {
+		margin-left: 24px;
+		cursor: pointer;
+
+		&:first-child {
+			margin-left: 0;
+		}
+	}
+}
+
+.header-bottom-nav {
+	background: $grey;
+	width: 100%;
+	height: 40px;
+	display: flex;
+	align-items: center;
+}
+
+.header-bottom-nav__menu ul {
+	display: flex;
+	li {
+		list-style-type: none;
+		@extend %r14;
+		a {
+			color: $black;
+			margin-right: 40px;
+		}		
+	}
+}
+
+.main-nav__cards {
+	display: flex;
+	width: 100%;
+	padding: 16px 0;
+
+	.main-nav__card {
+		flex-grow: 1;
+		margin-left: 16px;
+
+		&:first-child {
+			margin-left: 0;
+		}
+
+		.main-nav__photo img {
+			width: 100%;
+		}
+
+		.main-nav__title {
+			@extend %m16caps;
+			color: $black;
+			margin-top: 16px;
+			margin-bottom: 8px;
+		}
+
+		.main-nav__text {
+			@extend %r12 ;
+			color: $black;
+			margin-bottom: 4px;
+		}
+
+		.main-nav_all-items {
+			@extend %r12 ;
+			color: $dark-grey;
+		}
+	}
+}
+
+.main-baner {
+	display: flex;
+	background: $light-grey;
+	padding-bottom: 40px;
+
+	a {
+		width: 58%;
+
+		img{
+			display: block;
+			margin-left: auto;
+			object-fit: contain;
+			object-position: right;
+			width: 100%;
+			max-height: 480px;
+		}
+
+	}
+
+	.main-baner__info{
+
+		margin-top: auto;
+		padding-left: 130px;
+
+		.main-baner__title {
+			@extend %r22caps ;
+			color: $black;
+			margin-bottom: 8px;
+		}
+
+		.main-nav__text {
+			@extend %r14;
+			color: $black;
+			margin-bottom: 25px;
+		}
+
+		.main-baner_all-items {
+			@extend %r12;
+			color: $dark-grey;
+			margin-bottom: 5px;
+		}
+
+	}
+	
+}
+
