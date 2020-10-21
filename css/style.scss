@@ -324,3 +324,48 @@ footer {
 }
 
 
+
+
+
+
+
+
+
+
+
+
+.name-page__div {
+	background: $light-grey;
+	height: 40px;
+	align-items: center;
+	display: flex;
+
+	page{
+		@extend %r14;
+		color: $black;
+		cursor: pointer;
+	}
+}
+
+.main__h4 {
+	@extend %sb14;
+	color: $black;
+}
+
+.main__h2 {
+	@extend %m16caps;
+	color: $black;
+}
+
+.main__p {
+	@extend %r14;
+	color: $black;
+}
+
+.main__h4_payment {
+	margin-top: 32px;
+}
+
+.main__h2_payment, .main__p_payment {
+	margin-top: 16px;
+}

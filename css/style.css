@@ -17,14 +17,14 @@
   line-height: 15px;
 }
 
-.header-bottom-nav__menu ul li, .main-baner .main-baner__div .main-nav__text, .footer-nav__div_left a, .phone__text a, .geo__text {
+.header-bottom-nav__menu ul li, .main-baner .main-baner__div .main-nav__text, .footer-nav__div_left a, .phone__text a, .geo__text, .name-page__div page, .main__p {
   font-family: Montserrat-Regular;
   font-style: normal;
   font-size: 14px;
   line-height: 17px;
 }
 
-.main-nav__cards .main-nav__card .main-nav__title {
+.main-nav__cards .main-nav__card .main-nav__title, .main__h2 {
   font-family: Montserrat-Medium;
   font-style: normal;
   font-size: 16px;
@@ -38,6 +38,13 @@
   font-size: 22px;
   line-height: 27px;
   text-transform: uppercase;
+}
+
+.main__h4 {
+  font-family: Montserrat-SemiBold;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 17px;
 }
 
 * {
@@ -349,4 +356,39 @@ footer {
 
 .footer-ifno__p {
   color: #232323;
+}
+
+.name-page__div {
+  background: #F7F7F7;
+  height: 40px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.name-page__div page {
+  color: #232323;
+  cursor: pointer;
+}
+
+.main__h4 {
+  color: #232323;
+}
+
+.main__h2 {
+  color: #232323;
+}
+
+.main__p {
+  color: #232323;
+}
+
+.main__h4_payment {
+  margin-top: 32px;
+}
+
+.main__h2_payment, .main__p_payment {
+  margin-top: 16px;
 }
