@@ -330,17 +330,13 @@ footer {
 
 
 
-
-
-
-
 .name-page__div {
 	background: $light-grey;
 	height: 40px;
 	align-items: center;
 	display: flex;
 
-	page{
+	.page{
 		@extend %r14;
 		color: $black;
 		cursor: pointer;
@@ -368,4 +364,85 @@ footer {
 
 .main__h2_payment, .main__p_payment {
 	margin-top: 16px;
+}
+
+
+
+
+
+
+
+
+.main-contact__div {
+	display: flex;
+	justify-content: space-between;
+
+	.main-contact__div_right {
+		width: 50%;
+	}
+}
+
+.main-contact__div_left {
+	max-width: 445px;
+	margin-right: 20px;
+}
+
+.main__h4_contact {
+	margin-top: 24px;
+}
+
+.main-contact__div a {
+	@extend %r14;
+	color: $black;
+}
+
+.main-contact__div_left form p {
+	margin-top: 16px;
+	margin-bottom: 4px;
+	@extend %r12;
+	color: $black;
+}
+
+.main-contact__div_left form {
+	width: 328px;
+
+	input, textarea {
+		width: 100%;
+		@extend %r12;
+		color: $dark-grey;
+		padding: 8px;
+		border: 1px solid $dark-grey;
+		outline: none;
+	}
+
+	textarea {
+		height: 114px;
+		resize: none;
+	}
+}
+
+.form__p {
+	display: flex;
+	justify-content: space-between;
+}
+
+.main-contact__button {
+	margin-top: 16px;
+}
+
+.button_black {
+	width: 100%;
+	@extend %r14;
+	color: $light-grey;
+	padding: 11px 0 12px 25px;
+	background: $black;
+	border: none;
+	text-align: left;
+}
+
+.main-contact__map {
+	width: 100%;
+	max-height: 280px;
+	margin-top: 16px;
+	filter: grayscale(1);
 }
