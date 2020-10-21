@@ -14,6 +14,7 @@ a {
 
 footer {
 	margin-top: 80px;
+	margin-bottom: 16px;
 }
 
 .wrapper {
@@ -220,12 +221,16 @@ footer {
 	}
 }
 
+.main-info__text {
+	max-width: 42%;
+}
+
 .main-info__text_left {
-	margin-right: 130px;
+	padding-right: 130px;
 }
 
 .main-info__text_right{
-	margin-left: 130px;
+	padding-left: 130px;
 	margin-top: auto;
 	padding-bottom: 30px;
 }
@@ -233,6 +238,13 @@ footer {
 .main-info__div_right {
 	.main-info__photo {
 		order: -1;
+
+		img{
+			
+			margin-left: auto;
+			object-position: right;
+			
+		}
 	}
 }
 
@@ -242,7 +254,73 @@ footer {
 	img{
 			max-height: 480px;
 			object-fit: contain;
+			display: block;
+			width: 100%;
 		}
+}
+
+
+.footer-nav {
+	display: flex;
+	margin-bottom: 40px;
+}
+
+.footer-nav__div_left {
+	width: 50%;
+	h2 {
+		@extend %r22caps;
+		color: $black;
+	}
+
+	a {
+		margin-bottom: 8px;
+		display: block;
+		@extend %r14;
+		color: $black;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.footer-nav__div_right {
+	margin-top: auto;
+}
+
+.footer-nav__social {
+	margin-bottom: 40px;
+
+	a {
+		margin-right: 16px;
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}
+
+.footer-nav__phone, .footer-nav__geo {
+	display: flex;
+	align-items: center;
+
+}
+
+.phone__img, .geo__img {
+	margin-right: 8px;
+}
+
+.phone__text a, .geo__text {
+	@extend %r14;
+	color: $black;
+}
+
+.footer-nav__phone {
+	margin-bottom: 16px;
+}
+
+.footer-ifno__p {
+	@extend %r12;
+	color: $black;
 }
 
 
