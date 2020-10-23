@@ -1023,9 +1023,42 @@ input[type="checkbox"].sing-checkbox:checked + label span{
 
 
 
-.security__div {
-	width: 100%;
-	margin: 0 auto;
+
+
+
+.thanks__p {
+	@extend %r12;
+	color: $black;
+}
+
+.order__div {
+	margin-top: 24px;
+	background: $light-grey;
+	width: 41%;
+	padding: 24px;
+
+	.order__text {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 16px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		p {
+			@extend %r14;
+			color: $black;
+		}
+		span {
+			@extend %sb14;
+		}
+	}
+}
+
+.thanks__button {
+	width: 312px;
+	margin-top: 40px;
 }
 
 
