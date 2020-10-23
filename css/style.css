@@ -10,7 +10,14 @@
   font-family: "Montserrat-SemiBold";
   src: url("../fonts/Montserrat-SemiBold.ttf");
 }
-.header-contact_phone, .header-contact_time-work, .header-contact_phone > a, .header-top-nav__search input, .main-nav__cards .main-nav__card .main-nav__text, .main-nav__cards .main-nav__card .main-nav_all-items, .main-baner .main-baner__div .main-baner_all-items, .main-info__div_left p, .main-info__div_right p, .main-info__div_left a, .main-info__div_right a, .footer-ifno__p, .main-contact__div_left form p, .main-contact__div_left form input, .main-contact__div_left form textarea, .pagination__div .pagination__page .pagination__page_nomber, .basket-delete .basket-delete__text, .basket-promo__div-top p {
+form .forget-password p {
+  font-family: Montserrat-Regular;
+  font-style: normal;
+  font-size: 10px;
+  line-height: 12px;
+}
+
+.header-contact_phone, .header-contact_time-work, .header-contact_phone > a, .header-top-nav__search input, .main-nav__cards .main-nav__card .main-nav__text, .main-nav__cards .main-nav__card .main-nav_all-items, .main-baner .main-baner__div .main-baner_all-items, .main-info__div_left p, .main-info__div_right p, .main-info__div_left a, .main-info__div_right a, .footer-ifno__p, .main-contact__div_left form p, .main-contact__div_left form input, .main-contact__div_left form textarea, .pagination__div .pagination__page .pagination__page_nomber, .basket-delete .basket-delete__text, .basket-promo__div-top p, .sing__div-right .sing__contener_right p, .checkbox label {
   font-family: Montserrat-Regular;
   font-style: normal;
   font-size: 12px;
@@ -40,7 +47,7 @@
   text-transform: uppercase;
 }
 
-.name-page__div .name__div .page span, .main__h4, .basket-promo__div-bottom h4, .basket-promo__div-bottom .basket-promo__p-b span, .count__input, .cost__div, .showroom__div h4 {
+.name-page__div .name__div .page span, .main__h4, .basket-promo__div-bottom h4, .basket-promo__div-bottom .basket-promo__p-b span, .count__input, .cost__div, .showroom__div h4, .sing__div .sing-authorization__div h4, .sing__div .sing__contener_right h4 {
   font-family: Montserrat-SemiBold;
   font-style: normal;
   font-size: 14px;
@@ -671,6 +678,14 @@ footer {
   margin-left: 0;
 }
 
+.basket-catalog {
+  width: 220px;
+}
+
+.basket-catalog__div {
+  margin-top: 24px;
+}
+
 .search__div {
   width: 100%;
   margin: 0 auto;
@@ -917,4 +932,120 @@ footer {
 }
 .slider__div .showroom__arrow-r {
   right: 16px;
+}
+
+.sing .wrapper {
+  padding-right: 0;
+}
+
+.sing__div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+}
+.sing__div .sing-authorization__div, .sing__div .sing__contener_right {
+  width: 328px;
+  padding-top: 32px;
+  margin-right: 40px;
+}
+.sing__div .sing-authorization__div h4, .sing__div .sing__contener_right h4 {
+  color: #232323;
+}
+
+form .forget-password p {
+  margin-top: 8px;
+  color: #232323;
+  margin-bottom: 24px;
+}
+
+.sing__h4 {
+  margin-top: 32px;
+}
+
+.sing-guest {
+  margin-top: 20px;
+}
+
+.sing__div-right {
+  background: #DCDCDC;
+  width: 100%;
+  padding-left: 40px;
+  padding-bottom: 40px;
+}
+.sing__div-right .sing__contener_right p {
+  color: #232323;
+}
+.sing__div-right .sing__p {
+  margin-top: 16px;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"].sing-checkbox + label span {
+  display: block;
+  width: 40px;
+  height: 16px;
+  margin: -2px 0;
+  vertical-align: middle;
+  background: url("../img/Rectangle85.svg") left top no-repeat;
+  cursor: pointer;
+}
+
+.checkbox-c2 {
+  width: 70px !important;
+}
+
+input[type="checkbox"].sing-checkbox:checked + label span {
+  background: url("../img/Rectangle86.svg") left top no-repeat;
+}
+
+.checkbox {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin-bottom: 10px;
+}
+.checkbox:last-child {
+  margin-bottom: 0;
+}
+.checkbox label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #232323;
+}
+.checkbox label a {
+  display: contents;
+  color: #232323;
+  border-bottom: 1px solid #A6A6A6;
+  text-decoration: underline;
+}
+
+.sing__rights {
+  margin: 24px 0;
+}
+
+.sing__div-left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.sing-basket .button__white-center {
+  width: 328px;
+}
+
+.security__div {
+  width: 100%;
+  margin: 0 auto;
 }

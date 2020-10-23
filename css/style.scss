@@ -624,6 +624,14 @@ footer {
 	}
 }
 
+.basket-catalog {
+	width: 220px;
+}
+
+.basket-catalog__div {
+	margin-top: 24px;
+}
+
 
 
 
@@ -897,3 +905,128 @@ footer {
 		right: 16px;
 	}
 }
+
+
+
+
+
+.sing .wrapper {
+	padding-right: 0;
+}
+.sing__div {
+	display: flex;
+	margin: 0 auto;
+
+	.sing-authorization__div, .sing__contener_right {
+		width: 328px;
+		padding-top: 32px;
+		margin-right: 40px;
+
+		h4 {
+			color: $black;
+			@extend %sb14;
+		}
+	}
+}
+
+
+form .forget-password p {
+	margin-top: 8px;
+	color: $black;
+	@extend %r10;
+	margin-bottom: 24px;
+}
+
+.sing__h4 {
+	margin-top: 32px;
+}
+
+.sing-guest {
+	margin-top: 20px;
+}
+
+.sing__div-right {
+	background: $grey;
+	width: 100%;
+	padding-left:40px;
+	padding-bottom: 40px;
+
+	.sing__contener_right p {
+		color: $black;
+		@extend %r12;
+	}
+
+	.sing__p {
+		margin-top: 16px;
+	}
+}
+
+
+// Hide old box
+input[type="checkbox"] {
+	display: none;
+}
+// Disabled checkbox view
+input[type="checkbox"].sing-checkbox + label span{
+	display: block;
+	width: 40px;
+	height: 16px;
+	margin: -2px 0;
+	vertical-align: middle;
+	background: url("../img/Rectangle85.svg") left top no-repeat;
+	cursor: pointer;
+}
+
+.checkbox-c2 {
+	width: 70px!important;
+}
+// Selected checkbox view
+input[type="checkbox"].sing-checkbox:checked + label span{
+	background: url("../img/Rectangle86.svg") left top no-repeat;
+}
+// Checkbox body
+.checkbox{
+	display: inline-flex;
+	margin-bottom: 10px;
+	&:last-child {
+		margin-bottom: 0;
+	}
+	label {
+		display: flex;
+		color: $black;
+		@extend %r12;
+
+		a{
+			display: contents;
+			color: $black;
+			border-bottom: 1px solid $dark-grey;
+			text-decoration: underline;
+		}
+	}
+}
+
+.sing__rights {
+	margin: 24px 0;
+}
+
+.sing__div-left {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.sing-basket {
+	.button__white-center {
+		width: 328px;
+	}
+}
+
+
+
+.security__div {
+	width: 100%;
+	margin: 0 auto;
+}
+
+
+
