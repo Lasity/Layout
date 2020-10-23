@@ -17,14 +17,14 @@
   line-height: 15px;
 }
 
-.header-bottom-nav__menu ul li, .main-baner .main-baner__div .main-nav__text, .footer-nav__div_left a, .phone__text a, .geo__text, .name-page__div .name__div .page, .main__p, .main-contact__div a, .button_black, .sorting__text, .button__white-center, .basket-promo__div-top input:focus, .button__disabled, .basket-promo__div-bottom .basket-promo__p p, .count__text, .cost__text {
+.header-bottom-nav__menu ul li, .main-baner .main-baner__div .main-nav__text, .footer-nav__div_left a, .phone__text a, .geo__text, .name-page__div .name__div .page, .main__p, .main-contact__div a, .button_black, .sorting__text, .button__white-center, .basket-promo__div-top input:focus, .button__disabled, .basket-promo__div-bottom .basket-promo__p p, .count__text, .cost__text, .showroom__text p {
   font-family: Montserrat-Regular;
   font-style: normal;
   font-size: 14px;
   line-height: 17px;
 }
 
-.main-nav__cards .main-nav__card .main-nav__title, .main__h2 {
+.main-nav__cards .main-nav__card .main-nav__title, .main__h2, .showroom__text h5 {
   font-family: Montserrat-Medium;
   font-style: normal;
   font-size: 16px;
@@ -40,7 +40,7 @@
   text-transform: uppercase;
 }
 
-.name-page__div .name__div .page span, .main__h4, .basket-promo__div-bottom h4, .basket-promo__div-bottom .basket-promo__p-b span, .count__input, .cost__div {
+.name-page__div .name__div .page span, .main__h4, .basket-promo__div-bottom h4, .basket-promo__div-bottom .basket-promo__p-b span, .count__input, .cost__div, .showroom__div h4 {
   font-family: Montserrat-SemiBold;
   font-style: normal;
   font-size: 14px;
@@ -873,4 +873,48 @@ footer {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.showroom__div {
+  width: 100%;
+  margin-top: 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #232323;
+}
+.showroom__div h4 {
+  margin-bottom: 16px;
+}
+
+.showroom__text {
+  width: 50%;
+  margin-right: 16px;
+}
+.showroom__text h5 {
+  margin-bottom: 16px;
+}
+.showroom__text p {
+  margin-bottom: 16px;
+}
+.showroom__text p:last-child {
+  margin-bottom: 0;
+}
+
+.showroom__img {
+  width: 100%;
+}
+
+.slider__div {
+  position: relative;
+}
+.slider__div .showroom__arrow-l, .slider__div .showroom__arrow-r {
+  position: absolute;
+  top: calc(50% - 24px);
+}
+.slider__div .showroom__arrow-l {
+  left: 16px;
+}
+.slider__div .showroom__arrow-r {
+  right: 16px;
 }

@@ -838,3 +838,62 @@ footer {
 	align-items: center;
 	justify-content: center;
 }
+
+
+
+
+
+
+
+.showroom__div {
+	width: 100%;
+	margin-top: 32px;
+	display: flex;
+	color: $black;
+
+	h4 {
+		@extend %sb14;
+		margin-bottom: 16px;
+	}
+}
+
+.showroom__text {
+	width: 50%;
+	margin-right: 16px;
+
+	h5 {
+		@extend %m16caps;
+		margin-bottom: 16px;
+	}
+
+	p {
+		@extend %r14;
+		margin-bottom: 16px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.showroom__img {
+	width: 100%;
+}
+
+
+.slider__div {
+	position: relative;
+
+	.showroom__arrow-l, .showroom__arrow-r {
+		position: absolute;
+		top: calc(50% - 24px);
+	}
+
+	.showroom__arrow-l {
+		left: 16px;
+	}
+
+	.showroom__arrow-r {
+		right: 16px;
+	}
+}
