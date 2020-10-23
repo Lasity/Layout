@@ -10,14 +10,14 @@
   font-family: "Montserrat-SemiBold";
   src: url("../fonts/Montserrat-SemiBold.ttf");
 }
-.header-contact_phone, .header-contact_time-work, .header-contact_phone > a, .header-top-nav__search input, .main-nav__cards .main-nav__card .main-nav__text, .main-nav__cards .main-nav__card .main-nav_all-items, .main-baner .main-baner__div .main-baner_all-items, .main-info__div_left p, .main-info__div_right p, .main-info__div_left a, .main-info__div_right a, .footer-ifno__p, .main-contact__div_left form p, .main-contact__div_left form input, .main-contact__div_left form textarea, .pagination__div .pagination__page .pagination__page_nomber {
+.header-contact_phone, .header-contact_time-work, .header-contact_phone > a, .header-top-nav__search input, .main-nav__cards .main-nav__card .main-nav__text, .main-nav__cards .main-nav__card .main-nav_all-items, .main-baner .main-baner__div .main-baner_all-items, .main-info__div_left p, .main-info__div_right p, .main-info__div_left a, .main-info__div_right a, .footer-ifno__p, .main-contact__div_left form p, .main-contact__div_left form input, .main-contact__div_left form textarea, .pagination__div .pagination__page .pagination__page_nomber, .basket-delete .basket-delete__text, .basket-promo__div-top p {
   font-family: Montserrat-Regular;
   font-style: normal;
   font-size: 12px;
   line-height: 15px;
 }
 
-.header-bottom-nav__menu ul li, .main-baner .main-baner__div .main-nav__text, .footer-nav__div_left a, .phone__text a, .geo__text, .name-page__div .name__div .page, .main__p, .main-contact__div a, .button_black, .sorting__text, .button__white-center {
+.header-bottom-nav__menu ul li, .main-baner .main-baner__div .main-nav__text, .footer-nav__div_left a, .phone__text a, .geo__text, .name-page__div .name__div .page, .main__p, .main-contact__div a, .button_black, .sorting__text, .button__white-center, .basket-promo__div-top input:focus, .button__disabled, .basket-promo__div-bottom .basket-promo__p p, .count__text, .cost__text {
   font-family: Montserrat-Regular;
   font-style: normal;
   font-size: 14px;
@@ -40,7 +40,7 @@
   text-transform: uppercase;
 }
 
-.name-page__div .name__div .page span, .main__h4 {
+.name-page__div .name__div .page span, .main__h4, .basket-promo__div-bottom h4, .basket-promo__div-bottom .basket-promo__p-b span, .count__input, .cost__div {
   font-family: Montserrat-SemiBold;
   font-style: normal;
   font-size: 14px;
@@ -686,4 +686,191 @@ footer {
   color: #232323;
   border: 1px solid #232323;
   cursor: pointer;
+}
+
+.basket__div {
+  margin: 0 auto;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 16px;
+}
+
+.basket-thing__div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.basket__img__thing {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+.basket__contener {
+  width: 66%;
+}
+
+.basket-thing__img {
+  max-width: 220px;
+  margin-right: 32px;
+  max-height: 294px;
+}
+.basket-thing__img img {
+  width: 100%;
+  height: 100%;
+}
+
+.basket-thing__text .main__p, .basket-thing__text .basket-thing__h4-margine {
+  margin-top: 16px;
+}
+.basket-thing__text .basket-thing__p-margine {
+  margin-top: 0px;
+}
+
+.basket-delete {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 40px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  position: absolute;
+  bottom: 0;
+}
+.basket-delete .basket-delete__text {
+  color: #232323;
+}
+.basket-delete .basket-delete__img {
+  height: 24px;
+}
+
+.basket-promo__div {
+  width: 360px;
+}
+
+.basket-promo__div-top {
+  background: #DCDCDC;
+  width: 100%;
+  padding: 24px 24px 32px;
+  margin-bottom: 16px;
+}
+.basket-promo__div-top p {
+  color: #232323;
+  margin-bottom: 4px;
+}
+.basket-promo__div-top input {
+  width: 100%;
+  background: #DCDCDC;
+  border: 1px solid #A6A6A6;
+  height: 32px;
+  padding: 8px;
+}
+.basket-promo__div-top input:focus {
+  border: 1px solid #232323;
+  color: #232323;
+}
+.basket-promo__div-top .button-basket__disabled {
+  width: 180px;
+  height: 40px;
+  margin-top: 16px;
+}
+
+.button__disabled {
+  background: #A6A6A6;
+  color: #232323;
+  border: none;
+}
+
+.basket-promo__button {
+  width: 100%;
+  text-align: right;
+}
+
+.basket-promo__div-bottom {
+  padding: 24px;
+  background: #DCDCDC;
+  width: 100%;
+}
+.basket-promo__div-bottom h4 {
+  color: #232323;
+  margin-bottom: 24px;
+}
+.basket-promo__div-bottom .basket-promo__p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.basket-promo__div-bottom .basket-promo__p p {
+  margin-bottom: 8px;
+}
+.basket-promo__div-bottom .basket-promo__p-b {
+  margin-top: 8px;
+}
+
+.button-basket__black {
+  height: 40px;
+  cursor: pointer;
+}
+
+.basket-thing__cost, .basket-thing__count {
+  width: 100px;
+  text-align: center;
+  color: #232323;
+}
+
+.count__input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.count__input input {
+  background: none;
+  border: none;
+  font-size: 30px;
+  width: 24px;
+}
+.count__input .count {
+  margin: 0 12px;
+}
+
+.count__text, .cost__text {
+  margin-bottom: 12px;
+}
+
+.cost__div {
+  color: #232323;
+  height: 35px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }

@@ -648,3 +648,193 @@ footer {
 	border: 1px solid $black;
 	cursor: pointer;
 }
+
+
+
+
+
+.basket__div {
+	margin: 0 auto;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	margin-top: 16px;
+}
+
+.basket-thing__div {
+	display: flex;
+	justify-content: space-between;
+	flex-grow: 1;
+}
+
+.basket__img__thing {
+	display: flex;
+	position: relative;
+}
+
+.basket__contener {
+	width: 66%;
+}
+
+.basket-thing__img {
+	max-width: 220px;
+	margin-right: 32px;
+	max-height: 294px;
+
+	img {
+		width: 100%;
+		height: 100%;
+	}
+}
+
+.basket-thing__text {
+	.main__p, .basket-thing__h4-margine {
+		margin-top: 16px;
+	}
+
+	.basket-thing__p-margine {
+		margin-top: 0px;
+	}
+}
+
+.basket-delete {
+	display: flex;
+	margin-bottom: 40px;
+	align-items: center;
+	cursor: pointer;
+	position: absolute;
+	bottom: 0;
+	.basket-delete__text {
+		@extend %r12;
+		color: $black;
+	}
+
+	.basket-delete__img {
+		height: 24px;
+	}
+}
+
+
+
+.basket-promo__div {
+	width: 360px;
+}
+
+.basket-promo__div-top {
+	background: $grey;
+	width: 100%;
+	padding: 24px 24px 32px;
+	margin-bottom: 16px;
+	p {
+		@extend %r12;
+		color: $black;
+		margin-bottom: 4px;
+	}
+
+	input {
+		width: 100%;
+		background: $grey;
+		border: 1px solid $dark-grey;
+		height: 32px;
+		padding: 8px;
+
+		&:focus {
+			border: 1px solid $black;
+			@extend %r14;
+			color: $black;
+		}
+	}
+
+	.button-basket__disabled {
+		width: 180px;
+		height: 40px;
+		margin-top: 16px;
+	}
+}
+
+.button__disabled {
+	background: $dark-grey;
+	@extend %r14;
+	color: $black;
+	border: none;
+}
+
+.basket-promo__button {
+	width: 100%;
+	text-align: right;
+}
+
+.basket-promo__div-bottom {
+	padding: 24px;
+	background: $grey;
+	width: 100%;
+
+	h4 {
+		@extend %sb14;
+		color: $black;
+		margin-bottom: 24px;
+	}
+
+	.basket-promo__p {
+		display: flex;
+		justify-content: space-between;
+
+		p {
+			@extend %r14;
+			
+			margin-bottom: 8px;
+		}
+	}
+
+	.basket-promo__p-b {
+		margin-top: 8px;
+
+		span {
+			@extend %sb14;
+		}
+	}
+}
+
+.button-basket__black {
+	height: 40px;
+	cursor: pointer;
+}
+
+.basket-thing__cost, .basket-thing__count {
+	width: 100px;
+	text-align: center;
+	color: $black;
+
+}
+
+.count__input {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	@extend %sb14;
+
+	input {
+		background: none;
+		border: none;
+		font-size: 30px;
+		width: 24px;
+	}
+
+	.count {
+		margin: 0 12px;
+	}
+}
+
+.count__text, .cost__text {
+	margin-bottom: 12px;
+	@extend %r14;
+}
+
+.cost__div {
+	color: $black;
+	@extend %sb14;
+	height: 35px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
