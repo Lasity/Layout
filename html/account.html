@@ -4,8 +4,9 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="../css/style.css" rel="stylesheet">
-	<script src="../script/script.js"></script>
 	<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+	<script src="../script/script.js"></script>
+
 	<title>Аккаунт</title>
 </head>
 <body>
@@ -71,35 +72,32 @@
 							<p>Индекс*</p>
 							<input type='text' name=''/>
 							<p>Страна*</p>
-							<select class="select__contener">
-								<option label="Выберите страну" value="1" selected></option>
-								<option>Россия</option>
-								<option>Украина</option>
-							</select>
-							<p>Регион/Область*</p>
-							<select class="select__contener"> 
-								<option label="Регион/Область" value="1" selected></option>
-								<option>Московская область</option>
-								<option>Московская область</option>
-							</select>
-
 							<div class="container">
-    <span class="choose">Choose Gender</span>
-  
-      <div class="dropdown">
-        <div class="select">
-          <span>Select Gender</span>
-          <i class="fa fa-chevron-left"></i>
-        </div>
-        <input type="hidden" name="gender">
-        <ul class="dropdown-menu">
-          <li id="male">Male</li>
-          <li id="female">Female</li>
-        </ul>
-      </div>
-  
-  <span class="msg"></span>
-</div>
+						      	<div class="dropdown">
+						        	<div class="select">
+						          	<span>Выберите страну</span>
+						        </div>
+						        <input type="hidden" name="gender">
+						        <ul class="dropdown-menu">
+						          	<li id="1">Россия</li>
+						          	<li id="2">Украина</li>
+						        </ul>
+						      </div>
+							</div>
+							<p>Регион/Область*</p>
+							<div class="container">
+						      	<div class="dropdown">
+						        	<div class="select">
+						          	<span>Регион/Область</span>
+						        </div>
+						        <input type="hidden" name="gender">
+						        <ul class="dropdown-menu">
+						          	<li id="3">Московская область</li>
+						          	<li id="4">Московская область</li>
+						        </ul>
+						      </div>
+							</div>
+
 							<button class="button_black" type="submit">Сохранить изменения</button>
 							</form>
 						</div>
