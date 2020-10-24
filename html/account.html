@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="../css/style.css" rel="stylesheet">
+	<script src="../script/script.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+	<title>Аккаунт</title>
+</head>
+<body>
+
+
+	<main>
+		<div class="name-page__div">
+			<div class="name__div wrapper">
+				<div class="page account-page"><span>Аккаунт</span></div>
+				<div class="page account-page">Избранное</div>
+				<div class="page account-page">История заказов</div>
+			</div>
+		</div>
+
+		<div class="account wrapper">
+			<div class="sing__div-right">
+					<div class="sing__contener_right">
+						<h4 class="main__h4">Ваши данные</h4>
+						
+						<div class="main-contact__div_left sing__form_left">
+							<form action="">
+								<div class="form__p">
+									<p>Имя*</p>
+									<p class="form__p_s">*обязательно для заполнения</p>
+								</div>
+								<input type='text' name='name'/>
+								<p>Фамилия*</p>
+								<input type='text' name='fulname'/>
+								<p>E-mail*</p>
+								<input type="email" name="login">
+								<p>Телефон*</p>
+								<input type="tel" name="tel" pattern="">				
+								<button class="button_black" type="submit">Сохранить изменения</button>
+							</form>
+							<h4 class="main__h4 main__h4_payment">Пароль</h4>
+							<form action="">
+								<p>Текущий пароль</p>
+								<input type='password' name='password'/>
+								<p>Новый пароль</p>
+								<input type='password' name='password'/>
+								<p>Подтверждение пароля</p>
+								<input type='password' name='password'/>
+								<button class="button__disabled" type="submit">Изменить пароль</button>
+							</form>
+							
+						</div>
+					</div>
+				</div>
+
+				<div class="sing__div">
+					<div class="sing__div-left">
+						<div class="sing-authorization__div main-contact__div_left">
+							<h4>Адрес</h4>
+							<p class="main__p main__p_payment">Для Вашего удобства Вы можете заранее ввести информацию о Вашем адресе для автоматического заполнения при оформлении дальнейших заказов.</p>
+							<form action="">
+								<div class="form__p">
+								<p>Адрес*</p>
+								<p class="form__p_s">*обязательно для заполнения</p>
+							</div>
+							<input type="text" name="">
+							<p>Город*</p>
+							<input type='text' name=''/>
+							<p>Индекс*</p>
+							<input type='text' name=''/>
+							<p>Страна*</p>
+							<select class="select__contener">
+								<option label="Выберите страну" value="1" selected></option>
+								<option>Россия</option>
+								<option>Украина</option>
+							</select>
+							<p>Регион/Область*</p>
+							<select class="select__contener"> 
+								<option label="Регион/Область" value="1" selected></option>
+								<option>Московская область</option>
+								<option>Московская область</option>
+							</select>
+
+							<div class="container">
+    <span class="choose">Choose Gender</span>
+  
+      <div class="dropdown">
+        <div class="select">
+          <span>Select Gender</span>
+          <i class="fa fa-chevron-left"></i>
+        </div>
+        <input type="hidden" name="gender">
+        <ul class="dropdown-menu">
+          <li id="male">Male</li>
+          <li id="female">Female</li>
+        </ul>
+      </div>
+  
+  <span class="msg"></span>
+</div>
+							<button class="button_black" type="submit">Сохранить изменения</button>
+							</form>
+						</div>
+					</div>
+				</div>
+		</div>		
+		
+	</main>
+
+</body>
+</html>
