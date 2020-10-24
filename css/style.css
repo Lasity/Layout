@@ -616,27 +616,28 @@ button {
   margin-top: auto;
 }
 
+.thing__like-white {
+  background-image: url("../img/heart_outline_w.png");
+  background-repeat: no-repeat, repeat;
+  background-position: right 7px top 50%, 0 0;
+  background-color: #232323;
+}
+
+.thing__like-black {
+  background-image: url("../img/heart_outline.png");
+  background-repeat: no-repeat, repeat;
+  background-position: right 7px top 50%, 0 0;
+  background-color: #F7F7F7;
+}
+
 .thing__like {
   position: absolute;
   cursor: pointer;
-  background-color: #F7F7F7;
   border-radius: 25px;
   width: 38px;
   height: 38px;
   bottom: 90px;
   right: 16px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-.thing__like img {
-  display: block;
 }
 
 .thing__text {
@@ -1145,6 +1146,10 @@ input[type="checkbox"].sing-checkbox:checked + label span {
   background-repeat: no-repeat, repeat;
   background-position: right 11px top 50%, 0 0;
   background-size: 16px auto, 100%;
+  outline: none;
+}
+.sing__div .dropdown:focus {
+  border: 1px solid #232323;
 }
 .sing__div .dropdown .select {
   cursor: pointer;
