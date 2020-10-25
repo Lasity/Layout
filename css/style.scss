@@ -31,6 +31,13 @@ footer {
 
 button {
 	cursor: pointer;
+	&:active, &:focus {
+		outline: none;
+	}
+
+	&:-moz-focus-inner {
+		border: 0;
+	}
 }
 
 .wrapper {
@@ -74,6 +81,7 @@ button {
 	align-items: center;
 	margin: 0 auto;
 	height: 100%;
+	position: 	relative;	
 }
 
 .header-top-nav__search {
@@ -503,10 +511,23 @@ button {
 	width: 100%;
 	@extend %r14;
 	color: $light-grey;
-	padding: 11px 0 12px 25px;
-	background: $black;
+	padding-left: 12px;
 	border: none;
 	text-align: left;
+	height: 40px;
+	background-image: linear-gradient(to left,$white,$white 50%,$black 50%,$black);
+	background-size: 200% 100%;
+	transition: background .5s ease-in;
+
+	&:hover {
+		background-position: 100% 0;
+		color: $black;
+		border: 1px solid $black;
+	}
+
+	&:active {
+		border: 2px solid $black;
+	}
 }
 
 .main-contact__map {
@@ -564,13 +585,14 @@ button {
 }
 
 .thing__div {
-	flex-basis: 25%;
-	position: relative;
-	max-width: 360px;
-
 	.thing__img {
 		height: 480px;
 		margin-top: auto;
+		img{
+			width: 100%;
+		    height: 100%;
+		    object-fit: cover;
+		}
 	}
 }
 
@@ -596,6 +618,7 @@ button {
 	height: 38px;
 	bottom:90px;
 	right: 16px;
+	z-index: 5;
 }
 
 .thing__text {
@@ -613,16 +636,20 @@ button {
 	}
 }
 
+.contener__a {
+	position: relative;
+	flex-basis: 25%;
+}
+
 
 .pagination__div {
 	width: 100%;
 	display: flex;
 	justify-content: center;
-	margin-top: 40px;
 	cursor: pointer;
 	height: 24px;
 	align-items: center;
-	margin: 0 auto;
+	margin: 40px auto 0;
 	.pagination__page {
 		display: flex;
 		margin: 0 16px;
@@ -670,6 +697,19 @@ button {
 	color: $black;
 	border: 1px solid $black;
 	cursor: pointer;
+	height: 40px;
+	background-image: linear-gradient(to left,$black,$black 50%,$white 50%,$white);
+	background-size: 200% 100%;
+	transition: background .5s ease-in;
+
+	&:hover {
+		background-position: 100% 0;
+		color: $white;
+	}
+
+	&:active {
+		border: 2px solid $white;
+	}
 }
 
 
@@ -950,6 +990,7 @@ form .forget-password p {
 	color: $black;
 	@extend %r10;
 	margin-bottom: 24px;
+	cursor: pointer;
 }
 
 .sing__h4 {
@@ -986,7 +1027,6 @@ input[type="checkbox"].sing-checkbox + label span{
 	display: block;
 	width: 40px;
 	height: 16px;
-	margin: -2px 0;
 	vertical-align: middle;
 	background: url("../img/Rectangle85.svg") left top no-repeat;
 	cursor: pointer;
@@ -1195,5 +1235,241 @@ input[type="checkbox"].sing-checkbox:checked + label span{
 
 	.dropdown .dropdown-menu li:active {
 	    background-color: $grey;
+	}
+}
+
+
+
+
+.icon_menu {
+	position: 	absolute;
+	top: 80px;
+	right: 0;
+	background-color: $grey;
+	padding: 24px 24px 0;
+	width: 360px;
+	z-index: 5;
+
+	input {
+		background-color: $grey;
+		color: $black;
+		@extend %r12;
+		padding: 8px;
+		border: 1px solid $dark-grey;
+		width: 100%;
+		margin-top: 4px;
+	}
+	
+	
+	input[type="email"] {
+		margin-bottom: 24px;
+	}
+
+	.forget-password p{
+		margin-bottom: 16px;
+	}
+
+	.button__icon-menu {
+		height: 40px;
+		width: calc(100% + 48px);
+    	margin: 0 -24px;
+	}
+
+	.icon_menu__text {
+		margin: 24px 0;
+
+		.main__p {
+			margin-bottom: 16px;
+		}
+
+		.icon__p-s p{
+			color: $black;
+			@extend %r10;
+			margin-bottom: 12px;
+
+			&:last-chuld {
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+.header-invert {
+	filter: invert(0.71);
+}
+
+.catalog_menu {
+	overflow-y: scroll;
+	height: 360px;
+	margin:-24px -24px 0 -24px;
+}
+
+.catalog_menu__contener {
+	
+	display: flex;
+	justify-content: space-between;
+	border-bottom: 1px solid $black;
+
+	.catalog_menu__img {
+		max-width: 160px;
+		width: 160px;
+		margin-left: 18px;
+
+		img {
+			width: 100%;
+		}
+	}
+
+	.catalog_menu__text {
+		flex-grow: 1;
+		color: $black;
+		@extend %r12;
+		margin-left: 24px;
+
+		.text-top {
+			margin-top: 24px;
+			
+			p {
+				margin-bottom: 4px;
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+
+	.text-size {
+		margin-top: 32px;
+		display: flex;
+		justify-content: space-between;
+
+		a {
+			color: $black;
+			border-bottom: 0.5px solid $black;
+		}
+	}
+
+	.catalog-delete {
+		position: relative;
+		margin-top: 25px;
+
+		.basket-delete__img {
+			width: 16px;
+			height: 16px;
+			margin-right: 6px;
+
+			img {
+				width: 100%;
+			}
+		}
+	}
+
+}
+
+.catalog_menu-sum {
+	color: $black;
+	@extend %r14;
+	margin: 8px 0;
+}
+
+.for-filter {
+	position: relative;
+}
+
+.catalog-filter {
+	position: absolute;
+	width: 360px;
+	top: 40px;
+	left: 0;
+	background-color: $grey;
+	z-index: 10;
+	
+	.scrol {
+		overflow-y: scroll;
+
+		.filter__text {
+			margin: 24px 0 24px 40px;
+			height: 455px;
+
+			h3 {
+				color: $black;
+				@extend %m16caps;
+				margin: 16px 0;
+
+				&:first-child {
+					margin-top: 16px;
+				}
+			}
+
+			.category div {
+				margin-bottom: 8px;
+				color: $black;
+				@extend %r14;
+				display: flex;
+				align-items: center;
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+
+			.category span {
+				width: 12px;
+				height: 12px;
+				background-color: $black;
+				display: block;
+				margin-left: 12px;
+			}
+		}
+	}
+
+}
+
+.filter__button {
+	padding: 36px 56px 24px 40px;
+	display: flex;
+	justify-content: space-between;
+
+	button {
+		width: 112px;
+	}
+
+	.filter__button-grey {
+		height: 40px;
+		background-color: $grey;
+		color: $black;
+		@extend %r14;
+		border: 1px solid $black;
+
+		&:active {
+			border: 2px solid $black;
+		}
+	}
+}
+
+.filter-price {
+	margin-right: 40px;
+
+	div {
+		display: flex;
+		justify-content: space-between;
+		
+		p {
+			color: $black;
+			@extend %r12;
+		}
+	}
+
+	.filter-slider {
+		width: 100%;
+		height: 4px;
+		background-color: $light-grey;
 	}
 }
