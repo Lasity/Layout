@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="../css/style.css" rel="stylesheet">
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+	<script src="../script/script.js"></script>
+	<title>Оформление заказа</title>
+</head>
+<body>
+
+
+	<main>
+		<div class="name-page__div">
+			<div class="name__div wrapper">
+				<div class="page">Корзина<span> > Оформление заказа</span></div>
+			</div>
+		</div>
+		<div class="registration wrapper">
+			<div class="account">
+				<div class="sing__div-right">
+					<div class="sing__contener_right">
+						<h4 class="main__h4">Личные данные</h4>
+
+						<div class="main-contact__div_left sing__form_left">
+							<form action="">
+								<div class="form__p">
+									<p>Имя*</p>
+									<p class="form__p_s">*обязательно для заполнения</p>
+								</div>
+								<input type='text' name='name'/>
+								<p>Фамилия*</p>
+								<input type='text' name='fulname'/>
+								<p>E-mail*</p>
+								<input type="email" name="login">
+								<p>Телефон*</p>
+								<input type="tel" name="tel" pattern="">				
+							</form>
+							<h4 class="main__h4 main__h4_payment">Варианты доставки</h4>
+							<div class="sing__rights">
+								<div class="checkbox">
+									<input type="checkbox" id="c1" name="c1" class="sing-checkbox" />
+									<label for="c1" class="checkbox_label"><span></span><DIV>Самовывоз из Showroom по адресу г. Москва, Проспект Мира, д. 31 - ₽ 0,00 </DIV></label>
+								</div>
+								<div class="checkbox">
+									<input type="checkbox" id="c2" name="c2" class="sing-checkbox" />
+									<label for="c2" class="checkbox_label"><span></span><div>Доставка по Москве в пределах МКАД - ₽ 350,00</div></label>
+								</div>
+								<div class="checkbox">
+									<input type="checkbox" id="c3" name="c3" class="sing-checkbox" />
+									<label for="c3" class="checkbox_label"><span></span><div>Доставка по Подмосковью за пределами МКАД - ₽ 500,00</div></label>
+								</div>
+								<div class="checkbox">
+									<input type="checkbox" id="c4" name="c4" class="sing-checkbox" />
+									<label for="c4" class="checkbox_label"><span></span><div>Доставка по России через EMS RUSSIAN POST - ₽ 500,00</div></label>
+								</div>
+								<div class="checkbox">
+									<input type="checkbox" id="c5" name="c5" class="sing-checkbox" />
+									<label for="c5" class="checkbox_label"><span></span><div>Доставка в страны СНГ Казахстан, Белоруссию, Украину - ₽ 1200,00</div></label>
+								</div>
+								<div class="checkbox">
+									<input type="checkbox" id="c6" name="c6" class="sing-checkbox" />
+									<label for="c6" class="checkbox_label"><span></span><div>Доставка по России через PONY EXPRESS или CDEK - ₽ 1000,00</div></label>
+								</div>
+							</div>		
+
+						</div>
+					</div>
+				</div>
+
+				<div class="sing__div">
+					<div class="sing__div-left">
+						<div class="sing-authorization__div main-contact__div_left">
+							<h4>Адрес</h4>
+							<form action="">
+								<div class="form__p">
+									<p>Адрес*</p>
+									<p class="form__p_s">*обязательно для заполнения</p>
+								</div>
+								<input type="text" name="">
+								<p>Город*</p>
+								<input type='text' name=''/>
+								<p>Индекс*</p>
+								<input type='text' name=''/>
+								<p>Страна*</p>
+								<div class="container">
+									<div class="dropdown">
+										<div class="select">
+											<span>Выберите страну</span>
+										</div>
+										<input type="hidden" name="gender">
+										<ul class="dropdown-menu">
+											<li id="1">Россия</li>
+											<li id="2">Украина</li>
+										</ul>
+									</div>
+								</div>
+								<p>Регион/Область*</p>
+								<div class="container">
+									<div class="dropdown">
+										<div class="select">
+											<span>Регион/Область</span>
+										</div>
+										<input type="hidden" name="gender">
+										<ul class="dropdown-menu">
+											<li id="3">Московская область</li>
+											<li id="4">Московская область</li>
+										</ul>
+									</div>
+								</div>
+								<h4 class="main__h4_payment">Добавить комментарий</h4>
+								<textarea name="text" placeholder='Вы можете указать дополнительную информацию для доставки. Например, указать время наиболее удобное для вас, для получения заказа.'></textarea>
+								<button class="button_black" type="submit">Перейти к оплате</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>	
+
+			<div class="basket-promo__div">
+				<div class="basket-promo__div-top">
+					<p>Промокод</p>
+					<input type="text">
+					<div class="basket-promo__button">
+						<button class="button__disabled button-basket__disabled">Применить</button>
+					</div>
+				</div>
+				<div class="basket-promo__div-bottom">
+					<h4>Сумма заказа:</h4>
+					<div class="basket-promo__p">
+						<p>Цена:</p>
+						<p>₽ .243.512,00</p>
+					</div>
+					<div class="basket-promo__p">
+						<p>Ваша скидка:</p>
+						<p>10%</p>
+					</div>
+					<div class="basket-promo__p">
+						<p>Цена со скидкой</p>
+						<p>₽ 1.243.512,00</p>
+					</div>
+					<div class="basket-promo__p">
+						<p>Доставка:</p>
+						<p>₽ 350,00</p>
+					</div>
+					<div class="basket-promo__p basket-promo__p-b">
+						<p>Итого:</p>
+						<p><span>₽ 1.243.512,00</span></p>
+					</div>
+				</div>
+				<div class="sing-basket">
+					<button class="button__white-center">Вернуться в корзину</button>
+				</div>
+
+			</div>
+		</div>
+	</main>
+
+</body>
+</html>
