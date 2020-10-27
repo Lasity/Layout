@@ -19,6 +19,10 @@ input[type='search']::-webkit-search-results-decoration {
   display: none;
 }
 
+input {
+	outline: none;
+}
+
 header {
 	width: 100%;
 }
@@ -852,6 +856,9 @@ button {
 
 	.basket-promo__p-b {
 		margin-top: 8px;
+		p {
+			margin-bottom: 0;
+		}
 
 		span {
 			@extend %sb14;
@@ -1258,6 +1265,11 @@ input[type="checkbox"].sing-checkbox:checked + label span{
 		border: 1px solid $dark-grey;
 		width: 100%;
 		margin-top: 4px;
+
+		&:focus {
+			border: solid 1px $black;
+			color: $black;
+		}
 	}
 	
 	
@@ -1613,11 +1625,15 @@ input[type="checkbox"].sing-checkbox:checked + label span{
 				}
 			}
 
-			.size-table p {
-				@extend %r12;
-				border-bottom: 1px solid $black;
-				cursor: pointer;
-				width: max-content;
+			.size-table {
+				position: relative;
+
+					p {
+					@extend %r12;
+					border-bottom: 1px solid $black;
+					cursor: pointer;
+					width: max-content;
+				}
 			}
 		}
 	}
@@ -1667,6 +1683,58 @@ input[type="checkbox"].sing-checkbox:checked + label span{
 			display: flex;
 			justify-content: space-between;
 			height: 100%;
+		}
+	}
+}
+
+.product__div .product-top .product__size .table__div div {
+	margin-top: 0;
+
+	p {
+		border-bottom: none;
+	}
+}
+
+.table__div {
+	width: 310px;
+	display: block;
+	padding: 24px;
+	background-color: $grey;
+	@extend %r12;
+	position: absolute;
+	top: 12px;
+	left: 0;
+
+	.table-name {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 8px;
+
+		.table-delete {
+			display: flex;
+			align-items: center;
+			cursor: pointer;
+
+			.basket-delete__img {
+				width: 16px;
+				height: 16px;
+
+				img {
+					width: 100%;
+				}
+			}
+		}
+	}
+
+	table {
+		width: 100%;
+		border: 1px solid $black;
+		border-collapse: collapse;
+
+		td {
+			width: 65px;
+			border: 1px solid $black;
+			padding: 8px 0 8px 12px;
 		}
 	}
 }

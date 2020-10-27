@@ -17,7 +17,7 @@ form .forget-password p, .icon_menu .icon_menu__text .icon__p-s p {
   line-height: 12px;
 }
 
-.header-contact_phone, .header-contact_time-work, .header-contact_phone > a, .header-top-nav__search input, .main-nav__cards .main-nav__card .main-nav__text, .main-nav__cards .main-nav__card .main-nav_all-items, .main-baner .main-baner__div .main-baner_all-items, .main-info__div_left p, .main-info__div_right p, .main-info__div_left a, .main-info__div_right a, .footer-ifno__p, .main-contact__div_left form p, .main-contact__div_left form input, .main-contact__div_left form textarea, .pagination__div .pagination__page .pagination__page_nomber, .basket-delete .basket-delete__text, .basket-promo__div-top p, .sing__div-right .sing__contener_right p, .checkbox label, .thanks__p, .sing__div .dropdown, .icon_menu input, .catalog_menu__contener .catalog_menu__text, .filter-price div p, .product__div .product-top .product__size .size-table p {
+.header-contact_phone, .header-contact_time-work, .header-contact_phone > a, .header-top-nav__search input, .main-nav__cards .main-nav__card .main-nav__text, .main-nav__cards .main-nav__card .main-nav_all-items, .main-baner .main-baner__div .main-baner_all-items, .main-info__div_left p, .main-info__div_right p, .main-info__div_left a, .main-info__div_right a, .footer-ifno__p, .main-contact__div_left form p, .main-contact__div_left form input, .main-contact__div_left form textarea, .pagination__div .pagination__page .pagination__page_nomber, .basket-delete .basket-delete__text, .basket-promo__div-top p, .sing__div-right .sing__contener_right p, .checkbox label, .thanks__p, .sing__div .dropdown, .icon_menu input, .catalog_menu__contener .catalog_menu__text, .filter-price div p, .product__div .product-top .product__size .size-table p, .table__div {
   font-family: Montserrat-Regular;
   font-style: normal;
   font-size: 12px;
@@ -70,6 +70,10 @@ input[type='search']::-webkit-search-cancel-button,
 input[type='search']::-webkit-search-results-button,
 input[type='search']::-webkit-search-results-decoration {
   display: none;
+}
+
+input {
+  outline: none;
 }
 
 header {
@@ -887,6 +891,9 @@ button:-moz-focus-inner {
 .basket-promo__div-bottom .basket-promo__p-b {
   margin-top: 8px;
 }
+.basket-promo__div-bottom .basket-promo__p-b p {
+  margin-bottom: 0;
+}
 
 .button-basket__black {
   height: 40px;
@@ -1240,6 +1247,10 @@ input[type="checkbox"].sing-checkbox:checked + label span {
   width: 100%;
   margin-top: 4px;
 }
+.icon_menu input:focus {
+  border: solid 1px #232323;
+  color: #232323;
+}
 .icon_menu input[type="email"] {
   margin-bottom: 24px;
 }
@@ -1546,6 +1557,9 @@ input[type="checkbox"].sing-checkbox:checked + label span {
 .product__div .product-top .product__size button:active {
   margin-right: -2px;
 }
+.product__div .product-top .product__size .size-table {
+  position: relative;
+}
 .product__div .product-top .product__size .size-table p {
   border-bottom: 1px solid #232323;
   cursor: pointer;
@@ -1600,4 +1614,56 @@ input[type="checkbox"].sing-checkbox:checked + label span {
       -ms-flex-pack: justify;
           justify-content: space-between;
   height: 100%;
+}
+
+.product__div .product-top .product__size .table__div div {
+  margin-top: 0;
+}
+.product__div .product-top .product__size .table__div div p {
+  border-bottom: none;
+}
+
+.table__div {
+  width: 310px;
+  display: block;
+  padding: 24px;
+  background-color: #DCDCDC;
+  position: absolute;
+  top: 12px;
+  left: 0;
+}
+.table__div .table-name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 8px;
+}
+.table__div .table-name .table-delete {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+.table__div .table-name .table-delete .basket-delete__img {
+  width: 16px;
+  height: 16px;
+}
+.table__div .table-name .table-delete .basket-delete__img img {
+  width: 100%;
+}
+.table__div table {
+  width: 100%;
+  border: 1px solid #232323;
+  border-collapse: collapse;
+}
+.table__div table td {
+  width: 65px;
+  border: 1px solid #232323;
+  padding: 8px 0 8px 12px;
 }
