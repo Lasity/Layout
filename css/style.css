@@ -17,14 +17,14 @@ form .forget-password p, .icon_menu .icon_menu__text .icon__p-s p {
   line-height: 12px;
 }
 
-.header-contact_phone, .header-contact_time-work, .header-contact_phone > a, .header-top-nav__search input, .main-nav__cards .main-nav__card .main-nav__text, .main-nav__cards .main-nav__card .main-nav_all-items, .main-baner .main-baner__div .main-baner_all-items, .main-info__div_left p, .main-info__div_right p, .main-info__div_left a, .main-info__div_right a, .footer-ifno__p, .main-contact__div_left form p, .main-contact__div_left form input, .main-contact__div_left form textarea, .pagination__div .pagination__page .pagination__page_nomber, .basket-delete .basket-delete__text, .basket-promo__div-top p, .sing__div-right .sing__contener_right p, .checkbox label, .thanks__p, .sing__div .dropdown, .icon_menu input, .catalog_menu__contener .catalog_menu__text, .filter-price div p {
+.header-contact_phone, .header-contact_time-work, .header-contact_phone > a, .header-top-nav__search input, .main-nav__cards .main-nav__card .main-nav__text, .main-nav__cards .main-nav__card .main-nav_all-items, .main-baner .main-baner__div .main-baner_all-items, .main-info__div_left p, .main-info__div_right p, .main-info__div_left a, .main-info__div_right a, .footer-ifno__p, .main-contact__div_left form p, .main-contact__div_left form input, .main-contact__div_left form textarea, .pagination__div .pagination__page .pagination__page_nomber, .basket-delete .basket-delete__text, .basket-promo__div-top p, .sing__div-right .sing__contener_right p, .checkbox label, .thanks__p, .sing__div .dropdown, .icon_menu input, .catalog_menu__contener .catalog_menu__text, .filter-price div p, .product__div .product-top .product__size .size-table p {
   font-family: Montserrat-Regular;
   font-style: normal;
   font-size: 12px;
   line-height: 15px;
 }
 
-.header-bottom-nav__menu ul li, .main-baner .main-baner__div .main-nav__text, .footer-nav__div_left a, .phone__text a, .geo__text, .name-page__div .name__div .page, .main__p, .main-contact__div a, .button_black, .sorting__text, .thing__text .thing__price, .button__white-center, .basket-promo__div-top input:focus, .button__disabled, .basket-promo__div-bottom .basket-promo__p p, .count__text, .cost__text, .showroom__text p, .order__div .order__text p, .catalog_menu-sum, .catalog-filter .scrol .filter__text .category div, .filter__button .filter__button-grey {
+.header-bottom-nav__menu ul li, .main-baner .main-baner__div .main-nav__text, .footer-nav__div_left a, .phone__text a, .geo__text, .name-page__div .name__div .page, .main__p, .main-contact__div a, .button_black, .sorting__text, .thing__text .thing__price, .button__white-center, .basket-promo__div-top input:focus, .button__disabled, .basket-promo__div-bottom .basket-promo__p p, .count__text, .cost__text, .showroom__text p, .order__div .order__text p, .catalog_menu-sum, .catalog-filter .scrol .filter__text .category div, .filter__button .filter__button-grey, .product__div .product-top .product__specifications, .product__div .product-top .product__description, .viewed__conteiner .viewed__conteiner-black a {
   font-family: Montserrat-Regular;
   font-style: normal;
   font-size: 14px;
@@ -47,7 +47,7 @@ form .forget-password p, .icon_menu .icon_menu__text .icon__p-s p {
   text-transform: uppercase;
 }
 
-.name-page__div .name__div .page span, .main__h4, .basket-promo__div-bottom h4, .basket-promo__div-bottom .basket-promo__p-b span, .count__input, .cost__div, .showroom__div h4, .sing__div .sing-authorization__div h4, .sing__div .sing__contener_right h4, .order__div .order__text span {
+.name-page__div .name__div .page span, .main__h4, .basket-promo__div-bottom h4, .basket-promo__div-bottom .basket-promo__p-b span, .count__input, .cost__div, .showroom__div h4, .sing__div .sing-authorization__div h4, .sing__div .sing__contener_right h4, .order__div .order__text span, .product__div .product-top .product__name span {
   font-family: Montserrat-SemiBold;
   font-style: normal;
   font-size: 14px;
@@ -95,6 +95,7 @@ button:-moz-focus-inner {
 .wrapper {
   padding: 0 40px;
   max-width: 1440px;
+  margin: 0 auto;
 }
 
 .header-contact {
@@ -544,8 +545,8 @@ button:-moz-focus-inner {
   background-image: -webkit-gradient(linear, right top, left top, from(#FFFFFF), color-stop(50%, #FFFFFF), color-stop(50%, #232323), to(#232323));
   background-image: linear-gradient(to left, #FFFFFF, #FFFFFF 50%, #232323 50%, #232323);
   background-size: 200% 100%;
-  -webkit-transition: background .5s ease-in;
-  transition: background .5s ease-in;
+  -webkit-transition: background 0.5s cubic-bezier(0.5, 0.5, 0.5, 0.5), color 0.75s;
+  transition: background 0.5s cubic-bezier(0.5, 0.5, 0.5, 0.5), color 0.75s;
 }
 .button_black:hover {
   background-position: 100% 0;
@@ -739,8 +740,8 @@ button:-moz-focus-inner {
   background-image: -webkit-gradient(linear, right top, left top, from(#232323), color-stop(50%, #232323), color-stop(50%, #FFFFFF), to(#FFFFFF));
   background-image: linear-gradient(to left, #232323, #232323 50%, #FFFFFF 50%, #FFFFFF);
   background-size: 200% 100%;
-  -webkit-transition: background .5s ease-in;
-  transition: background .5s ease-in;
+  -webkit-transition: background 0.5s cubic-bezier(0.5, 0.5, 0.5, 0.5), color 0.75s;
+  transition: background 0.5s cubic-bezier(0.5, 0.5, 0.5, 0.5), color 0.75s;
 }
 .button__white-center:hover {
   background-position: 100% 0;
@@ -1457,4 +1458,146 @@ input[type="checkbox"].sing-checkbox:checked + label span {
 }
 .registration .sing-basket button {
   width: 100%;
+}
+
+.product__div {
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+.product__div .product-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.product__div .product-top .product__slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 32px;
+}
+.product__div .product-top .product__slider .slider-mini {
+  max-width: 99px;
+  width: 99px;
+  margin-right: 16px;
+  height: 99px;
+}
+.product__div .product-top .product__slider .slider-mini img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.product__div .product-top .product__slider .product__photo {
+  max-width: 560px;
+  max-height: 620px;
+  width: 560px;
+  position: relative;
+}
+.product__div .product-top .product__slider .product__photo .thing__like {
+  top: 16px;
+  right: 16px;
+}
+.product__div .product-top .product__slider .product__photo img {
+  width: 100%;
+}
+.product__div .product-top .product__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 32px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+.product__div .product-top .product__specifications, .product__div .product-top .product__description {
+  color: #232323;
+}
+.product__div .product-top .product__specifications {
+  width: 312px;
+}
+.product__div .product-top .product__specifications .in__basket {
+  width: 100%;
+}
+.product__div .product-top .product__name {
+  margin-bottom: 80px;
+}
+.product__div .product-top .product__name p {
+  margin-bottom: 16px;
+}
+.product__div .product-top .product__name p:last-child {
+  margin-bottom: 0;
+}
+.product__div .product-top .product__color {
+  margin-bottom: 40px;
+}
+.product__div .product-top .product__size {
+  margin-bottom: 80px;
+}
+.product__div .product-top .product__size div {
+  margin-top: 8px;
+}
+.product__div .product-top .product__size button {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+.product__div .product-top .product__size button:active {
+  margin-right: -2px;
+}
+.product__div .product-top .product__size .size-table p {
+  border-bottom: 1px solid #232323;
+  cursor: pointer;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.brend__conteiner {
+  margin: 0 auto 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.brend__conteiner .brend-info {
+  -ms-flex-preferred-size: 25%;
+      flex-basis: 25%;
+  margin-right: 16px;
+}
+.brend__conteiner .brend-info:last-child {
+  margin-right: 0;
+}
+.brend__conteiner .brend-info h2 {
+  margin-bottom: 16px;
+}
+.brend__conteiner .brend-info p {
+  margin-bottom: 8px;
+}
+.brend__conteiner .brend-info p:last-child {
+  margin-bottom: 0;
+}
+
+.viewed__conteiner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 -40px;
+}
+.viewed__conteiner .viewed__conteiner-black {
+  background-color: #232323;
+  padding: 16px 16px 0 40px;
+  height: 480px;
+}
+.viewed__conteiner .viewed__conteiner-black a {
+  color: #FFFFFF;
+}
+.viewed__conteiner .viewed__conteiner-black .viewed__conteiner_text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100%;
 }

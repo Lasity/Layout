@@ -43,6 +43,7 @@ button {
 .wrapper {
 	padding: 0 40px;
 	max-width: 1440px;
+	margin: 0 auto;
 }
 
 .header-contact {
@@ -517,7 +518,7 @@ button {
 	height: 40px;
 	background-image: linear-gradient(to left,$white,$white 50%,$black 50%,$black);
 	background-size: 200% 100%;
-	transition: background .5s ease-in;
+	transition: background .5s cubic-bezier(0.5, 0.5, 0.5, 0.5) , color .75s;
 
 	&:hover {
 		background-position: 100% 0;
@@ -700,7 +701,7 @@ button {
 	height: 40px;
 	background-image: linear-gradient(to left,$black,$black 50%,$white 50%,$white);
 	background-size: 200% 100%;
-	transition: background .5s ease-in;
+	transition: background .5s cubic-bezier(0.5, 0.5, 0.5, 0.5) , color .75s;
 
 	&:hover {
 		background-position: 100% 0;
@@ -1506,6 +1507,166 @@ input[type="checkbox"].sing-checkbox:checked + label span{
 
 		button {
 			width: 100%;
+		}
+	}
+}
+
+
+
+
+
+
+.product__div {
+	margin: 0 auto;
+	margin-bottom: 40px;
+
+	.product-top {
+		display: flex;
+
+		.product__slider {
+			display: flex;
+			margin-right: 32px;
+
+			.slider-mini {
+				max-width: 99px;
+				width: 99px;
+				margin-right: 16px;
+				height: 99px;
+
+
+				img {
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+				}
+			}
+
+			.product__photo {
+				max-width: 560px;
+				max-height: 620px;
+				width: 560px;
+				position: relative;
+
+				.thing__like {
+					top: 16px;
+					right: 16px;
+				}
+
+				img {
+					width: 100%;
+				}
+			}
+		}
+
+		.product__text {
+			display: flex;
+			justify-content: space-between;
+			margin-top: 32px;
+			flex-grow: 1;
+		}
+
+		.product__specifications, .product__description {
+			color: $black;
+			@extend %r14;
+		}
+
+		.product__specifications {
+			width: 312px;
+			.in__basket {
+				width: 100%;
+			}
+		}
+
+		.product__name {
+			margin-bottom: 80px;
+
+			span {
+				@extend %sb14;
+			}
+
+			p {
+				margin-bottom: 16px;
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+
+		.product__color {
+			margin-bottom: 40px;
+		}
+
+		.product__size {
+			margin-bottom: 80px;
+
+			div {
+				margin-top: 8px;
+			}
+
+			button {
+				padding-left: 12px;
+				padding-right: 12px;
+
+				&:active {
+					margin-right: -2px;
+				}
+			}
+
+			.size-table p {
+				@extend %r12;
+				border-bottom: 1px solid $black;
+				cursor: pointer;
+				width: max-content;
+			}
+		}
+	}
+}
+
+.brend__conteiner {
+	margin: 0 auto 40px;
+	display: flex;
+
+	.brend-info {
+		flex-basis: 25%;
+		margin-right: 16px;
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+		h2 {
+			margin-bottom: 16px;
+		}
+
+		p {
+			margin-bottom: 8px;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+
+.viewed__conteiner {
+	display: flex;
+	margin: 0 -40px;
+
+	.viewed__conteiner-black {
+		background-color: $black;
+		padding: 16px 16px 0 40px;
+		height: 480px;
+
+		a {
+			@extend %r14;
+			color: $white;
+		}
+
+		.viewed__conteiner_text {
+			display: flex;
+			justify-content: space-between;
+			height: 100%;
 		}
 	}
 }
