@@ -17,14 +17,14 @@ form .forget-password p, .icon_menu .icon_menu__text .icon__p-s p {
   line-height: 12px;
 }
 
-.header-contact_phone, .header-contact_time-work, .header-contact_phone > a, .header-top-nav__search input, .main-nav__cards .main-nav__card .main-nav__text, .main-nav__cards .main-nav__card .main-nav_all-items, .main-baner .main-baner__div .main-baner_all-items, .main-info__div_left p, .main-info__div_right p, .main-info__div_left a, .main-info__div_right a, .footer-ifno__p, .main-contact__div_left form p, .main-contact__div_left form input, .main-contact__div_left form textarea, .pagination__div .pagination__page .pagination__page_nomber, .basket-delete .basket-delete__text, .basket-promo__div-top p, .sing__div-right .sing__contener_right p, .checkbox label, .thanks__p, .sing__div .dropdown, .icon_menu input, .catalog_menu__contener .catalog_menu__text, .filter-price div p, .product__div .product-top .product__size .size-table p, .table__div {
+.header-contact_phone, .header-contact_time-work, .header-contact_phone > a, .header-top-nav__search input, .main-nav__cards .main-nav__card .main-nav__text, .main-nav__cards .main-nav__card .main-nav_all-items, .main-baner .main-baner__div .main-baner_all-items, .main-info__div_left p, .main-info__div_right p, .main-info__div_left a, .main-info__div_right a, .footer-ifno__p, .main-contact__div_left form p, .main-contact__div_left form input, .main-contact__div_left form textarea, .pagination__div .pagination__page .pagination__page_nomber, .basket-delete .basket-delete__text, .basket-promo__div-top p, .sing__div-right .sing__contener_right p, .checkbox label, .thanks__p, .sing__div .dropdown, .icon_menu input, .catalog_menu__contener .catalog_menu__text, .filter-price div p, .product__div .product-top .product__size .size-table p, .table__div, .history-order .history-clothes__div .history-thing {
   font-family: Montserrat-Regular;
   font-style: normal;
   font-size: 12px;
   line-height: 15px;
 }
 
-.header-bottom-nav__menu ul li, .main-baner .main-baner__div .main-nav__text, .footer-nav__div_left a, .phone__text a, .geo__text, .name-page__div .name__div .page, .main__p, .main-contact__div a, .button_black, .sorting__text, .thing__text .thing__price, .button__white-center, .basket-promo__div-top input:focus, .button__disabled, .basket-promo__div-bottom .basket-promo__p p, .count__text, .cost__text, .showroom__text p, .order__div .order__text p, .catalog_menu-sum, .catalog-filter .scrol .filter__text .category div, .filter__button .filter__button-grey, .product__div .product-top .product__specifications, .product__div .product-top .product__description, .viewed__conteiner .viewed__conteiner-black a {
+.header-bottom-nav__menu ul li, .main-baner .main-baner__div .main-nav__text, .footer-nav__div_left a, .phone__text a, .geo__text, .name-page__div .name__div .page, .main__p, .main-contact__div a, .button_black, .sorting__text, .thing__text .thing__price, .button__white-center, .basket-promo__div-top input:focus, .button__disabled, .basket-promo__div-bottom .basket-promo__p p, .count__text, .cost__text, .showroom__text p, .order__div .order__text p, .catalog_menu-sum, .catalog-filter .scrol .filter__text .category div, .filter__button .filter__button-grey, .product__div .product-top .product__specifications, .product__div .product-top .product__description, .viewed__conteiner .viewed__conteiner-black a, .history-order {
   font-family: Montserrat-Regular;
   font-style: normal;
   font-size: 14px;
@@ -47,7 +47,7 @@ form .forget-password p, .icon_menu .icon_menu__text .icon__p-s p {
   text-transform: uppercase;
 }
 
-.name-page__div .name__div .page span, .main__h4, .basket-promo__div-bottom h4, .basket-promo__div-bottom .basket-promo__p-b span, .count__input, .cost__div, .showroom__div h4, .sing__div .sing-authorization__div h4, .sing__div .sing__contener_right h4, .order__div .order__text span, .product__div .product-top .product__name span {
+.name-page__div .name__div .page span, .main__h4, .basket-promo__div-bottom h4, .basket-promo__div-bottom .basket-promo__p-b span, .count__input, .cost__div, .showroom__div h4, .sing__div .sing-authorization__div h4, .sing__div .sing__contener_right h4, .order__div .order__text span, .product__div .product-top .product__name span, .order-top {
   font-family: Montserrat-SemiBold;
   font-style: normal;
   font-size: 14px;
@@ -928,7 +928,7 @@ button:-moz-focus-inner {
 }
 
 .count__text, .cost__text {
-  margin-bottom: 12px;
+  margin-bottom: 9px;
 }
 
 .cost__div {
@@ -1666,4 +1666,71 @@ input[type="checkbox"].sing-checkbox:checked + label span {
   width: 65px;
   border: 1px solid #232323;
   padding: 8px 0 8px 12px;
+}
+
+.order-top {
+  margin-top: 32px;
+}
+
+.history__conteiner, .history-thing, .thing-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.history-order {
+  color: #232323;
+  margin-bottom: 24px;
+}
+.history-order:last-child {
+  margin-bottom: 0;
+}
+.history-order .order-number, .history-order .order-data, .history-order .order-sum, .history-order .order-payment-state, .history-order .order-state {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  max-width: 230px;
+}
+.history-order .order-number {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.history-order .order-number .arrow_bottom {
+  background-image: url("../img/chevron_right1.png");
+  background-repeat: no-repeat, repeat;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  margin-right: 4px;
+}
+.history-order .order-number .arrow_top {
+  background-image: url("../img/chevron_right2.png");
+  background-repeat: no-repeat, repeat;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  margin-right: 4px;
+}
+.history-order .history-clothes__div {
+  margin-top: 16px;
+}
+.history-order .history-clothes__div .history-thing {
+  margin-bottom: 4px;
+}
+.history-order .history-clothes__div .history-thing:last-child {
+  margin-bottom: 0;
+}
+.history-order .history-clothes__div .history-thing .thing-text {
+  margin-right: 40px;
+  width: 500px;
+}
+.history-order .history-clothes__div .history-thing .thing-text div {
+  margin-right: 40px;
+}
+.history-order .history-clothes__div .history-thing .thing-text div:last-child {
+  margin-right: 0;
 }

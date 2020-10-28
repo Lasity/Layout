@@ -897,7 +897,7 @@ button {
 }
 
 .count__text, .cost__text {
-	margin-bottom: 12px;
+	margin-bottom: 9px;
 	@extend %r14;
 }
 
@@ -1735,6 +1735,83 @@ input[type="checkbox"].sing-checkbox:checked + label span{
 			width: 65px;
 			border: 1px solid $black;
 			padding: 8px 0 8px 12px;
+		}
+	}
+}
+
+
+
+
+
+
+.order-top {
+	margin-top: 32px;
+	@extend %sb14;
+}
+
+.history__conteiner, .history-thing, .thing-text{
+	display: flex;
+}
+
+.history-order {
+	color: $black;
+	@extend %r14;
+	margin-bottom: 24px;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	.order-number, .order-data, .order-sum, .order-payment-state, .order-state {
+		flex-grow: 1;
+		max-width: 230px;
+	}
+
+	.order-number {
+		display: flex;
+		align-items: center;
+	
+		.arrow_bottom {
+			background-image: url('../img/chevron_right1.png');
+			background-repeat: no-repeat, repeat;
+			width: 16px;
+			height: 16px;
+			cursor: pointer;
+			margin-right: 4px;
+		}
+
+		.arrow_top {
+			background-image: url('../img/chevron_right2.png');
+			background-repeat: no-repeat, repeat;
+			width: 16px;
+			height: 16px;
+			cursor: pointer;
+			margin-right: 4px;
+		}
+	}
+	.history-clothes__div {
+		margin-top: 16px;
+		
+		.history-thing {
+			@extend %r12;
+			margin-bottom: 4px;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+
+			.thing-text {
+				margin-right: 40px;
+				width: 500px;
+
+				div {
+				margin-right: 40px;
+
+					&:last-child {
+						margin-right: 0;
+					}
+				}	
+			}
 		}
 	}
 }
