@@ -1568,27 +1568,27 @@ input[type="checkbox"].sing-checkbox:checked + label span {
   width: max-content;
 }
 
-.brend__conteiner {
+.brand__conteiner {
   margin: 0 auto 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-.brend__conteiner .brend-info {
+.brand__conteiner .brand-info {
   -ms-flex-preferred-size: 25%;
       flex-basis: 25%;
   margin-right: 16px;
 }
-.brend__conteiner .brend-info:last-child {
+.brand__conteiner .brand-info:last-child {
   margin-right: 0;
 }
-.brend__conteiner .brend-info h2 {
+.brand__conteiner .brand-info h2 {
   margin-bottom: 16px;
 }
-.brend__conteiner .brend-info p {
+.brand__conteiner .brand-info p {
   margin-bottom: 8px;
 }
-.brend__conteiner .brend-info p:last-child {
+.brand__conteiner .brand-info p:last-child {
   margin-bottom: 0;
 }
 
@@ -1613,7 +1613,7 @@ input[type="checkbox"].sing-checkbox:checked + label span {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  height: 100%;
+  margin-bottom: 8px;
 }
 
 .product__div .product-top .product__size .table__div div {
@@ -1691,6 +1691,9 @@ input[type="checkbox"].sing-checkbox:checked + label span {
           flex-grow: 1;
   max-width: 230px;
 }
+.history-order .order-state span {
+  border-bottom: 1px solid #232323;
+}
 .history-order .order-number {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1733,4 +1736,57 @@ input[type="checkbox"].sing-checkbox:checked + label span {
 }
 .history-order .history-clothes__div .history-thing .thing-text div:last-child {
   margin-right: 0;
+}
+
+.brand__main-info__text {
+  position: relative;
+}
+.brand__main-info__text .brand-in-catalog {
+  height: 50%;
+  position: absolute;
+  bottom: 0;
+  width: 312px;
+}
+.brand__main-info__text .brand-in-catalog button {
+  width: 100%;
+}
+
+.brand-right .main-info__text_right {
+  margin-top: 0;
+}
+.brand-right .main-info__text_right .brand-info__img-top {
+  width: 100%;
+}
+.brand-right .main-info__text_right .brand-info__img-top img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.brand-right .main-info__text_right h3 {
+  margin-top: 40px;
+}
+
+.brand-bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 70%;
+  margin-top: 24px;
+  margin-bottom: 40px;
+}
+.brand-bottom .main-info__div_right {
+  display: block;
+  margin-top: auto;
+}
+.brand-bottom .main-info__div_right p {
+  margin-bottom: 0;
+}
+.brand-bottom .brand-bottom__img {
+  width: 440px;
+  margin-right: 65px;
+}
+.brand-bottom .brand-bottom__img img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }

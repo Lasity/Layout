@@ -1639,11 +1639,11 @@ input[type="checkbox"].sing-checkbox:checked + label span{
 	}
 }
 
-.brend__conteiner {
+.brand__conteiner {
 	margin: 0 auto 40px;
 	display: flex;
 
-	.brend-info {
+	.brand-info {
 		flex-basis: 25%;
 		margin-right: 16px;
 
@@ -1682,7 +1682,7 @@ input[type="checkbox"].sing-checkbox:checked + label span{
 		.viewed__conteiner_text {
 			display: flex;
 			justify-content: space-between;
-			height: 100%;
+			margin-bottom: 8px;
 		}
 	}
 }
@@ -1767,6 +1767,10 @@ input[type="checkbox"].sing-checkbox:checked + label span{
 		max-width: 230px;
 	}
 
+	.order-state span{
+		border-bottom: 1px solid $black;
+	}
+
 	.order-number {
 		display: flex;
 		align-items: center;
@@ -1815,3 +1819,68 @@ input[type="checkbox"].sing-checkbox:checked + label span{
 		}
 	}
 }
+
+
+
+
+
+
+
+.brand__main-info__text {
+	position: relative;
+
+		.brand-in-catalog {
+		height: 50%;
+		position: absolute;
+		bottom: 0;
+		width: 312px;
+
+		button {
+			width: 100%;
+		}
+	}
+}
+
+.brand-right .main-info__text_right {
+	margin-top: 0;
+
+	.brand-info__img-top {
+		width: 100%;
+
+		img {
+			width: 100%;
+			object-fit: cover;
+		}
+	}
+
+	h3 {
+		margin-top: 40px;
+	}
+}
+
+.brand-bottom {
+	display: flex;
+	width: 70%;
+	margin-top: 24px;
+	margin-bottom: 40px;
+
+	.main-info__div_right {
+		display: block;
+		margin-top: auto;
+
+		p {
+			margin-bottom: 0;
+		}
+	}
+
+	.brand-bottom__img {
+		width: 440px;
+		margin-right: 65px;
+
+		img {
+			width: 100%;
+			object-fit: cover;
+		}
+	}
+}
+
