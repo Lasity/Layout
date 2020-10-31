@@ -24,14 +24,14 @@ form .forget-password p, .icon_menu .icon_menu__text .icon__p-s p {
   line-height: 15px;
 }
 
-.header-bottom-nav__menu ul li, .main-baner .main-baner__div .main-nav__text, .footer-nav__div_left a, .phone__text a, .geo__text, .name-page__div .name__div .page, .main__div_info .icon_menu p, .main__p, .main-contact__div a, .button_black, .sorting__text, .thing__text .thing__price, .button__white-center, .basket-promo__div-top input:focus, .button__disabled, .basket-promo__div-bottom .basket-promo__p p, .count__text, .cost__text, .showroom__text p, .order__div .order__text p, .catalog_menu-sum, .catalog-filter .scrol .filter__text .category div, .filter__button .filter__button-grey, .product__div .product-top .product__specifications, .product__div .product-top .product__description, .viewed__conteiner .viewed__conteiner-black a, .history-order, .mobile-menu__div .mobile-menu__nav ul li a {
+.header-bottom-nav__menu ul li, .main-baner .main-baner__div .main-nav__text, .footer-nav__div_left a, .phone__text a, .geo__text, .name-page__div .name__div .page, .main__div_info p, .main__p, .main-contact__div a, .button_black, .sorting__text, .thing__text .thing__price, .button__white-center, .basket-promo__div-top input:focus, .button__disabled, .basket-promo__div-bottom .basket-promo__p p, .count__text, .cost__text, .showroom__text p, .order__div .order__text p, .catalog_menu-sum, .catalog-filter .scrol .filter__text .category div, .filter__button .filter__button-grey, .product__div .product-top .product__specifications, .product__div .product-top .product__description, .viewed__conteiner .viewed__conteiner-black a, .history-order, .mobile-menu__div .mobile-menu__nav ul li a {
   font-family: Montserrat-Regular;
   font-style: normal;
   font-size: 14px;
   line-height: 17px;
 }
 
-.main-nav__cards .main-nav__card .main-nav__title, .main__div_info .icon_menu h4, .main__h2, .showroom__text h5, .catalog-filter .scrol .filter__text h3, .mobile-menu__div .mobile-menu__nav, .mobile-menu__div .mobile-menu__nav .mobile__a a {
+.main-nav__cards .main-nav__card .main-nav__title, .main__div_info h4, .main__h2, .showroom__text h5, .catalog-filter .scrol .filter__text h3, .mobile-menu__div .mobile-menu__nav, .mobile-menu__div .mobile-menu__nav .mobile__a a {
   font-family: Montserrat-Medium;
   font-style: normal;
   font-size: 16px;
@@ -47,7 +47,7 @@ form .forget-password p, .icon_menu .icon_menu__text .icon__p-s p {
   text-transform: uppercase;
 }
 
-.name-page__div .name__div .page span, .main__div_info .icon_menu h2, .main__h4, .basket-promo__div-bottom h4, .basket-promo__div-bottom .basket-promo__p-b span, .count__input, .cost__div, .showroom__div h4, .sing__div .sing-authorization__div h4, .sing__div .sing__contener_right h4, .order__div .order__text span, .product__div .product-top .product__name span, .order-top {
+.name-page__div .name__div .page span, .main__div_info h2, .main__h4, .basket-promo__div-bottom h4, .basket-promo__div-bottom .basket-promo__p-b span, .count__input, .cost__div, .showroom__div h4, .sing__div .sing-authorization__div h4, .sing__div .sing__contener_right h4, .order__div .order__text span, .product__div .product-top .product__name span, .order-top {
   font-family: Montserrat-SemiBold;
   font-style: normal;
   font-size: 14px;
@@ -466,19 +466,19 @@ button:-moz-focus-inner {
   cursor: pointer;
 }
 
-.main__div_info .icon_menu {
+.main__div_info {
   width: 100%;
   margin: 0 auto;
 }
-.main__div_info .icon_menu h2 {
+.main__div_info h2 {
   color: #232323;
   margin-top: 32px;
 }
-.main__div_info .icon_menu h4 {
+.main__div_info h4 {
   color: #232323;
   margin-top: 16px;
 }
-.main__div_info .icon_menu p {
+.main__div_info p {
   color: #232323;
   margin-top: 16px;
 }
@@ -2078,6 +2078,30 @@ input[type="checkbox"].sing-checkbox:checked + label span {
     height: 72px;
   }
 }
+@media (max-width: 820px) {
+  .account {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-right: 0;
+  }
+  .account .sing__div-right {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-left: 0;
+  }
+  .account .sing__div {
+    margin: 0 auto;
+  }
+  .account .main-contact__div_left {
+    margin-right: 0;
+  }
+}
 @media (max-width: 768px) {
   .header-top-nav__like, .header-top-nav__user {
     display: none;
@@ -2154,6 +2178,10 @@ input[type="checkbox"].sing-checkbox:checked + label span {
   .menu__btn {
     top: 22px;
   }
+
+  .account {
+    padding: 0;
+  }
 }
 @media (max-width: 690px) {
   .main-nav__cards .main-nav__card:nth-child(2n) {
@@ -2206,5 +2234,21 @@ input[type="checkbox"].sing-checkbox:checked + label span {
 
   .pagination__div {
     display: none;
+  }
+
+  .sing__div, .sing__contener_right {
+    padding: 0 16px;
+  }
+
+  .account-page {
+    display: none;
+  }
+
+  .account-page-active {
+    display: block;
+  }
+
+  .sing__div .sing-authorization__div, .sing__div .sing__contener_right, .main-contact__div_left form {
+    width: 100%;
   }
 }
