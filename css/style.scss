@@ -1266,7 +1266,8 @@ input[type="checkbox"].sing-checkbox:checked + label span{
 		display: none;
 		max-height: 144px;
 		overflow-y: auto;
-		z-index: 9
+		z-index: 9;
+		overflow-y: scroll;
 	}
 
 	.dropdown .dropdown-menu li {
@@ -2353,7 +2354,9 @@ input[type="checkbox"].sing-checkbox:checked + label span{
 	.account-page-active {
 		display: block;
 	}
+}
 
+@media (max-width: 380px) {
 	.sing__div .sing-authorization__div, .sing__div .sing__contener_right, .main-contact__div_left form {
 		width: 100%;
 	}
