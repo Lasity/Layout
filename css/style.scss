@@ -1969,6 +1969,7 @@ input[type="checkbox"].sing-checkbox:checked + label span{
 		visibility: hidden;
 		right: -100%;
 		transition: all .75s cubic-bezier(0.5, 0.5, 0.5, 0.5);
+		z-index: 6;
 
 		.mobile-menu__ul {
 			overflow-y: scroll;
@@ -1992,7 +1993,7 @@ input[type="checkbox"].sing-checkbox:checked + label span{
 			margin-bottom: 16px;
 		}
 
-		.mobile__a{
+		.mobile__a, .mobile__li__a{
 			a {
 				margin-top: 16px;
 				color: $black;
@@ -2004,6 +2005,13 @@ input[type="checkbox"].sing-checkbox:checked + label span{
 				}
 			} 
 		}
+
+		.mobile__li__a{
+			margin-bottom: 16px;
+			color: $black;
+			@extend %m16caps;
+			display: block;
+		} 
 	}	
 }
 
@@ -2078,9 +2086,33 @@ input[type="checkbox"].sing-checkbox:checked + label span{
 	}
 
 	.registration .account .button_black {
-		margin-top: 16px
+		margin-top: 16px;
+	}
+
+	.basket-promo__div {
+		width: 330px;
 	}
 }
+
+@media (max-width: 1150px) {
+	.basket__div {
+		flex-direction: column;
+	}
+
+	.basket__contener {
+		width: 100%;
+	}
+
+	.basket-promo__div {
+		width: 360px;
+		margin-top: 24px;
+	}
+
+	.basket-catalog {
+		width: 360px;
+	}
+}
+
 
 @media (max-width: 1024px) { 
 	.main-info__div_left {
@@ -2196,6 +2228,10 @@ input[type="checkbox"].sing-checkbox:checked + label span{
 
 	.header-top-nav {
 		height: 72px;
+	}
+
+	.order__div, .thanks__button {
+		width: 50%;
 	}
 	
 }
@@ -2318,6 +2354,14 @@ input[type="checkbox"].sing-checkbox:checked + label span{
 	.registration {
 		padding: 0;
 	}
+
+	.header-top-nav__logo {
+		height: 24px;
+
+		img {
+			height: 100%;
+		}
+	}
 }
 
 @media (max-width: 690px) {
@@ -2331,6 +2375,10 @@ input[type="checkbox"].sing-checkbox:checked + label span{
 
 	.contener__a {
 		flex-basis: 50%;
+	}
+
+	.order__div, .thanks__button {
+		width: 80%;
 	}
 }
 
@@ -2384,8 +2432,16 @@ input[type="checkbox"].sing-checkbox:checked + label span{
 		display: none
 	}
 
-	.account-page-active {
+	.page-active {
 		display: block;
+		span {
+			font-family: Montserrat-Regular;
+		}
+		
+	}
+
+	.order__div, .thanks__button {
+		width: 100%;
 	}
 }
 
