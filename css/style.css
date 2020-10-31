@@ -1251,7 +1251,7 @@ input[type="checkbox"].sing-checkbox:checked + label span {
   max-height: 144px;
   overflow-y: auto;
   z-index: 9;
-  overflow-y: scroll;
+  overflow-y: scroll !important;
 }
 .sing__div .dropdown .dropdown-menu li {
   padding: 9px 10px;
@@ -1955,6 +1955,21 @@ input[type="checkbox"].sing-checkbox:checked + label span {
     padding-left: 78px;
     padding-bottom: 0;
   }
+
+  .registration .account {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .registration {
+    padding-right: 0;
+  }
+
+  .registration .account .button_black {
+    margin-top: 16px;
+  }
 }
 @media (max-width: 1024px) {
   .main-info__div_left .main-info__photo {
@@ -2102,6 +2117,23 @@ input[type="checkbox"].sing-checkbox:checked + label span {
   .account .main-contact__div_left {
     margin-right: 0;
   }
+
+  .basket-promo__div {
+    margin: 32px auto 0;
+    width: 328px;
+  }
+
+  .registration {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-left: 0;
+  }
+  .registration .account {
+    width: 100%;
+    margin-left: 0;
+  }
 }
 @media (max-width: 768px) {
   .header-top-nav__like, .header-top-nav__user {
@@ -2183,6 +2215,10 @@ input[type="checkbox"].sing-checkbox:checked + label span {
   .account {
     padding: 0;
   }
+
+  .registration {
+    padding: 0;
+  }
 }
 @media (max-width: 690px) {
   .main-nav__cards .main-nav__card:nth-child(2n) {
@@ -2251,6 +2287,20 @@ input[type="checkbox"].sing-checkbox:checked + label span {
 }
 @media (max-width: 380px) {
   .sing__div .sing-authorization__div, .sing__div .sing__contener_right, .main-contact__div_left form {
+    width: 100%;
+  }
+
+  .registration .account .main-contact__div_left form {
+    width: 328px;
+    padding: 0;
+  }
+}
+@media (max-width: 360px) {
+  .registration .account .main-contact__div_left form {
+    width: 100%;
+  }
+
+  .registration .account .sing__rights, .basket-promo__div {
     width: 100%;
   }
 }
