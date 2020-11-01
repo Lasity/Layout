@@ -90,6 +90,14 @@ $(document).ready(() => {
         
     });
 
+    $(window).resize(function() {
+        if($(document).width() > 900) {
+            $(".mobile-menu__nav").removeClass("menu__box");
+            $('#menu__toggle').prop('checked', false);
+        }
+        
+    });
+
 
     $(window).scroll(function() {
         if($(document).width() > 900) {

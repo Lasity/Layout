@@ -1919,6 +1919,14 @@ input[type="checkbox"].sing-checkbox:checked + label span {
   right: 0 !important;
 }
 
+.mobile-on {
+  display: none;
+}
+
+.page-on {
+  display: none;
+}
+
 @media (max-width: 1200px) {
   .main-nav__cards .main-nav__card {
     margin-left: 12px;
@@ -1979,6 +1987,10 @@ input[type="checkbox"].sing-checkbox:checked + label span {
 
   .basket-promo__div {
     width: 330px;
+  }
+
+  .showroom__slider {
+    width: 50%;
   }
 }
 @media (max-width: 1150px) {
@@ -2169,6 +2181,49 @@ input[type="checkbox"].sing-checkbox:checked + label span {
     width: 100%;
     margin-left: 0;
   }
+
+  .sing__div {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-left: 0;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .mobile-off {
+    display: none;
+  }
+
+  .mobile-on {
+    display: block;
+  }
+
+  .sing__div .sing__div-right {
+    margin-top: 32px;
+    padding-left: 0;
+  }
+
+  .sing__div .sing-authorization__div {
+    margin-right: 0;
+    padding-top: 16px;
+  }
+
+  .sing__div .sing__contener_right {
+    margin: 0 auto;
+  }
+
+  .mobile-on .sing-basket {
+    margin-top: 40px;
+  }
+  .mobile-on .sing-authorization__div {
+    padding-top: 0;
+  }
+  .mobile-on .sing-authorization__div h4 {
+    margin-top: 24px;
+  }
 }
 @media (max-width: 768px) {
   .header-top-nav__like, .header-top-nav__user {
@@ -2261,6 +2316,10 @@ input[type="checkbox"].sing-checkbox:checked + label span {
   .header-top-nav__logo img {
     height: 100%;
   }
+
+  .sing__div {
+    padding-left: 0;
+  }
 }
 @media (max-width: 690px) {
   .main-nav__cards .main-nav__card:nth-child(2n) {
@@ -2323,19 +2382,29 @@ input[type="checkbox"].sing-checkbox:checked + label span {
     padding: 0 16px;
   }
 
-  .account-page {
+  .account-page, .page-off {
     display: none;
   }
 
-  .page-active {
+  .page-active, .page-on {
     display: block;
-  }
-  .page-active span {
-    font-family: Montserrat-Regular;
   }
 
   .order__div, .thanks__button {
     width: 100%;
+  }
+
+  .page span {
+    font-family: Montserrat-Regular !important;
+  }
+
+  .sing__div {
+    padding-left: 0;
+  }
+
+  .sing__div .sing__contener_right {
+    padding: 0;
+    padding-top: 32px;
   }
 }
 @media (max-width: 380px) {
@@ -2346,6 +2415,23 @@ input[type="checkbox"].sing-checkbox:checked + label span {
   .registration .account .main-contact__div_left form {
     width: 328px;
     padding: 0;
+  }
+
+  .sing .sing__contener_right {
+    padding: 32px 16px 0;
+  }
+  .sing .sing__div-left {
+    width: 100%;
+  }
+  .sing .mobile-on .sing-authorization__div, .sing .sing__div-left {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+  .sing .sing-basket .button__white-center {
+    width: 100%;
+  }
+  .sing .main-contact__div_left {
+    margin-right: 0;
   }
 }
 @media (max-width: 360px) {

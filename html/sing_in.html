@@ -12,7 +12,8 @@
 	<main>
 		<div class="name-page__div">
 			<div class="name__div wrapper">
-				<div class="page">Корзина<span> > Оформление заказа</span></div>
+				<div class="page page-off">Корзина<span> > Оформление заказа</span></div>
+				<div class="page page-on">Оформление заказа</div>
 			</div>
 		</div>
 		<div class="sing">
@@ -34,13 +35,13 @@
 							<button class="button_black" type="submit">Войти</button>
 						</form>
 
-						<h4 class="sing__h4">Или Вы можете продолжить, как гость</h4>
-						<form action="">
+						<h4 class="sing__h4 mobile-off">Или Вы можете продолжить, как гость</h4>
+						<form action="" class="mobile-off">
 							<p>E-mail</p>
 							<input type="email" name="login">
 
 							<p>Оформление заказа без учетной записи</p>
-	 
+
 							<p>Вы не сможете отслеживать статус своих заказов
 							и будете лишены других удобств. Хотите оформить заказ без регистрации?</p>
 
@@ -49,7 +50,7 @@
 						
 
 					</div>
-					<div class="sing-basket">
+					<div class="sing-basket mobile-off">
 						<button class="button__white-center">Вернуться в корзину</button>
 					</div>
 				</div>
@@ -84,19 +85,39 @@
 										<input type="checkbox" id="c2" name="c2" class="sing-checkbox" />
 										<label for="c2" class="checkbox_label"><span></span><div>Я прочитал 
 											<a href="security_policy.html">политику безопасности</a> и согласен с условиями безопасности и обработки персональных данных</div></label>
-									</div>
+										</div>
 
-								</div>						
-								<button class="button_black" >Зарегистрироваться</button>
-							</form> 
+									</div>						
+									<button class="button_black" >Зарегистрироваться</button>
+								</form> 
+							</div>
+						</div>
+					</div>
+					<div class="mobile-on">
+						<div class="sing-authorization__div main-contact__div_left">
+							<h4 class="sing__h4">Или Вы можете продолжить, как гость</h4>
+							<form action="">
+								<p>E-mail</p>
+								<input type="email" name="login">
+
+								<p>Оформление заказа без учетной записи</p>
+
+								<p>Вы не сможете отслеживать статус своих заказов
+								и будете лишены других удобств. Хотите оформить заказ без регистрации?</p>
+
+								<button class="button_black sing-guest" type="submit">Продолжить, как гость</button>
+							</form>
+							<div class="sing-basket">
+								<button class="button__white-center">Вернуться в корзину</button>
+							</div>
+
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-		
-		
-	</main>
 
-</body>
-</html>
+
+		</main>
+
+	</body>
+	</html>
