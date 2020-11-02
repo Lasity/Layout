@@ -15,7 +15,8 @@
 	<main>
 		<div class="name-page__div">
 			<div class="name__div wrapper">
-				<div class="page">Главная > Одежда<span> > Платье Liviana Conti</span></div>
+				<div class="page page-off">Главная > Одежда<span> > Платье Liviana Conti</span></div>
+				<div class="page page-on">Платье Liviana Conti</div>
 			</div>
 		</div>
 
@@ -29,7 +30,9 @@
 						<img src="../img/Rectangle17_1.png" alt="">
 					</div>
 					<div class="product__photo">
+						<div class="product__photo_arrow-r"></div>
 						<img src="../img/Rectangle17_1.png" alt="">
+						<div class="product__photo_arrow-l"></div>
 						<div class="thing__like thing__like-black"></div>
 					</div>
 				</div>
@@ -121,26 +124,47 @@
 			</div>
 		</div>
 		<div class="brand__conteiner wrapper">
-			<div class="brend-info">
-				<h2 class="main__h2">информация о товаре</h2>
-				<p class="main__p">Ткань: вискоза 65%, полиамид 35%</p>
-				<p class="main__p">Бренд: Liviana Conti - Италия</p>
-				<p class="main__p">Производство: Италия</p>
+			<div class="brand-info">
+				<div class="mobile-info__toggle">
+					<h2 class="main__h2">информация о товаре</h2>
+					<span id="toggle-info" class="toggle__button"></span>
+				</div>
+				<div id="toggle-info__text" class="mobile-text__toggle "> 
+					<p class="main__p">Ткань: вискоза 65%, полиамид 35%</p>
+					<p class="main__p">Бренд: Liviana Conti - Италия</p>
+					<p class="main__p">Производство: Италия</p>
+				</div>
 			</div>
-			<div class="brend-info">
-				<h2 class="main__h2">о бренде</h2>
-				<p class="main__p">«Liviana Conti» – это бренд женской одежды, аксессуаров и обуви, созданный дизайнером Ливаной Трофей и предпринимателем Роберто Конти в Италии. ... Спустя несколько лет, ее творческий порыв, а также предпринимательский талант Роберто Конти объединились, и в 1982 году вышла первая коллекция их совместного бренда.</p>
+			<div class="brand-info">
+				<div class="mobile-info__toggle">
+					<h2 class="main__h2">о бренде</h2>
+					<span id="toggle-brand" class="toggle__button"></span>
+				</div>
+				<div class="mobile-text__toggle" id="toggle-brand__text">
+					<p class="main__p">«Liviana Conti» – это бренд женской одежды, аксессуаров и обуви, созданный дизайнером Ливаной Трофей и предпринимателем Роберто Конти в Италии. ... Спустя несколько лет, ее творческий порыв, а также предпринимательский талант Роберто Конти объединились, и в 1982 году вышла первая коллекция их совместного бренда.</p>
+				</div>
 			</div>
-			<div class="brend-info">
-				<h2 class="main__h2">Размер и крой</h2>
-				<p class="main__p">Размер на модели: UK S/ EU S/ US XS</p>
-				<p class="main__p">Рост модели: 173 см</p>
+			<div class="brand-info">
+				<div class="mobile-info__toggle">
+					<h2 class="main__h2">Размер и крой</h2>
+					<span id="toggle-size" class="toggle__button"></span>
+				</div>
+				<div class="mobile-text__toggle" id="toggle-size__text">
+					<p class="main__p">Размер на модели: UK S/ EU S/ US XS</p>
+					<p class="main__p">Рост модели: 173 см</p>
+				</div>
 			</div>
-			<div class="brend-info">
-				<h2 class="main__h2">Уход</h2>
-				<p class="main__p">Машинная стирка согласно инструкции на этикетке</p>
+			<div class="brand-info">
+				<div class="mobile-info__toggle">
+					<h2 class="main__h2">Уход</h2>
+					<span id="toggle-care" class="toggle__button"></span>
+				</div>
+				<div class="mobile-text__toggle" id="toggle-care__text">
+					<p class="main__p">Машинная стирка согласно инструкции на этикетке</p>
+				</div>
 			</div>
 		</div>
+
 		<div class="wrapper">
 			<div class="viewed__conteiner ">
 			<div class="contener__a viewed__conteiner-black">
@@ -152,6 +176,7 @@
 						</div>
 					</div>
 				</a>
+				<div class="viewed__conteiner-white"></div>
 			</div>
 
 			<div class="contener__a">

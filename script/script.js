@@ -139,6 +139,30 @@ $(document).ready(() => {
            $("sirting__img").toggleClass('sirting__img-off');
         }
     });
+
+    $('.toggle__button').click(function(){
+        $(this).toggleClass('toggle__button_close');
+        let id = $(this).attr('id') + "__text";
+        let description = $("#" + id);
+        if($(description).css("display") == "none") {
+            $(description).slideDown(300);
+        } else {
+             $(description).slideUp(300);
+        }
+        
+    });
+
+    $('.size-table').click(function(){
+        $(".table__div").toggleClass('table__div_open');
+    });
+
+    $(document).mouseup(function (e){ // событие клика по веб-документу
+        var div = $(".table__div"); // тут указываем ID элемента
+        if (!div.is(e.target) && div.has(e.target).length === 0) { // и не по его дочерним элементам
+            $(div).removeClass('table__div_open');
+        }
+    });
+
 });
 
 
