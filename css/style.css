@@ -10,14 +10,14 @@
   font-family: "Montserrat-SemiBold";
   src: url("../fonts/Montserrat-SemiBold.ttf");
 }
-form .forget-password p, .icon_menu .icon_menu__text .icon__p-s p {
+form .forget-password p, .icon_menu .icon_menu__text .icon__p-s p, .error_data__p {
   font-family: Montserrat-Regular;
   font-style: normal;
   font-size: 10px;
   line-height: 12px;
 }
 
-.header-contact_phone, .header-contact_time-work, .header-contact_phone > a, .header-top-nav__search input, .main-nav__cards .main-nav__card .main-nav__text, .main-nav__cards .main-nav__card .main-nav_all-items, .main-baner .main-baner__div .main-baner_all-items, .main-info__div_left p, .main-info__div_right p, .main-info__div_left a, .main-info__div_right a, .footer-info__p, .main-contact__div_left form p, .main-contact__div_left form input, .main-contact__div_left form textarea, .pagination__div .pagination__page .pagination__page_nomber, .basket-delete .basket-delete__text, .basket-promo__div-top p, .sing__div-right .sing__contener_right p, .checkbox label, .thanks__p, .sing__div .dropdown, .icon_menu input, .catalog_menu__contener .catalog_menu__text, .filter-price div p, .product__div .product-top .product__size .size-table p, .table__div, .history-order .history-clothes__div .history-thing {
+.header-contact_phone, .header-contact_time-work, .header-contact_phone > a, .header-top-nav__search input, .main-nav__cards .main-nav__card .main-nav__text, .main-nav__cards .main-nav__card .main-nav_all-items, .main-baner .main-baner__div .main-baner_all-items, .main-info__div_left p, .main-info__div_right p, .main-info__div_left a, .main-info__div_right a, .footer-info__p, .main-contact__div_left form p, .main-contact__div_left form input, .main-contact__div_left form textarea, .pagination__div .pagination__page .pagination__page_nomber, .basket-delete .basket-delete__text, .basket-promo__div-top p, .sing__div-right .sing__contener_right p, .checkbox label, .thanks__p, .sing__div .dropdown, .icon_menu input, .catalog_menu__contener .catalog_menu__text, .filter-price div p, .product__div .product-top .product__size .size-table p, .table__div, .history-order .history-clothes__div .history-thing, .form-sent__div p {
   font-family: Montserrat-Regular;
   font-style: normal;
   font-size: 12px;
@@ -2027,6 +2027,33 @@ input[type="checkbox"].sing-checkbox:checked + label span {
           transform: rotate(90deg);
 }
 
+.error_data {
+  border: 1px solid #DD0000 !important;
+  position: relative;
+  margin-top: 0;
+}
+
+.error_data__p {
+  color: #DD0000 !important;
+  margin-bottom: 0 !important;
+  margin-top: 5px !important;
+}
+
+.form-sent__div {
+  display: none;
+}
+.form-sent__div p {
+  color: #232323;
+  margin-top: 16px;
+}
+.form-sent__div .form-sent__p-margin {
+  margin-top: 80px;
+}
+.form-sent__div .button__white-center {
+  width: 312px;
+  margin-top: 24px;
+}
+
 @media (max-width: 1400px) {
   .viewed__conteiner .viewed__conteiner-black .viewed__conteiner-white {
     height: 77px;
@@ -2879,6 +2906,10 @@ input[type="checkbox"].sing-checkbox:checked + label span {
 
   .basket-thing__cost, .basket-thing__count {
     width: 150px;
+  }
+
+  .form-sent__div .button__white-center {
+    width: 100%;
   }
 }
 @media (max-width: 360px) {

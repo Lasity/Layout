@@ -2109,6 +2109,43 @@ input[type="checkbox"].sing-checkbox:checked + label span{
 	transform: rotate(90deg);
 }
 
+.error_data {
+	border: 1px solid #DD0000 !important;
+	position: relative;
+	margin-top: 0;
+}
+
+.error_data__p {
+	color: #DD0000 !important;
+	@extend %r10;
+	margin-bottom:0 !important;
+	margin-top: 5px !important;
+}
+
+.form-sent__div {
+	display: none;
+	p {
+		color: $black;
+		@extend %r12;
+		margin-top: 16px;
+	}
+
+	.form-sent__p-margin {
+		margin-top: 80px;
+	}
+
+	.button__white-center {
+		width: 312px;
+		margin-top: 24px;
+	}
+}
+
+
+
+
+
+
+
 
 
 
@@ -2947,6 +2984,13 @@ input[type="checkbox"].sing-checkbox:checked + label span{
 
 	.basket-thing__cost, .basket-thing__count {
 		width: 150px;
+	}
+
+	.form-sent__div {
+
+		.button__white-center {
+			width: 100%;
+		}
 	}
 }
 

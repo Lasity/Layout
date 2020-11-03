@@ -36,13 +36,20 @@
 						<p>Имя*</p>
 						<p class="form__p_s">*обязательно для заполнения</p>
 					</div>
-					<input type='text' name='name' placeholder='Введите имя'/>
+					<input  class="error_data" type='text' name='name' placeholder='Введите имя'/>
+					<p class="error_data__p">Не корректные данные</p>
 					<p>E-mail*</p>
 					<input type="email" name="login" placeholder='Введите e-mail'>
 					<p>Ваш вопрос, или сообщение*</p>
 					<textarea name="text" placeholder='Введите текст'></textarea>
 					<button class="button_black main-contact__button">Отправить</button>
 				</form>
+
+				<div class="form-sent__div">
+					<p>Скоро с Вами свяжется наш менеджер</p>
+					<p class="form-sent__p-margin">Вы хотите, чтобы с Вами связались еще по какому-нибудь вопросу?</p>
+					<button class="button__white-center">Составить еще одну форму</button>
+				</div>
 			</div>
 			<div class="main-contact__div_right">
 				<h4 class="main__h4 main__h4_payment">На карте</h4>
