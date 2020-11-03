@@ -22,10 +22,6 @@ $(document).ready(() => {
         $(this).toggleClass('header-invert');
         $('.basket-popup').toggleClass('icon_menu-visibility');
     });
-
-    $('.filter').click(function(){
-        $('.catalog-filter').toggleClass('catalog-filter-visibility');
-    });
     
     $('.header-top-nav__search button').click(function(){
         if( $('.header-top-nav__search').hasClass('header-top-nav__search-mobile')){
@@ -131,13 +127,21 @@ $(document).ready(() => {
         
     });
 
-
-    $('.filter').click(function(){
-        if($(document).width() > 900) {
-            $(".sirting__img").addClass("sirting__img-on");
-        } else {
-           $("sirting__img").toggleClass('sirting__img-off');
+    $(document).click(function (e){ // событие клика по веб-документу
+        let div = $(".catalog-filter"); // тут указываем ID элемента
+        if (!div.is(e.target) && div.has(e.target).length === 0 && !div.is( $('.filter') ) ) { // и не по его дочерним элементам
+            $(div).removeClass('catalog-filter-visibility');
         }
+    });
+
+     $('.filter').click(function(){
+        let filter = $('.catalog-filter');
+        if ( $(filter).hasClass("catalog-filter-visibility") ) {
+            $(filter).removeClass('catalog-filter-visibility');
+        } else {
+             $(filter).addClass('catalog-filter-visibility');
+        }
+        
     });
 
     $('.toggle__button').click(function(){
@@ -152,12 +156,13 @@ $(document).ready(() => {
         
     });
 
-    $('.size-table').click(function(){
-        $(".table__div").toggleClass('table__div_open');
+    $('.size-table p').click(function(){
+        $(".table__div").addClass('table__div_open');
     });
 
+
     $(document).mouseup(function (e){ // событие клика по веб-документу
-        var div = $(".table__div"); // тут указываем ID элемента
+        let div = $(".table__div"); // тут указываем ID элемента
         if (!div.is(e.target) && div.has(e.target).length === 0) { // и не по его дочерним элементам
             $(div).removeClass('table__div_open');
         }
@@ -165,4 +170,6 @@ $(document).ready(() => {
 
 });
 
-
+ function hideSizeTable() {
+    $(".table__div").removeClass('table__div_open');
+}

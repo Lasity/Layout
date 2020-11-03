@@ -633,9 +633,6 @@ button:-moz-focus-inner {
   margin-right: 8px;
   height: 16px;
   width: 16px;
-}
-
-.sorting__img-on {
   background-image: url("../img/slider_03.svg");
 }
 
@@ -825,6 +822,12 @@ button:-moz-focus-inner {
   display: -ms-flexbox;
   display: flex;
   position: relative;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
 .basket__contener {
@@ -2402,11 +2405,6 @@ input[type="checkbox"].sing-checkbox:checked + label span {
     margin-right: 0;
   }
 
-  .basket-promo__div {
-    margin: 32px auto 0;
-    width: 328px;
-  }
-
   .registration {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -2460,6 +2458,82 @@ input[type="checkbox"].sing-checkbox:checked + label span {
   }
   .mobile-on .sing-authorization__div h4 {
     margin-top: 24px;
+  }
+
+  .basket-thing__text-off {
+    display: none;
+  }
+
+  .basket-thing__text .main__p, .basket-thing__text .basket-thing__h4-margine {
+    margin-top: 8px;
+  }
+
+  .basket-thing__h4-margine {
+    font-family: 'Montserrat-Regular';
+  }
+
+  .basket__img__thing {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: unset;
+        -ms-flex-pack: unset;
+            justify-content: unset;
+  }
+
+  .basket-delete {
+    top: 0;
+    right: 0;
+    -webkit-box-align: unset;
+        -ms-flex-align: unset;
+            align-items: unset;
+    margin-bottom: 0;
+  }
+  .basket-delete .basket-delete__text {
+    display: none;
+  }
+
+  .basket-thing__text-color {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .basket-thing__text-color p {
+    margin-right: 17px;
+  }
+  .basket-thing__text-color p:last-child {
+    margin-right: 0;
+  }
+
+  .basket-thing__cost, .basket-thing__count {
+    text-align: left;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 2px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 300px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .basket-thing__cost .count__text, .basket-thing__cost .cost__text, .basket-thing__count .count__text, .basket-thing__count .cost__text {
+    margin-bottom: 0;
+  }
+  .basket-thing__cost .cost__div, .basket-thing__count .cost__div {
+    width: 110px;
+    font-family: Montserrat-Regular;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    height: 16px;
   }
 }
 @media (max-width: 768px) {
@@ -2623,6 +2697,12 @@ input[type="checkbox"].sing-checkbox:checked + label span {
   .slider__div .showroom__arrow-l, .slider__div .showroom__arrow-r {
     top: calc(50% - 12px);
   }
+
+  .basket-thing__img {
+    max-width: 150px;
+    margin-right: 16px;
+    max-height: unset;
+  }
 }
 @media (max-width: 550px) {
   .main-baner {
@@ -2695,6 +2775,21 @@ input[type="checkbox"].sing-checkbox:checked + label span {
   .brand__main-info__text .brand-in-catalog {
     width: 100%;
   }
+
+  .basket-thing__cost, .basket-thing__count {
+    width: 200px;
+  }
+
+  .basket-thing__text div, .basket-thing__text p, .basket-thing__cost div, .basket-thing__count div {
+    font-style: normal;
+    font-size: 10px;
+    line-height: 12px;
+  }
+
+  .count__input input {
+    font-size: 20px;
+    width: 15px;
+  }
 }
 @media (max-width: 480px) {
   .contener__a {
@@ -2742,6 +2837,14 @@ input[type="checkbox"].sing-checkbox:checked + label span {
   .main-contact__div_left form {
     width: 100%;
   }
+
+  .basket-thing__img {
+    max-width: 92px;
+  }
+
+  .basket-promo__div, .basket-catalog {
+    width: 100%;
+  }
 }
 @media (max-width: 380px) {
   .sing__div .sing-authorization__div, .sing__div .sing__contener_right, .main-contact__div_left form {
@@ -2772,6 +2875,10 @@ input[type="checkbox"].sing-checkbox:checked + label span {
 
   .search__div .search__div_button {
     width: 100%;
+  }
+
+  .basket-thing__cost, .basket-thing__count {
+    width: 150px;
   }
 }
 @media (max-width: 360px) {
