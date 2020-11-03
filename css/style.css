@@ -1774,14 +1774,9 @@ input[type="checkbox"].sing-checkbox:checked + label span {
   color: #232323;
   margin-bottom: 24px;
 }
-.history-order:last-child {
-  margin-bottom: 0;
-}
 .history-order .order-number, .history-order .order-data, .history-order .order-sum, .history-order .order-payment-state, .history-order .order-state {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  max-width: 230px;
+  -ms-flex-preferred-size: 20%;
+      flex-basis: 20%;
 }
 .history-order .order-state span {
   border-bottom: 1px solid #232323;
@@ -2239,6 +2234,13 @@ input[type="checkbox"].sing-checkbox:checked + label span {
 
   .brand__main-info__text {
     margin-right: 78px;
+  }
+
+  .history__div {
+    overflow-x: scroll;
+  }
+  .history__div .history-order {
+    width: 975px;
   }
 }
 @media (max-width: 900px) {

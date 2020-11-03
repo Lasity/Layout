@@ -1841,13 +1841,8 @@ input[type="checkbox"].sing-checkbox:checked + label span{
 	@extend %r14;
 	margin-bottom: 24px;
 
-	&:last-child {
-		margin-bottom: 0;
-	}
-
 	.order-number, .order-data, .order-sum, .order-payment-state, .order-state {
-		flex-grow: 1;
-		max-width: 230px;
+		flex-basis: 20%;
 	}
 
 	.order-state span{
@@ -2341,6 +2336,14 @@ input[type="checkbox"].sing-checkbox:checked + label span{
 
 	.brand__main-info__text {
 		margin-right: 78px;
+	}
+
+	.history__div {
+		.history-order {
+			width: 975px;
+		}
+		
+		overflow-x: scroll;
 	}
 
 }
