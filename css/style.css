@@ -1807,17 +1807,16 @@ input[type="checkbox"].sing-checkbox:checked + label span {
   height: 16px;
   cursor: pointer;
   margin-right: 4px;
+  -webkit-transition: all .3s linear;
+  transition: all .3s linear;
 }
 .history-order .order-number .arrow_top {
-  background-image: url("../img/chevron_right2.png");
-  background-repeat: no-repeat, repeat;
-  width: 16px;
-  height: 16px;
-  cursor: pointer;
-  margin-right: 4px;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 .history-order .history-clothes__div {
   margin-top: 16px;
+  display: none;
 }
 .history-order .history-clothes__div .history-thing {
   margin-bottom: 4px;

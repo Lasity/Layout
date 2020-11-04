@@ -168,6 +168,17 @@ $(document).ready(() => {
         }
     });
 
+    $('.history__conteiner').click(function(){
+       let neighbor = $(this).siblings('.history-clothes__div');
+       let child = $(this).find(".arrow_bottom");
+       $(child).toggleClass("arrow_top");
+       if($(neighbor).css("display") == "none") {
+            $(neighbor).slideDown(300);
+        } else {
+             $(neighbor).slideUp(300);
+        }
+    });
+
 });
 
  function hideSizeTable() {

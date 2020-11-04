@@ -1869,19 +1869,16 @@ input[type="checkbox"].sing-checkbox:checked + label span{
 			height: 16px;
 			cursor: pointer;
 			margin-right: 4px;
+			transition:all .3s linear;
 		}
 
 		.arrow_top {
-			background-image: url('../img/chevron_right2.png');
-			background-repeat: no-repeat, repeat;
-			width: 16px;
-			height: 16px;
-			cursor: pointer;
-			margin-right: 4px;
+			transform: rotate(180deg);
 		}
 	}
 	.history-clothes__div {
 		margin-top: 16px;
+		display: none;
 		
 		.history-thing {
 			@extend %r12;
