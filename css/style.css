@@ -640,15 +640,21 @@ button:-moz-focus-inner {
   margin: 0 40px;
 }
 
-.sirting__img {
+.sorting__img {
   margin-right: 8px;
   height: 16px;
   width: 16px;
+}
+
+.filter-sorting__img {
   background-image: url("../img/slider_03.svg");
+  -webkit-transition: all .5s linear;
+  transition: all .5s linear;
 }
 
 .sort__img-off {
   background-image: url("../img/close_big.png") !important;
+  background-size: 100% 100%;
 }
 
 .sorting__div {
@@ -1922,8 +1928,8 @@ input[type="checkbox"].sing-checkbox:checked + label span {
           justify-content: space-between;
   visibility: hidden;
   right: -100%;
-  -webkit-transition: all 0.75s cubic-bezier(0.5, 0.5, 0.5, 0.5);
-  transition: all 0.75s cubic-bezier(0.5, 0.5, 0.5, 0.5);
+  -webkit-transition: all .75s linear;
+  transition: all .75s linear;
   z-index: 6;
 }
 .mobile-menu__div .mobile-menu__nav .mobile-menu__ul {

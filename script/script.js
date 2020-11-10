@@ -96,17 +96,31 @@ $(document).ready(() => {
 
 
     $(window).scroll(function() {
+        
         if($(document).width() > 900) {
             if ($(document).scrollTop() >= 112) {
                 $(".icon_menu").css('top', '80px');
-                $(".catalog-filter").css('top', '120px');
+                let filter = $(".sorting__text");
+                if( filter != null ) {
+                    $(".catalog-filter").css('top', '160px');
+                    $(".name-page__div").addClass('fix').css('top', '120px');
+                }
             } else {
-                $(".icon_menu").css('top', '112px');
-                $(".catalog-filter").css('top', '192px');
+                $(".icon_menu").removeClass("fix");
+                let filter = $(".sorting__text");
+                if( filter != null ) {
+                    $(".catalog-filter").removeClass("fix");
+                    $(".name-page__div").removeClass("fix");
+                }
             }
         } else {
             $(".icon_menu").css('top', '72px');
-            $(".catalog-filter").css('top', '72px');
+            let filter = $(".sorting__text");
+            if( filter != null ) {
+                $(".catalog-filter").css('top', '112px');
+                $(".name-page__div").addClass('fix').css('top', '72px');
+            }
+            
         }
 
         if($(document).width() > 900) {
@@ -127,19 +141,23 @@ $(document).ready(() => {
         
     });
 
-    $(document).click(function (e){ // событие клика по веб-документу
-        let div = $(".catalog-filter"); // тут указываем ID элемента
-        if (!div.is(e.target) && div.has(e.target).length === 0 && !div.is( $('.filter') ) ) { // и не по его дочерним элементам
-            $(div).removeClass('catalog-filter-visibility');
-        }
-    });
+    // $(document).click(function (e){ // событие клика по веб-документу
+    //     let div = $(".catalog-filter"); // тут указываем ID элемента
+    //     if (!div.is(e.target) && div.has(e.target).length === 0 && !div.is( $('.filter') ) ) { // и не по его дочерним элементам
+    //         $(div).removeClass('catalog-filter-visibility');
+    //     }
+    // });
+
+
 
      $('.filter').click(function(){
         let filter = $('.catalog-filter');
         if ( $(filter).hasClass("catalog-filter-visibility") ) {
             $(filter).removeClass('catalog-filter-visibility');
+            $(".filter-sorting__img").removeClass('sort__img-off');
         } else {
              $(filter).addClass('catalog-filter-visibility');
+             $(".filter-sorting__img").addClass('sort__img-off');
         }
         
     });
