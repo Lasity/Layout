@@ -8,9 +8,14 @@ $(document).ready(() => {
         $(this).removeClass('active');
         $(this).find('.dropdown-menu').slideUp(300);
     });
-    $('.dropdown .dropdown-menu li').click(function () {
+    // $('.dropdown .dropdown-menu li').click(function () {
+    //     $(this).parents('.dropdown').find('span').text($(this).text());
+    //     $(this).parents('.dropdown').find('input').attr('value', $(this).attr('id'));
+    // });
+
+    $(document).on('click', '.dropdown .dropdown-menu li', function (){ 
         $(this).parents('.dropdown').find('span').text($(this).text());
-        $(this).parents('.dropdown').find('input').attr('value', $(this).attr('id'));
+        $(this).parents('.dropdown').find('input').val($(this).attr('id')).trigger('change');
     });
 
     $('.header-top-nav__user').click(function(){
