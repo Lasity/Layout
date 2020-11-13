@@ -202,8 +202,34 @@ $(document).ready(() => {
         }
     });
 
+    $('.thing__like-black').click(function(){ 
+        let popup = $('.popup');
+        showPopup(popup, 'Товар добавлен в избранное');
+    });
+
+    $(document).mouseup(function (e){ /// функция скрытия поп-апа при нажатии на любое место на странице
+        let div = $(".popup"); // тут указываем ID элемента
+        if (!div.is(e.target) && div.has(e.target).length === 0) { // и не по его дочерним элементам
+            $(div).fadeOut(300);
+        }
+    });
+
+    $('.popup-close').click(function(){    // функция скрытия поп-апа при нажатии на крестик
+        $(".popup").fadeOut(300);
+    });
+
 });
 
- function hideSizeTable() {
+ function hideSizeTable() {  
     $(".table__div").removeClass('table__div_open');
 }
+
+function showPopup(popup, content) {   
+    $(popup).find('.popup_text').text(content);
+    $(popup).fadeIn(300);
+}
+
+function hidePopup(popup) {
+    $(popup).fadeOut(300);
+}
+

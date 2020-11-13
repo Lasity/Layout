@@ -2205,19 +2205,19 @@ input[type="checkbox"].sing-checkbox:checked + label span{
 	font-weight: bold;
 }
 
-.like__popup {
+.popup {
 	width: 312px;
 	height: 180px;
 	position: fixed;
 	top: calc(50% - 90px);
 	left: calc(50% - 156px);
 	background: $grey;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+	text-align: center;
 	padding: 24px;
+	display: none;
+	z-index: 9;
 
-	.like__popup-close {
+	.popup-close {
 		background-image: url('../img/close_big.png');
 		background-size: 100% 100%;
 		width: 14px;
@@ -2228,9 +2228,16 @@ input[type="checkbox"].sing-checkbox:checked + label span{
 		cursor: pointer;
 	}
 
-	.like__popup_text {
+	.popup_text {
 		@extend %m16caps;
 		text-align: center;
+	}
+
+	.popup__div {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100%;
 	}
 }
 

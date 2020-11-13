@@ -32,7 +32,7 @@ form .forget-password p, .icon_menu .icon_menu__text .icon__p-s p, .error_data__
   line-height: 17px;
 }
 
-.main-nav__cards .main-nav__card .main-nav__title, .main__div_info h4, .main__h2, .showroom__text h5, .catalog-filter .scrol .filter__text h3, .mobile-menu__div .mobile-menu__nav, .mobile-menu__div .mobile-menu__nav .mobile__a a, .mobile-menu__div .mobile-menu__nav .mobile__li__a a, .mobile-menu__div .mobile-menu__nav .mobile__li__a, .like__popup .like__popup_text {
+.main-nav__cards .main-nav__card .main-nav__title, .main__div_info h4, .main__h2, .showroom__text h5, .catalog-filter .scrol .filter__text h3, .mobile-menu__div .mobile-menu__nav, .mobile-menu__div .mobile-menu__nav .mobile__a a, .mobile-menu__div .mobile-menu__nav .mobile__li__a a, .mobile-menu__div .mobile-menu__nav .mobile__li__a, .popup .popup_text {
   font-family: Montserrat-Medium;
   font-style: normal;
   font-size: 16px;
@@ -2125,25 +2125,19 @@ input[type="checkbox"].sing-checkbox:checked + label span {
   font-weight: bold;
 }
 
-.like__popup {
+.popup {
   width: 312px;
   height: 180px;
   position: fixed;
   top: calc(50% - 90px);
   left: calc(50% - 156px);
   background: #DCDCDC;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  text-align: center;
   padding: 24px;
+  display: none;
+  z-index: 9;
 }
-.like__popup .like__popup-close {
+.popup .popup-close {
   background-image: url("../img/close_big.png");
   background-size: 100% 100%;
   width: 14px;
@@ -2153,8 +2147,20 @@ input[type="checkbox"].sing-checkbox:checked + label span {
   right: 13px;
   cursor: pointer;
 }
-.like__popup .like__popup_text {
+.popup .popup_text {
   text-align: center;
+}
+.popup .popup__div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
 }
 
 @media (max-width: 1400px) {
