@@ -951,6 +951,7 @@ button {
 		border: none;
 		font-size: 30px;
 		width: 24px;
+		cursor: pointer;
 	}
 
 	.count {
@@ -1112,10 +1113,30 @@ input[type="checkbox"].sing-checkbox + label span{
 .checkbox-c2 {
 	width: 70px!important;
 }
-// Selected checkbox view
+// Selected radio view
 input[type="checkbox"].sing-checkbox:checked + label span{
 	background: url("../img/Rectangle86.svg") left top no-repeat;
 }
+
+// Hide old box
+input[type="radio"] {
+	display: none;
+}
+// Disabled radio view
+input[type="radio"].sing-checkbox + label span{
+	display: block;
+	width: 32px;
+	height: 16px;
+	vertical-align: middle;
+	background: url("../img/Rectangle85.svg") left top no-repeat;
+	cursor: pointer;
+}
+
+// Selected radio view
+input[type="radio"].sing-checkbox:checked + label span{
+	background: url("../img/Rectangle86.svg") left top no-repeat;
+}
+
 // Checkbox body
 .checkbox{
 	display: inline-flex;
@@ -1823,23 +1844,17 @@ input[type="checkbox"].sing-checkbox:checked + label span{
 	}
 }
 
-.table__div_open {
-	visibility:visible !important;
-	right:calc((100vw - 360px)/2) !important;
-}
-
 .table__div {
+	display: none;
 	width: 310px;
-	display: block;
 	padding: 24px;
 	background-color: $grey;
 	@extend %r12;
-	position: fixed;
-	top: calc((100vh - 160)/2);
-	right: -100%;
-	visibility:hidden;
+	position: absolute;
+	top: 15px;
+	left: 0;
 	z-index: 6;
-	transition:all .75s linear;
+	overflow: hidden;
 
 	.table-name {
 		display: flex;
@@ -2871,15 +2886,6 @@ input[type="checkbox"].sing-checkbox:checked + label span{
 		}
 	}
 
-	.table__div_open {
-		visibility:visible !important;
-		right:0 !important;
-	}
-
-	.table__div {
-		top: 40px;
-	}
-
 	.basket-catalog__div {
 		padding: 0;
 	}
@@ -3000,7 +3006,7 @@ input[type="checkbox"].sing-checkbox:checked + label span{
 	}
 
 	.basket-thing__cost, .basket-thing__count {
-		width: 200px;
+		width: 135px;
 	}
 
 	.basket-thing__text div, .basket-thing__text p, .basket-thing__cost div, .basket-thing__count div {
@@ -3012,6 +3018,24 @@ input[type="checkbox"].sing-checkbox:checked + label span{
 	.count__input input {
 	    font-size: 20px;
 	    width: 15px;
+	}
+
+	.basket-delete .basket-delete__img {
+		width: 14px;
+		height: 14px;
+
+		img {
+			width: 100%;
+		}
+	}
+
+	.basket-promo__div-top, .basket-promo__div-bottom {
+		padding-left: 16px;
+		padding-right: 16px;
+	}
+
+	.button_black, .account .button__disabled {
+		padding-left: 16px;
 	}
 }
 
@@ -3067,6 +3091,18 @@ input[type="checkbox"].sing-checkbox:checked + label span{
 
 	.basket__div .basket-promo__div {
 		padding: 0;
+	}
+
+	.basket-thing__div {
+		margin-bottom: 8px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	.basket-promo__div, .basket-catalog__div {
+		margin-top: 16px;
 	}
 
 }
@@ -3140,5 +3176,9 @@ input[type="checkbox"].sing-checkbox:checked + label span{
 
 	.registration .account .sing__rights, .basket-promo__div {
 		width: 100%;
+	}
+
+	.table__div {
+		left: calc(50% - 155px);
 	}
 }

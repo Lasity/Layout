@@ -179,15 +179,15 @@ $(document).ready(() => {
         
     });
 
-    $('.size-table p').click(function(){
-        $(".table__div").addClass('table__div_open');
+    $('.size-table p').click(function(){ //открытие таблицы размеров
+        $(".table__div").slideDown(300);
     });
 
 
-    $(document).mouseup(function (e){ // событие клика по веб-документу
+    $(document).mouseup(function (e){ // закрытие таблицы размеров 
         let div = $(".table__div"); // тут указываем ID элемента
         if (!div.is(e.target) && div.has(e.target).length === 0) { // и не по его дочерним элементам
-            $(div).removeClass('table__div_open');
+            $(div).slideUp();
         }
     });
 
@@ -220,8 +220,8 @@ $(document).ready(() => {
 
 });
 
- function hideSizeTable() {  
-    $(".table__div").removeClass('table__div_open');
+ function hideSizeTable() {  //закрытие таблицы размеров 
+    $(".table__div").slideUp();
 }
 
 function showPopup(popup, content) {   
