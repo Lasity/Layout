@@ -565,6 +565,7 @@ button {
 .form__p {
 	display: flex;
 	justify-content: space-between;
+	align-items: flex-end;
 }
 
 .main-contact__button {
@@ -727,8 +728,16 @@ button {
 	height: 24px;
 	align-items: center;
 	margin: 40px auto 0;
+
+	.pagination__arrow-left, .pagination__arrow-right {
+		display: flex;
+		align-items: center;
+	}
+
 	.pagination__page {
 		display: flex;
+		align-items: center;
+		height: 100%;
 		margin: 0 16px;
 
 		.pagination__page_nomber {
@@ -738,6 +747,17 @@ button {
 
 			&:first-child {
 				margin-left: 0;
+			}
+		}
+
+		.pagination-active {
+			background: $grey;
+			padding: 5px 4px 4px;
+			margin-left: 12px;
+			margin-right: -4px;
+
+			&:first-child {
+				margin-left: -4px;
 			}
 		}
 	}
@@ -1910,7 +1930,7 @@ input[type="radio"].sing-checkbox:checked + label span{
 	@extend %sb14;
 }
 
-.history__conteiner, .history-thing, .thing-text{
+.history__conteiner, .thing-text{
 	display: flex;
 }
 
@@ -1948,8 +1968,15 @@ input[type="radio"].sing-checkbox:checked + label span{
 	.history-clothes__div {
 		margin-top: 16px;
 		display: none;
+
+		.history__div-flex {
+			display: flex;
+		}
+
+		.history-cost__div {
+		}
 		
-		.history-thing {
+		.history-thing, .history-cost__div {
 			@extend %r12;
 			margin-bottom: 4px;
 
@@ -1959,7 +1986,6 @@ input[type="radio"].sing-checkbox:checked + label span{
 
 			.thing-text {
 				margin-right: 40px;
-				width: 500px;
 
 				div {
 					margin-right: 40px;

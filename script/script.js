@@ -233,7 +233,7 @@ $(document).ready(() => {
     $('.popup-close').click(function(){    // функция скрытия поп-апа при нажатии на крестик
         $(".popup").fadeOut(300);
     });
-
+    
 });
 
 function hideSizeTable() {  //закрытие таблицы размеров 
