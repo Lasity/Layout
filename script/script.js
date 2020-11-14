@@ -18,14 +18,30 @@ $(document).ready(() => {
         $(this).parents('.dropdown').find('input').val($(this).attr('id')).trigger('change');
     });
 
-    $('.header-top-nav__user').click(function(){
-        $(this).toggleClass('header-invert');
-        $('.user-popup').toggleClass('icon_menu-visibility');
+    $('.header-top-nav__user').click(function(){  //открытие всплывающего окна авторизации
+        $(this).addClass('header-invert');
+        $('.user-popup').slideDown();
     });
 
-    $('.header-top-nav__cart').click(function(){
+    $(document).mouseup(function (e){ // закрытие всплывающего окна авторизации
+        let div = $(".user-popup"); // тут указываем ID элемента
+        if (!div.is(e.target) && div.has(e.target).length === 0) { // и не по его дочерним элементам
+            $(div).slideUp();
+        }
+        $('.header-top-nav__user').removeClass('header-invert');
+    });
+
+    $('.header-top-nav__cart').click(function(){  //открытие всплывающего окна корзины
         $(this).toggleClass('header-invert');
-        $('.basket-popup').toggleClass('icon_menu-visibility');
+        $('.basket-popup').slideDown();
+    });
+
+    $(document).mouseup(function (e){ // закрытие всплывающего окна корзины
+        let div = $('.basket-popup'); // тут указываем ID элемента
+        if (!div.is(e.target) && div.has(e.target).length === 0) { // и не по его дочерним элементам
+            $(div).slideUp();
+        }
+        $('.header-top-nav__cart').removeClass('header-invert');
     });
     
     $('.header-top-nav__search button').click(function(){
@@ -185,9 +201,9 @@ $(document).ready(() => {
 
 
     $(document).mouseup(function (e){ // закрытие таблицы размеров 
-        let div = $(".table__div"); // тут указываем ID элемента
+        let div = $(".size-table"); // тут указываем ID элемента
         if (!div.is(e.target) && div.has(e.target).length === 0) { // и не по его дочерним элементам
-            $(div).slideUp();
+            $(".table__div").slideUp();
         }
     });
 
@@ -220,8 +236,8 @@ $(document).ready(() => {
 
 });
 
- function hideSizeTable() {  //закрытие таблицы размеров 
-    $(".table__div").slideUp();
+function hideSizeTable() {  //закрытие таблицы размеров 
+    $(".table__div").slideUp(300);
 }
 
 function showPopup(popup, content) {   
@@ -231,5 +247,10 @@ function showPopup(popup, content) {
 
 function hidePopup(popup) {
     $(popup).fadeOut(300);
+}
+
+function hideAccountLogin() {  //закрытие формы входа на странице вход или регистрация 
+    $(".account-login").slideUp(300);
+    $(".password-recovery").slideDown(300);
 }
 

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="../css/style.css" rel="stylesheet">
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+	<script src="../script/script.js"></script>
+
+	<title>Вход или регистрация</title>
+</head>
+<body>
+
+
+	<main>
+		<div class="name-page__div">
+			<div class="name__div wrapper">
+				<div class="page account-page page-active">Вход, или регистрация</div>
+			</div>
+		</div>
+
+		<div class="sing">
+			<div class="sing__div wrapper">
+				<div class="sing__div-left ">
+					<div class="sing-authorization__div main-contact__div_left">
+						<h4>Войти в личный кабинет</h4>
+						<form action="" class="account-login">
+							<div class="form__p">
+								<p>E-mail*</p>
+								<p class="form__p_s">*обязательно для заполнения</p>
+							</div>
+							<input type="email" name="login">
+							<p>Пароль*</p>
+							<input type='password' name='password'/>
+							<div class="forget-password" onclick="hideAccountLogin()">
+								<p>Забыли пароль?</p>
+							</div>
+							<button class="button_black" type="submit">Войти</button>
+						</form>
+
+						<form action="" class="password-recovery">
+							<div class="form__p">
+								<p>Забыли пароль?<br>Введите ваш E-mail</p>
+							</div>
+							<div class="form__p">
+								<p>E-mail*</p>
+								<p class="form__p_s">*обязательно для заполнения</p>
+							</div>
+							<input type="email" name="login">
+							<div class="forget-password">
+								<p>Я помню пароль</p>
+							</div>
+							<button class="button_black" type="submit">Восстановить пароль</button>
+						</form>
+					</div>
+
+				</div>
+				<div class="sing__div-right">
+					<div class="sing__contener_right">
+						<h4>Регистрация</h4>
+						<p class="sing__p">Если у Вас еще нет аккаунта, то зарегистрируйтесь. Вы сможете отслеживать статус заказов, получать персональные скидки, участвовать в акциях и в дальнейшем оформление заказа будет занимать намного меньше времени</p>
+
+						<div class="main-contact__div_left sing__form_left">
+							<form action="">
+								<div class="form__p">
+									<p>Имя*</p>
+									<p class="form__p_s">*обязательно для заполнения</p>
+								</div>
+								<input type='text' name='name'/>
+								<p>Фамилия*</p>
+								<input type='text' name='fulname'/>
+								<p>E-mail*</p>
+								<input type="email" name="login">
+								<p>Телефон*</p>
+								<input type="tel" name="tel" pattern="">
+								<p>Пароль*</p>
+								<input type='password' name='password'/>
+								<p>Подтверждение пароля*</p>
+								<input type='password' name='password'/>
+								<div class="sing__rights">
+									<div class="checkbox">
+										<input type="checkbox" id="c1" name="c1" class="sing-checkbox" />
+										<label for="c1" class="checkbox_label"><span></span><DIV>Я хочу, чтобы мне сообщали об акциях и интересных новостях</DIV></label>
+									</div>
+									<div class="checkbox">
+										<input type="checkbox" id="c2" name="c2" class="sing-checkbox" />
+										<label for="c2" class="checkbox_label"><span></span><div>Я прочитал 
+											<a href="security_policy.html">политику безопасности</a> и согласен с условиями безопасности и обработки персональных данных</div></label>
+										</div>
+
+									</div>						
+									<button class="button_black" >Зарегистрироваться</button>
+								</form> 
+							</div>
+						</div>
+					</div>
+					<div class="mobile-on">
+						<div class="sing-authorization__div main-contact__div_left">
+							<h4 class="sing__h4">Или Вы можете продолжить, как гость</h4>
+							<form action="">
+								<p>E-mail</p>
+								<input type="email" name="login">
+
+								<p>Оформление заказа без учетной записи</p>
+
+								<p>Вы не сможете отслеживать статус своих заказов
+								и будете лишены других удобств. Хотите оформить заказ без регистрации?</p>
+
+								<button class="button_black sing-guest" type="submit">Продолжить, как гость</button>
+							</form>
+							<div class="sing-basket">
+								<button class="button__white-center">Вернуться в корзину</button>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+
+	</main>
+</body>
+</html>

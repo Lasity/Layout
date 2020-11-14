@@ -531,6 +531,10 @@ button {
 	color: $black;
 }
 
+.main-contact__div_left .form__p_s, .main-contact__div_left.sing__form_left .form__p_s{
+	@extend %r10;
+}
+
 .main-contact__div_left form {
 	width: 328px;
 
@@ -547,6 +551,10 @@ button {
 		height: 114px;
 		resize: none;
 	}
+}
+
+.password-recovery {
+	display: none;
 }
 
 .main-contact__div_left form textarea:focus {
@@ -770,6 +778,8 @@ button {
 	background-image: linear-gradient(to left,$black,$black 50%,$white 50%,$white);
 	background-size: 200% 100%;
 	transition: background .5s cubic-bezier(0.5, 0.5, 0.5, 0.5) , color .75s;
+	text-align: center;
+	line-height: 40px;
 
 	&:hover {
 		background-position: 100% 0;
@@ -1352,20 +1362,15 @@ input[type="radio"].sing-checkbox:checked + label span{
 	}
 }
 
-.icon_menu-visibility {
-	visibility: visible !important;
-	right: 0 !important;
-}
-
 .icon_menu {
-	position: fixed;
-	right: -100%;
+	position: absolute;
+	display: none;
+	right: 0;
 	background-color: $grey;
 	padding: 24px 24px 0;
 	width: 360px;
 	z-index: 5;
-	visibility: hidden;
-	transition: all .75s cubic-bezier(0.5, 0.5, 0.5, 0.5);
+	overflow: hidden;
 
 	form {
 		.main__p {
@@ -1578,6 +1583,11 @@ input[type="radio"].sing-checkbox:checked + label span{
 
 	button {
 		width: 112px;
+	}
+
+	.button_black {
+		padding-left: 0;
+		text-align: center;
 	}
 
 	.filter__button-grey {
@@ -1973,9 +1983,7 @@ input[type="radio"].sing-checkbox:checked + label span{
 	position: relative;
 
 	.brand-in-catalog {
-		height: 50%;
-		position: absolute;
-		bottom: 0;
+		margin-top: 80px;
 		width: 312px;
 
 		button {
@@ -2203,10 +2211,14 @@ input[type="radio"].sing-checkbox:checked + label span{
 .uppercase { 
 	text-transform: uppercase; 
 }
-
 .datepicker--cell.-selected-,
-.datepicker--cell.-selected-.-focused-,
-.datepicker--cell.-selected-.-current- {
+.datepicker--cell.-selected-.-focus-,
+.datepicker--cell.-selected-.-current-,
+.datepicker--cell.-selected-.-other-month-,
+.datepicker--cell.-selected-.-other-decade-,
+.datepicker--cell.-selected-.-other-month-.-focus-,
+.datepicker--cell.-selected-.-other-decade-.-focus-
+{
 	background-color: #232323;
 	color: #fff;
 	font-weight: normal;
@@ -2256,6 +2268,11 @@ input[type="radio"].sing-checkbox:checked + label span{
 	}
 }
 
+.main-baner.wrapper {
+	max-width: unset;
+	padding: 0;
+}
+
 
 
 
@@ -2270,8 +2287,9 @@ input[type="radio"].sing-checkbox:checked + label span{
 		height: 77px;
 	}
 
-	.brand__main-info__text .brand-in-catalog {
-		height: 30%;
+	.main-baner.wrapper {
+		padding: 0 40px;
+		max-width: 1440px;
 	}
 }
 
@@ -2475,6 +2493,12 @@ input[type="radio"].sing-checkbox:checked + label span{
 		overflow-x: scroll;
 	}
 
+	.brand__main-info__text {
+
+		.brand-in-catalog {
+			margin-top: 40px;
+		}
+	}	
 }
 
 @media (max-width: 900px) { 
@@ -2888,6 +2912,10 @@ input[type="radio"].sing-checkbox:checked + label span{
 
 	.basket-catalog__div {
 		padding: 0;
+	}
+
+	.main-baner.wrapper {
+		padding: 0 16px;
 	}
 }
 

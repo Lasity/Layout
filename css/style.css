@@ -11,7 +11,7 @@
   font-family: "Montserrat-SemiBold";
   src: url("../fonts/Montserrat-SemiBold.ttf");
 }
-form .forget-password p, .icon_menu .icon_menu__text .icon__p-s p, .error_data__p {
+.main-contact__div_left .form__p_s, .main-contact__div_left.sing__form_left .form__p_s, form .forget-password p, .icon_menu .icon_menu__text .icon__p-s p, .error_data__p {
   font-family: Montserrat-Regular;
   font-style: normal;
   font-size: 10px;
@@ -576,6 +576,10 @@ button:-moz-focus-inner {
   resize: none;
 }
 
+.password-recovery {
+  display: none;
+}
+
 .main-contact__div_left form textarea:focus {
   border: solid 1px #232323;
   color: #232323;
@@ -815,6 +819,8 @@ button:-moz-focus-inner {
   background-size: 200% 100%;
   -webkit-transition: background 0.5s cubic-bezier(0.5, 0.5, 0.5, 0.5), color 0.75s;
   transition: background 0.5s cubic-bezier(0.5, 0.5, 0.5, 0.5), color 0.75s;
+  text-align: center;
+  line-height: 40px;
 }
 .button__white-center:hover {
   background-position: 100% 0;
@@ -1338,21 +1344,15 @@ input[type="radio"].sing-checkbox:checked + label span {
   background-color: #DCDCDC;
 }
 
-.icon_menu-visibility {
-  visibility: visible !important;
-  right: 0 !important;
-}
-
 .icon_menu {
-  position: fixed;
-  right: -100%;
+  position: absolute;
+  display: none;
+  right: 0;
   background-color: #DCDCDC;
   padding: 24px 24px 0;
   width: 360px;
   z-index: 5;
-  visibility: hidden;
-  -webkit-transition: all 0.75s cubic-bezier(0.5, 0.5, 0.5, 0.5);
-  transition: all 0.75s cubic-bezier(0.5, 0.5, 0.5, 0.5);
+  overflow: hidden;
 }
 .icon_menu form .main__p {
   margin-top: 24px;
@@ -1540,6 +1540,10 @@ input[type="radio"].sing-checkbox:checked + label span {
 }
 .filter__button button {
   width: 112px;
+}
+.filter__button .button_black {
+  padding-left: 0;
+  text-align: center;
 }
 .filter__button .filter__button-grey {
   height: 40px;
@@ -1894,9 +1898,7 @@ input[type="radio"].sing-checkbox:checked + label span {
   position: relative;
 }
 .brand__main-info__text .brand-in-catalog {
-  height: 50%;
-  position: absolute;
-  bottom: 0;
+  margin-top: 80px;
   width: 312px;
 }
 .brand__main-info__text .brand-in-catalog button {
@@ -2119,8 +2121,12 @@ input[type="radio"].sing-checkbox:checked + label span {
 }
 
 .datepicker--cell.-selected-,
-.datepicker--cell.-selected-.-focused-,
-.datepicker--cell.-selected-.-current- {
+.datepicker--cell.-selected-.-focus-,
+.datepicker--cell.-selected-.-current-,
+.datepicker--cell.-selected-.-other-month-,
+.datepicker--cell.-selected-.-other-decade-,
+.datepicker--cell.-selected-.-other-month-.-focus-,
+.datepicker--cell.-selected-.-other-decade-.-focus- {
   background-color: #232323;
   color: #fff;
   font-weight: normal;
@@ -2174,13 +2180,19 @@ input[type="radio"].sing-checkbox:checked + label span {
   height: 100%;
 }
 
+.main-baner.wrapper {
+  max-width: unset;
+  padding: 0;
+}
+
 @media (max-width: 1400px) {
   .viewed__conteiner .viewed__conteiner-black .viewed__conteiner-white {
     height: 77px;
   }
 
-  .brand__main-info__text .brand-in-catalog {
-    height: 30%;
+  .main-baner.wrapper {
+    padding: 0 40px;
+    max-width: 1440px;
   }
 }
 @media (max-width: 1200px) {
@@ -2374,6 +2386,10 @@ input[type="radio"].sing-checkbox:checked + label span {
   }
   .history__div .history-order {
     width: 975px;
+  }
+
+  .brand__main-info__text .brand-in-catalog {
+    margin-top: 40px;
   }
 }
 @media (max-width: 900px) {
@@ -2828,6 +2844,10 @@ input[type="radio"].sing-checkbox:checked + label span {
 
   .basket-catalog__div {
     padding: 0;
+  }
+
+  .main-baner.wrapper {
+    padding: 0 16px;
   }
 }
 @media (max-width: 690px) {
