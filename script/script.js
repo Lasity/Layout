@@ -71,10 +71,6 @@ $(document).ready(() => {
         }
     });
 
-    $('#menu__toggle').click(function(){
-        $('.mobile-menu__nav').toggleClass('menu__box');
-    });
-
     $(window).scroll(function() {
         if($(document).width() > 900) {
             if ($(document).scrollTop() >= 112) {
@@ -113,6 +109,13 @@ $(document).ready(() => {
             $('#menu__toggle').prop('checked', false);
         }
         
+    });
+
+    $('#menu__toggle').click(function(){
+        $('.mobile-menu__nav').toggleClass('menu__box');
+        if($('.mobile-menu__nav').hasClass('menu__box') == false) {
+            $(".mobile__ul").slideUp(300);
+        }
     });
 
 
@@ -233,7 +236,15 @@ $(document).ready(() => {
     $('.popup-close').click(function(){    // функция скрытия поп-апа при нажатии на крестик
         $(".popup").fadeOut(300);
     });
-    
+
+    $('.section__li').click(function(){    // функция показа и скрытия подкатегорий в мобильном меню
+        if($(this).find(".mobile__ul").css("display")=='none'){
+            $(this).find(".mobile__ul").slideDown(300);
+        } else {
+            $(this).find(".mobile__ul").slideUp(300);
+        }
+    });
+
 });
 
 function hideSizeTable() {  //закрытие таблицы размеров 
@@ -252,5 +263,10 @@ function hidePopup(popup) {
 function hideAccountLogin() {  //закрытие формы входа на странице вход или регистрация 
     $(".account-login").slideUp(300);
     $(".password-recovery").slideDown(300);
+}
+
+function hidePasswordRecovery() {  //открыие формы входа на странице вход или регистрация 
+    $(".password-recovery").slideUp(300);
+    $(".account-login").slideDown(300);
 }
 

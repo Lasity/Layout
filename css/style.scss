@@ -227,7 +227,6 @@ button {
 .main-baner {
 	display: flex;
 	background: $light-grey;
-	padding-bottom: 40px;
 	margin: 0 auto;
 
 	a {
@@ -2079,7 +2078,7 @@ input[type="radio"].sing-checkbox:checked + label span{
 	.mobile-menu__nav {
 		width: 100%;
 		position: fixed;
-		top: 72px;
+		top: -100%;
 		background-color: $grey;
 		padding: 40px;
 		color: $black;
@@ -2089,13 +2088,17 @@ input[type="radio"].sing-checkbox:checked + label span{
 		flex-direction: column;
 		justify-content: space-between;
 		visibility: hidden;
-		right: -100%;
+		right: 0;
 		transition:all .75s linear;
 		z-index: 6;
 
 		.mobile-menu__ul {
 			overflow-y: scroll;
 			height: calc(100% - 80px);
+		}
+
+		.section__li {
+			cursor: pointer;
 		}
 
 		ul li{
@@ -2107,8 +2110,12 @@ input[type="radio"].sing-checkbox:checked + label span{
 			}
 		}
 
-		.mobile__ul li{
-			margin-bottom: 16px;
+		.mobile__ul {
+			display: none;
+
+			li{
+				margin-bottom: 16px;
+			}
 		}
 
 		p {
@@ -2139,7 +2146,7 @@ input[type="radio"].sing-checkbox:checked + label span{
 
 .menu__box {
 	visibility: visible !important;
-	right: 0 !important;
+	top: 72px !important;
 }
 
 .mobile-on {
@@ -2296,7 +2303,15 @@ input[type="radio"].sing-checkbox:checked + label span{
 
 .main-baner.wrapper {
 	max-width: unset;
-	padding: 0;
+	padding: 0 0 40px 0;
+}
+
+.g-recaptcha {
+	-webkit-filter: grayscale(1);
+	filter: grayscale(1);
+}
+.sing .g-recaptcha {
+	margin-bottom: 24px;
 }
 
 
@@ -2314,7 +2329,7 @@ input[type="radio"].sing-checkbox:checked + label span{
 	}
 
 	.main-baner.wrapper {
-		padding: 0 40px;
+		padding: 0 40px 40px;
 		max-width: 1440px;
 	}
 }
@@ -2324,7 +2339,7 @@ input[type="radio"].sing-checkbox:checked + label span{
 		margin-left: 12px;
 	}
 
-	.main-baner {
+	.main-baner.wrapper {
 		padding-bottom: 24px;
 
 		a {
@@ -2862,7 +2877,7 @@ input[type="radio"].sing-checkbox:checked + label span{
 		}
 	}
 
-	.main-baner {
+	.main-baner.wrapper {
 		flex-direction: column;
 		padding-right: 24px;
 
@@ -2988,7 +3003,7 @@ input[type="radio"].sing-checkbox:checked + label span{
 }
 
 @media (max-width: 550px) {
-	.main-baner{
+	.main-baner.wrapper{
 		padding-right: 0;
 
 		a img {
