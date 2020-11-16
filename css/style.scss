@@ -1092,12 +1092,20 @@ button {
 }
 
 
-form .forget-password p {
+form .forget-password p, {
 	margin-top: 8px;
 	color: $black;
 	@extend %r10;
-	margin-bottom: 24px;
 	cursor: pointer;
+	margin-bottom: 0;
+
+	a{
+		color: $black;
+	}
+}
+
+.sing-authorization__div form .button_black {
+	margin-top: 24px;
 }
 
 .sing__h4 {

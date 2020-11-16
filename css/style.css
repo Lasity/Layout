@@ -1119,8 +1119,15 @@ button:-moz-focus-inner {
 form .forget-password p {
   margin-top: 8px;
   color: #232323;
-  margin-bottom: 24px;
   cursor: pointer;
+  margin-bottom: 0;
+}
+form .forget-password p a {
+  color: #232323;
+}
+
+.sing-authorization__div form .button_black {
+  margin-top: 24px;
 }
 
 .sing__h4 {
