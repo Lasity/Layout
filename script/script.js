@@ -73,31 +73,38 @@ $(document).ready(() => {
 
     $(window).scroll(function() {
         if($(document).width() > 900) {
-            if ($(document).scrollTop() >= 112) {
-                $(".icon_menu").css('top', '80px');
-                $(".catalog-filter").css('top', '120px');
-            } else {
-                $(".icon_menu").css('top', '112px');
-                $(".catalog-filter").css('top', '192px');
-            }
-        } else {
-            $(".icon_menu").css('top', '72px');
-            $(".catalog-filter").css('top', '72px');
-        }
-
-        if($(document).width() > 900) {
-            if ($(this).scrollTop() >= 40) {
+            if ($(this).scrollTop() >= 32) {
                 $(".header-top-nav").addClass("fix").css('top', '0');
                 $(".header-bottom-nav").addClass("fix").css('top', '80px');
+                $(".name-page__div").addClass("fix").css('top', '120px');
+                if($('.name-page__div').length == 0){
+                    $("main").css('padding-top', '120px');
+                } else {
+                    $("main").css('padding-top', '140px');
+                }
             } else {
                 $(".header-top-nav").removeClass("fix");
                 $(".header-bottom-nav").removeClass("fix");
+                $(".name-page__div").removeClass("fix");
+                $("main").css('padding-top', '0');
             }
         } else {
-            if ($(this).scrollTop() >= 72) {
+            if ($(this).scrollTop() !=0) {
                 $(".header-top-nav").addClass("fix").css('top', '0');
+                $(".name-page__div").addClass("fix").css('top', '72px');
+                if($('.name-page__div').length == 0){
+                    $("main").css('padding-top', '72px');
+                } else {
+                    $("main").css('padding-top', '112px');
+                }
             } else {
                 $(".header-top-nav").removeClass("fix");
+                $("name-page__div").removeClass("fix");
+                if($('.name-page__div').length == 0){
+                    $("main").css('padding-top', '0');
+                } else {
+                    $("main").css('padding-top', '32px');
+                }
             }
         }
         
@@ -119,51 +126,22 @@ $(document).ready(() => {
     });
 
 
-    $(window).scroll(function() {
-        
-        if($(document).width() > 900) {
-            if ($(document).scrollTop() >= 112) {
-                $(".icon_menu").css('top', '80px');
-                let filter = $(".sorting__text");
-                if( filter != null ) {
-                    $(".catalog-filter").css('top', '160px');
-                    $(".name-page__div").addClass('fix').css('top', '120px');
-                }
-            } else {
-                $(".icon_menu").removeClass("fix");
-                let filter = $(".sorting__text");
-                if( filter != null ) {
-                    $(".catalog-filter").removeClass("fix");
-                    $(".name-page__div").removeClass("fix");
-                }
-            }
-        } else {
-            $(".icon_menu").css('top', '72px');
-            let filter = $(".sorting__text");
-            if( filter != null ) {
-                $(".catalog-filter").css('top', '112px');
-                $(".name-page__div").addClass('fix').css('top', '72px');
-            }
-            
+    $("#slider-range").slider({
+        range: true,
+        min: $("#input-hidden").attr('data-min')*1,
+        max: $("#input-hidden").attr('data-max')*1,
+        values: [ $("#input-hidden").attr('data-min'), $("#input-hidden").attr('data-max') ],
+        slide: function( event, ui ) {
+            $( "#amount1" ).val(ui.values[ 0 ] + "руб");
+            $( "#amount2" ).val(ui.values[ 1 ] + "руб");
         }
-
-        if($(document).width() > 900) {
-            if ($(this).scrollTop() >= 40) {
-                $(".header-top-nav").addClass("fix").css('top', '0');
-                $(".header-bottom-nav").addClass("fix").css('top', '80px');
-            } else {
-                $(".header-top-nav").removeClass("fix");
-                $(".header-bottom-nav").removeClass("fix");
-            }
-        } else {
-            if ($(this).scrollTop() >= 72) {
-                $(".header-top-nav").addClass("fix").css('top', '0');
-            } else {
-                $(".header-top-nav").removeClass("fix");
-            }
-        }
-        
     });
+    
+    $( "#amount1" ).val($( "#slider-range" ).slider( "values", 0 ) +
+        " руб");
+    $( "#amount2" ).val($( "#slider-range" ).slider( "values", 1 ) +
+        " руб ");
+
 
     // $(document).click(function (e){ // событие клика по веб-документу
     //     let div = $(".catalog-filter"); // тут указываем ID элемента

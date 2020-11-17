@@ -6,6 +6,9 @@
 	<link href="../css/style.css" rel="stylesheet">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" integrity="sha512-uto9mlQzrs59VwILcLiRYeLKPPbS/bT71da/OEBYEwcdNUk8jYIy+D176RYoop1Da+f9mvkYrmj5MCLZWEtQuA==" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css" integrity="sha512-urpIFwfLI9ZDL81s6eJjgBF7LpG+ROXjp1oNwTj4gSlCw00KiV1rWBrfszV3uf5r+v621fsAwqvy1wRJeeWT/A==" crossorigin="anonymous" />
 	<script src="../script/script.js"></script>
 	<title>Каталог товаров</title>
 </head>
@@ -293,15 +296,13 @@
 							</div>
 
 							<div class="filter-price category">
-								<h3>цЕНА</h3>
-								<div>
-									<p>1.290,00 руб</p>
-									<p>53.877,00 руб</p>
+								<h3>Цена</h3>
+								<div class="filter-price__input">
+									<input type="text" id="amount1" />
+									<input type="text" id="amount2" />
 								</div>
-								<div class="filter-slider">
-									<div></div>
-									<span></span>
-								</div>
+								<div id="slider-range"></div>
+								<input type="text" style="display: none" id="input-hidden" data-min="0" data-max="5000"/>
 							</div>
 						</div>	
 					</div>	
