@@ -1413,6 +1413,7 @@ input[type="radio"].sing-checkbox:checked + label span{
 	width: 360px;
 	z-index: 6;
 	overflow: hidden;
+	top: 112px;
 
 	form {
 		.main__p {
@@ -1562,27 +1563,22 @@ input[type="radio"].sing-checkbox:checked + label span{
 	position: relative;
 }
 
-.catalog-filter-visibility {
-	visibility: visible !important;
-	left: 0 !important;
-}
-
 .catalog-filter {
 	position: fixed;
+	display: none;
 	width: 360px;
 	top: 192px;
-	left: -100%;
+	left: 0;
 	background-color: $grey;
 	z-index: 5;
-	visibility: hidden;
-	transition: all .75s cubic-bezier(0.5, 0.5, 0.5, 0.5);
+	height: calc(100vh - 192px);
 	
 	.scrol {
 		overflow-y: scroll;
+		height: calc(100% - 100px);
 
 		.filter__text {
 			margin: 24px 0 24px 40px;
-			height: 455px;
 
 			h3 {
 				color: $black;
@@ -1824,21 +1820,23 @@ input[type="radio"].sing-checkbox:checked + label span{
 		.product__size {
 			margin-bottom: 80px;
 
-			div {
+			.product__button-size {
+				display: flex;
 				margin-top: 8px;
-			}
+				margin-bottom: 8px;
 
-			input {
-				display: none;
-			}
+				input {
+					display: none;
+				}
 
-			label {
-				padding: 8px 12px;
-				padding-left: 12px;
-				padding-right: 12px;
+				label {
+					padding-left: 12px;
+					padding-right: 12px;
+					margin-right: 4px;
 
-				&:active {
-					margin-right: -2px;
+					&:active {
+						margin-left: -2px;
+					}
 				}
 			}
 
@@ -2688,6 +2686,12 @@ input[type="radio"].sing-checkbox:checked + label span{
 
 	.header-top-nav {
 		height: 72px;
+		position: fixed;
+		z-index: 7;
+	}
+
+	main {
+		padding-top: 72px;
 	}
 
 	.order__div, .thanks__button {
@@ -2745,6 +2749,10 @@ input[type="radio"].sing-checkbox:checked + label span{
 		.main-info__div_right {
 			max-width: unset;
 		}
+	}
+
+	.catalog-filter {
+		height: calc(100vh - 112px);
 	}
 }
 

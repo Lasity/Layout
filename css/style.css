@@ -1402,6 +1402,7 @@ input[type="radio"].sing-checkbox:checked + label span {
   width: 360px;
   z-index: 6;
   overflow: hidden;
+  top: 112px;
 }
 .icon_menu form .main__p {
   margin-top: 24px;
@@ -1527,28 +1528,22 @@ input[type="radio"].sing-checkbox:checked + label span {
   position: relative;
 }
 
-.catalog-filter-visibility {
-  visibility: visible !important;
-  left: 0 !important;
-}
-
 .catalog-filter {
   position: fixed;
+  display: none;
   width: 360px;
   top: 192px;
-  left: -100%;
+  left: 0;
   background-color: #DCDCDC;
   z-index: 5;
-  visibility: hidden;
-  -webkit-transition: all 0.75s cubic-bezier(0.5, 0.5, 0.5, 0.5);
-  transition: all 0.75s cubic-bezier(0.5, 0.5, 0.5, 0.5);
+  height: calc(100vh - 192px);
 }
 .catalog-filter .scrol {
   overflow-y: scroll;
+  height: calc(100% - 100px);
 }
 .catalog-filter .scrol .filter__text {
   margin: 24px 0 24px 40px;
-  height: 455px;
 }
 .catalog-filter .scrol .filter__text h3 {
   color: #232323;
@@ -1757,19 +1752,23 @@ input[type="radio"].sing-checkbox:checked + label span {
 .product__div .product-top .product__size {
   margin-bottom: 80px;
 }
-.product__div .product-top .product__size div {
+.product__div .product-top .product__size .product__button-size {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   margin-top: 8px;
+  margin-bottom: 8px;
 }
-.product__div .product-top .product__size input {
+.product__div .product-top .product__size .product__button-size input {
   display: none;
 }
-.product__div .product-top .product__size label {
-  padding: 8px 12px;
+.product__div .product-top .product__size .product__button-size label {
   padding-left: 12px;
   padding-right: 12px;
+  margin-right: 4px;
 }
-.product__div .product-top .product__size label:active {
-  margin-right: -2px;
+.product__div .product-top .product__size .product__button-size label:active {
+  margin-left: -2px;
 }
 .product__div .product-top .product__size .size-table {
   position: relative;
@@ -2590,6 +2589,12 @@ input[type="radio"].sing-checkbox:checked + label span {
 
   .header-top-nav {
     height: 72px;
+    position: fixed;
+    z-index: 7;
+  }
+
+  main {
+    padding-top: 72px;
   }
 
   .order__div, .thanks__button {
@@ -2649,6 +2654,10 @@ input[type="radio"].sing-checkbox:checked + label span {
   }
   .brand-bottom .main-info__div_right {
     max-width: unset;
+  }
+
+  .catalog-filter {
+    height: calc(100vh - 112px);
   }
 }
 @media (max-width: 820px) {

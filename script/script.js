@@ -19,27 +19,31 @@ $(document).ready(() => {
     });
 
     $('.header-top-nav__user').click(function(){  //открытие всплывающего окна авторизации
-        $(this).addClass('header-invert');
-        $('.user-popup').slideDown();
+        if($('.user-popup').css('display') == 'none'){
+            $(this).addClass('header-invert');
+            $('.user-popup').slideDown(300);
+        }
     });
 
     $(document).mouseup(function (e){ // закрытие всплывающего окна авторизации
         let div = $(".user-popup"); // тут указываем ID элемента
         if (!div.is(e.target) && div.has(e.target).length === 0) { // и не по его дочерним элементам
-            $(div).slideUp();
+            $(div).slideUp(300);
         }
         $('.header-top-nav__user').removeClass('header-invert');
     });
 
     $('.header-top-nav__cart').click(function(){  //открытие всплывающего окна корзины
-        $(this).toggleClass('header-invert');
-        $('.basket-popup').slideDown();
+        if($('.basket-popup').css('display') == 'none'){
+            $(this).toggleClass('header-invert');
+            $('.basket-popup').slideDown(300);
+        }
     });
 
     $(document).mouseup(function (e){ // закрытие всплывающего окна корзины
         let div = $('.basket-popup'); // тут указываем ID элемента
         if (!div.is(e.target) && div.has(e.target).length === 0) { // и не по его дочерним элементам
-            $(div).slideUp();
+            $(div).slideUp(300);
         }
         $('.header-top-nav__cart').removeClass('header-invert');
     });
@@ -82,11 +86,17 @@ $(document).ready(() => {
                 } else {
                     $("main").css('padding-top', '140px');
                 }
+                $('.icon_menu').css('top', '80px');
+                $('.catalog-filter').css('top', '160px');
+                $('.catalog-filter').css('height', 'calc(100vh - 160px)');
             } else {
                 $(".header-top-nav").removeClass("fix");
                 $(".header-bottom-nav").removeClass("fix");
                 $(".name-page__div").removeClass("fix");
                 $("main").css('padding-top', '0');
+                $('.icon_menu').css('top', '112px');
+                $('.catalog-filter').css('top', '192px');
+                $('.catalog-filter').css('height', 'calc(100vh - 192px)');
             }
         } else {
             if ($(this).scrollTop() !=0) {
@@ -94,16 +104,19 @@ $(document).ready(() => {
                 $(".name-page__div").addClass("fix").css('top', '72px');
                 if($('.name-page__div').length == 0){
                     $("main").css('padding-top', '72px');
+                    $('.icon_menu').css('top', '72px');
                 } else {
                     $("main").css('padding-top', '112px');
+                    $('.icon_menu').css('top', '112px');
                 }
+                $('.catalog-filter').css('top', '112px');
             } else {
                 $(".header-top-nav").removeClass("fix");
                 $("name-page__div").removeClass("fix");
                 if($('.name-page__div').length == 0){
-                    $("main").css('padding-top', '0');
+                    $("main").css('padding-top', '72px');
                 } else {
-                    $("main").css('padding-top', '32px');
+                    $("main").css('padding-top', '112px');
                 }
             }
         }
@@ -157,12 +170,12 @@ $(document).ready(() => {
 
      $('.filter').click(function(){
         let filter = $('.catalog-filter');
-        if ( $(filter).hasClass("catalog-filter-visibility") ) {
-            $(filter).removeClass('catalog-filter-visibility');
-            $(".filter-sorting__img").removeClass('sort__img-off');
+        if ( $(filter).css('display') == 'none') {
+            $(filter).slideDown(300);
+            $(".filter-sorting__img").addClass('sort__img-off');
         } else {
-             $(filter).addClass('catalog-filter-visibility');
-             $(".filter-sorting__img").addClass('sort__img-off');
+            $(filter).slideUp(300);
+            $(".filter-sorting__img").removeClass('sort__img-off');
         }
         
     });

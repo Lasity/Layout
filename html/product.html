@@ -10,7 +10,225 @@
 	<title>Товар</title>
 </head>
 <body>
-	
+	<header>
+		<div class="header-contact">
+			<div class="header-contact__div wrapper">
+				<div class="header-contact_phone">Тел. 
+					<a href="tel:+7(987)654-32-10">+7 (987) 654-32-10</a>
+				</div>
+				<div class="header-contact_time-work">
+					Часы работы: с 11:00 до 21:00
+				</div>
+			</div>
+		</div>
+
+		<div class="header-top-nav">
+			<div class="header-top-nav__div wrapper">
+				<div class="header-top-nav__logo">
+					<a href="index.html">
+						<img src="../img/logo.png" alt="logo">
+					</a>
+				</div>
+				<div class="header-top-nav__search">
+					<input type="search" name="search" placeholder="Я хочу купить"> 
+					<button>
+						<img src="../img/search.png" alt="search">
+					</button>
+				</div>
+				<div class="header-top-nav__icon">
+					<div class="header-top-nav__user">
+						<img src="../img/user.png" alt="user">
+					</div>
+					<div class="header-top-nav__like">
+						<img src="../img/heart_outline.png" alt="like">
+					</div>
+					<div class="header-top-nav__cart">
+						<img src="../img/bar_top.png" alt="cart">
+					</div>
+					<div class="hamburger-menu">
+						<input id="menu__toggle" type="checkbox" />
+						<label class="menu__btn" for="menu__toggle">
+							<span></span>
+						</label>
+					</div>
+				</div>				
+			</div>
+		</div>
+
+		<div class="header-bottom-nav">
+			<div class="header-bottom-nav__div wrapper">
+				<nav class="header-bottom-nav__menu ">
+					<ul class="">
+						<li>
+							<a href="catalog.html">Одежда</a>
+						</li>
+						<li>
+							<a href="#">Обувь</a>
+						</li>
+						<li>
+							<a href="#">Сумки</a>
+						</li>
+						<li>
+							<a href="#">Аксессуары</a>
+						</li>
+						<li>
+							<a href="#">Новинки</a>
+						</li>
+						<li>
+							<a href="#">Распродажа</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+			
+		</div>
+		<div class="mobile-menu__div wrapper">
+			<nav class="mobile-menu__nav">
+				<ul class="mobile-menu__ul">
+					<li>
+						<p>Одежда</p>
+						<ul class="mobile__ul">
+							<li><a href="#">Мужчины</a></li>
+							<li><a href="#">Женщины</a></li>
+							<li><a href="#">Дети</a></li>
+							<li><a href="#">Кенгуру</a></li>
+						</ul>
+					</li>
+					<li>
+						<p>Обувь<p>
+							<ul class="mobile__ul">
+								<li><a href="#">Мужчины</a></li>
+								<li><a href="#">Женщины</a></li>
+								<li><a href="#">Дети</a></li>
+								<li><a href="#">Кенгуру</a></li>
+							</ul>
+						</li>
+						<li>
+							<p>Сумки</p>
+							<ul class="mobile__ul">
+								<li><a href="#">Мужчины</a></li>
+								<li><a href="#">Женщины</a></li>
+								<li><a href="#">Дети</a></li>
+								<li><a href="#">Кенгуру</a></li>
+							</ul>
+						</li>
+						<li>
+							<p>Аксессуары</p>
+						</li>
+						<li>
+							<p>Новинки</p>
+						</li>
+						<li>
+							<p>Распродажа</p>
+						</li>
+					</ul>
+					<div class="mobile__a">
+						<a href="#">личный кабинет</a>
+						<a href="#">Избранное</a>
+					</div>
+				</nav>
+			</div>
+
+			<div class="icon_menu user-popup">
+				<form action="">
+					<p class="main__p">E-mail*</p>
+					<input type="email" name="login">
+					<p class="main__p">Пароль*</p>
+					<input type='password' name='password'/>
+					<div class="forget-password">
+						<p>Забыли пароль?</p>
+					</div>
+					<button class="button__disabled button__icon-menu" type="submit">Авторизироваться</button>
+				</form>
+				<div class="icon_menu__text">
+					<p class="main__p">Если у Вас еще нет аккаунта, то зарегистрируйтесь</p>
+					<div class="icon__p-s">
+						<p>Совершать покупки станет еще приятние</p>
+						<p>Вы будете получать персональные скидки</p>
+						<p>Оформление заказа будет занимать намного меньше времени</p>
+					</div>
+				</div>
+				<button class="button_black button__icon-menu">Перейти к регистрации</button>
+			</div>
+
+			<div class="icon_menu basket-popup">
+				<div class="catalog_menu">
+					<div class="catalog_menu__contener">
+						<div class="catalog_menu__text">
+							<div class="text-top">
+								<p class="catalog-name">Туника</p>
+								<p class="catalog-brend">LIVIANA CONTI</p>
+								<p class="catalog-cost">₽ 52.877,00 х 1</p>
+							</div>
+							<div class="text-size">
+								<p class="catalog-size">Размер: M</p>
+								<a href="#">Изменить</a>
+							</div>
+							<div class="basket-delete catalog-delete">
+								<div class="basket-delete__img">
+									<img src="../img/close_big.png" alt="">
+								</div>
+								<div class="basket-delete__text">Удалить</div>
+							</div>
+						</div>
+						<div class="catalog_menu__img">
+							<img src="../img/Rectangle17.png" alt="">
+						</div>
+					</div>
+
+					<div class="catalog_menu__contener">
+						<div class="catalog_menu__text">
+							<div class="text-top">
+								<p class="catalog-name">Туника</p>
+								<p class="catalog-brend">LIVIANA CONTI</p>
+								<p class="catalog-cost">₽ 52.877,00 х 1</p>
+							</div>
+							<div class="text-size">
+								<p class="catalog-size">Размер: M</p>
+								<a href="#">Изменить</a>
+							</div>
+							<div class="basket-delete catalog-delete">
+								<div class="basket-delete__img">
+									<img src="../img/close_big.png" alt="">
+								</div>
+								<div class="basket-delete__text">Удалить</div>
+							</div>
+						</div>
+						<div class="catalog_menu__img">
+							<img src="../img/Rectangle17.png" alt="">
+						</div>
+					</div>
+
+					<div class="catalog_menu__contener">
+						<div class="catalog_menu__text">
+							<div class="text-top">
+								<p class="catalog-name">Туника</p>
+								<p class="catalog-brend">LIVIANA CONTI</p>
+								<p class="catalog-cost">₽ 52.877,00 х 1</p>
+							</div>
+							<div class="text-size">
+								<p class="catalog-size">Размер: M</p>
+								<a href="#">Изменить</a>
+							</div>
+							<div class="basket-delete catalog-delete">
+								<div class="basket-delete__img">
+									<img src="../img/close_big.png" alt="">
+								</div>
+								<div class="basket-delete__text">Удалить</div>
+							</div>
+						</div>
+						<div class="catalog_menu__img">
+							<img src="../img/Rectangle17.png" alt="">
+						</div>
+					</div>
+
+				</div>
+				<p class="catalog_menu-sum">Итого: ₽ 1.243.512,00</p>
+				<button class="button_black button__icon-menu">Перейти в корзину</button>
+			</div>
+			
+			
+		</header>
 
 	<main>
 		<div class="name-page__div">
