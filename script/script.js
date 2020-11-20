@@ -125,22 +125,25 @@ $(document).ready(() => {
         }
     });
 
-
-    $("#slider-range").slider({
-        range: true,
-        min: $("#input-hidden").attr('data-min')*1,
-        max: $("#input-hidden").attr('data-max')*1,
-        values: [ $("#input-hidden").attr('data-min'), $("#input-hidden").attr('data-max') ],
-        slide: function( event, ui ) {
-            $( "#amount1" ).val(ui.values[ 0 ] + "руб");
-            $( "#amount2" ).val(ui.values[ 1 ] + "руб");
-        }
-    });
+    if($('.catalog-filter').length >0){
+        $("#slider-range").slider({
+            range: true,
+            min: $("#input-hidden").attr('data-min')*1,
+            max: $("#input-hidden").attr('data-max')*1,
+            values: [ $("#input-hidden").attr('data-min'), $("#input-hidden").attr('data-max') ],
+            slide: function( event, ui ) {
+                $( "#amount1" ).val(ui.values[ 0 ] + " руб");
+                $( "#amount2" ).val(ui.values[ 1 ] + " руб");
+                console.log($('#input-hidden').attr('data-max'));
+            }
+        });
     
-    $( "#amount1" ).val($( "#slider-range" ).slider( "values", 0 ) +
-        " руб");
-    $( "#amount2" ).val($( "#slider-range" ).slider( "values", 1 ) +
-        " руб ");
+        $( "#amount1" ).val($( "#slider-range" ).slider( "values", 0 ) +
+            " руб");
+        $( "#amount2" ).val($( "#slider-range" ).slider( "values", 1 ) +
+            " руб ");
+    }
+    
 
 
     // $(document).click(function (e){ // событие клика по веб-документу

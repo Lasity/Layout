@@ -428,14 +428,27 @@ button {
 		width: 100%;
 		display: flex;
 		align-items: center;
+
 		.page{
 			@extend %r14;
 			color: $black;
 			cursor: pointer;
+			display: flex;
+			justify-self: center;
 
 			span {
 				@extend %sb14;
+				display: inline-flex;
+				justify-content: center;
 			}
+		}
+
+		.page__arrow-r {
+			display: block;
+			width: 16px;
+			height: 16px;
+			background-image: url('../img/page_arrow.png');
+			background-size: 100% 100%;
 		}
 	}
 }
@@ -964,9 +977,12 @@ button {
 
 .basket-thing__cost, .basket-thing__count {
 	width: 100px;
-	text-align: center;
 	color: $black;
 
+}
+
+.basket-thing__count {
+	text-align: center;
 }
 
 .count__input {
@@ -999,7 +1015,6 @@ button {
 	height: 35px;
 	display: flex;
 	align-items: center;
-	justify-content: center;
 }
 
 
@@ -1796,7 +1811,7 @@ input[type="radio"].sing-checkbox:checked + label span{
 			p {
 				margin-bottom: 16px;
 
-				&:last-child {
+				&:last-child, &:nth-child(2) {
 					margin-bottom: 0;
 				}
 			}
@@ -1813,7 +1828,12 @@ input[type="radio"].sing-checkbox:checked + label span{
 				margin-top: 8px;
 			}
 
-			button {
+			input {
+				display: none;
+			}
+
+			label {
+				padding: 8px 12px;
 				padding-left: 12px;
 				padding-right: 12px;
 
@@ -2187,7 +2207,7 @@ input[type="radio"].sing-checkbox:checked + label span{
 }
 
 .page-on {
-	display: none;
+	display: none !important;
 }
 
 .brand-veiwed a{
@@ -2540,7 +2560,7 @@ input[type="radio"].sing-checkbox:checked + label span{
 
 	.for-filter {
 		.page, .sorting {
-			display: none;
+			display: none !important;
 		}
 
 		.filter {
@@ -3155,11 +3175,11 @@ input[type="radio"].sing-checkbox:checked + label span{
 	}
 
 	.account-page, .page-off {
-		display: none;
+		display: none !important;
 	}
 
 	.page-active, .page-on {
-		display: block;		
+		display: block !important;		
 	}
 
 	.order__div, .thanks__button {
