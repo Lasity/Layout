@@ -894,6 +894,10 @@ button {
 
 .basket-promo__div {
 	width: 360px;
+
+	.button_black {
+		background-image: linear-gradient(to left,$grey,$grey 50%,$black 50%,$black);
+	}
 }
 
 .basket-promo__div-top {
@@ -1145,6 +1149,10 @@ form .forget-password p, {
 	.sing__p {
 		margin-top: 16px;
 	}
+}
+
+.sing__div-right input:-webkit-autofill {
+    -webkit-box-shadow: inset 0 0 0 50px $grey;
 }
 
 
@@ -1404,6 +1412,7 @@ input[type="radio"].sing-checkbox:checked + label span{
 	}
 }
 
+
 .icon_menu {
 	position: fixed;
 	display: none;
@@ -1434,6 +1443,10 @@ input[type="radio"].sing-checkbox:checked + label span{
 		margin-top: 4px;
 	}
 
+	input:-webkit-autofill {
+    	-webkit-box-shadow: inset 0 0 0 50px $grey;
+	}
+
 	.forget-password p{
 		margin-bottom: 16px;
 	}
@@ -1443,6 +1456,10 @@ input[type="radio"].sing-checkbox:checked + label span{
 		width: calc(100% + 48px);
 		margin: 0 -24px;
 		text-align: left;
+	}
+
+	.button_black {
+		background-image: linear-gradient(to left,$grey,$grey 50%,$black 50%,$black);
 	}
 
 	.button__disabled {
@@ -1626,6 +1643,7 @@ input[type="radio"].sing-checkbox:checked + label span{
 	.button_black {
 		padding-left: 0;
 		text-align: center;
+		background-image: linear-gradient(to left,$grey,$grey 50%,$black 50%,$black);
 	}
 
 	.filter__button-grey {
@@ -1734,6 +1752,7 @@ input[type="radio"].sing-checkbox:checked + label span{
 
 	.product-top {
 		display: flex;
+		height: calc(100vh - 192px);
 
 		.product__slider {
 			display: flex;
@@ -1743,7 +1762,6 @@ input[type="radio"].sing-checkbox:checked + label span{
 				max-width: 99px;
 				width: 99px;
 				margin-right: 16px;
-
 
 				img {
 					width: 100%;
@@ -1758,18 +1776,30 @@ input[type="radio"].sing-checkbox:checked + label span{
 			}
 
 			.product__photo {
-				max-width: 560px;
-				max-height: 620px;
 				width: 560px;
-				position: relative;
 
-				.thing__like {
-					top: 16px;
-					right: 16px;
+				.slick-list {
+					height: 100%;
+
+					.slick-track {
+						height: 100%;
+
+						.slick-slide div {
+							height: 100%;
+						}
+					}
 				}
+				// position: relative;
+
+				// .thing__like {
+				// 	top: 16px;
+				// 	right: 16px;
+				// }
 
 				img {
 					width: 100%;
+					height: 100%;
+					object-fit: cover;
 				}
 			}
 		}
@@ -2133,7 +2163,6 @@ input[type="radio"].sing-checkbox:checked + label span{
 		background-color: $grey;
 		padding: 40px;
 		color: $black;
-		@extend %m16caps;
 		height: calc(100vh - 72px);
 		display: flex;
 		flex-direction: column;
@@ -2150,15 +2179,14 @@ input[type="radio"].sing-checkbox:checked + label span{
 
 		.section__li {
 			cursor: pointer;
+
+			p {
+				@extend %m16caps;
+			}
 		}
 
 		ul li{
 			list-style-type: none;
-
-			a {
-				color: $black;
-				@extend %r14;
-			}
 		}
 
 		.mobile__ul {
@@ -2166,6 +2194,11 @@ input[type="radio"].sing-checkbox:checked + label span{
 
 			li{
 				margin-bottom: 16px;
+
+				a {
+					color: $black;
+					@extend %r14;
+				}
 			}
 		}
 
@@ -2361,10 +2394,49 @@ input[type="radio"].sing-checkbox:checked + label span{
 	-webkit-filter: grayscale(1);
 	filter: grayscale(1);
 }
-.sing .g-recaptcha {
+
+.sing .recaptcha {
 	margin-bottom: 24px;
 }
 
+.sing__contener_right .button_black {
+	background-image: linear-gradient(to left,$grey,$grey 50%,$black 50%,$black);
+}
+
+ #checkout-address {
+ 	padding-bottom: 32px;
+}
+
+.recaptcha {
+	margin-top: 16px;
+}
+
+.div__input {
+
+	p {
+		margin-top: 16px;
+		@extend %r12;
+		margin-bottom: 4px;
+	}
+
+	input, textarea {
+		width: 100%;
+		@extend %r12;
+		color: $black;
+		padding: 8px;
+		border: 1px solid $black;
+		outline: none;
+	}
+
+	textarea {
+		height: 114px;
+		resize: none;
+	}
+}
+
+.sing__form_left.div__input input{
+	background-color: $grey;
+}
 
 
 
@@ -2754,6 +2826,9 @@ input[type="radio"].sing-checkbox:checked + label span{
 	.catalog-filter {
 		height: calc(100vh - 112px);
 	}
+	.product__div .product-top {
+		height: 100%;
+	}
 }
 
 @media (max-width: 820px) {
@@ -3100,6 +3175,10 @@ input[type="radio"].sing-checkbox:checked + label span{
 
 	.viewed__conteiner .contener__a {
 		flex-basis: 100%;
+	}
+
+	.product__div .product-top .product__slider {
+		margin: 0 -16px;
 	}
 
 	.product__div .product-top .product__slider .product__photo, .product__div .product-top .product__text {

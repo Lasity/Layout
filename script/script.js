@@ -239,6 +239,41 @@ $(document).ready(() => {
         }
     });
 
+
+
+
+    // $('.slider-for').slick({
+    //     slidesToShow: 1,
+    //     slidesToScroll: 1,
+    //     arrows: false,
+    //     fade: true,
+    //     vertical: false,
+    //     asNavFor: '.slider-nav'
+    // });
+
+    // $('.slider-nav').slick({
+    //     slidesToShow: 3,
+    //     slidesToScroll: 1,
+    //     asNavFor: '.slider-for',
+    //     dots: true,
+    //     // centerMode: true,
+    //     vertical: true,
+    //     focusOnSelect: true
+    // });
+
+    // if($('.product__div').length != 0) {
+    //     var lastScrollTop = 0;
+    //     $(window).scroll(function(event){
+    //         var st = $(this).scrollTop();
+    //         if (st > lastScrollTop){
+    //             // $('.slider-for').slick('slickNext');
+    //         } else {
+    //         // upscroll code
+    //         }
+    //         lastScrollTop = st;
+    //     });
+    // }
+
 });
 
 function hideSizeTable() {  //закрытие таблицы размеров 
