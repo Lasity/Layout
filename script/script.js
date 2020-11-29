@@ -29,8 +29,9 @@ $(document).ready(() => {
         let div = $(".user-popup"); // тут указываем ID элемента
         if (!div.is(e.target) && div.has(e.target).length === 0) { // и не по его дочерним элементам
             $(div).slideUp(300);
+            $('.header-top-nav__user').removeClass('header-invert');
         }
-        $('.header-top-nav__user').removeClass('header-invert');
+        
     });
 
     $('.header-top-nav__cart').click(function(){  //открытие всплывающего окна корзины
@@ -44,8 +45,8 @@ $(document).ready(() => {
         let div = $('.basket-popup'); // тут указываем ID элемента
         if (!div.is(e.target) && div.has(e.target).length === 0) { // и не по его дочерним элементам
             $(div).slideUp(300);
+            $('.header-top-nav__cart').removeClass('header-invert');
         }
-        $('.header-top-nav__cart').removeClass('header-invert');
     });
     
     $('.header-top-nav__search button').click(function(){
@@ -133,7 +134,7 @@ $(document).ready(() => {
             initProductSlider();
         } else {
             if ($('.product__photo ').hasClass('slick-initialized')) {
-                $('.product__photo ').unslick();
+                $('.product__photo').slick('unslick');
             }
         }
         
@@ -282,11 +283,25 @@ $(document).ready(() => {
         $('html, body').animate({
             scrollTop: big_photo_top-top_bar_height // класс объекта к которому приезжаем
         }, 600 ); // Скорость прокрутки
-
-        // console.log(scroll_top + ' ' + big_photo_top);
     });
 
+    if($('.photo__div').length > 0) {
+        if($(document).width() > 768) {
+            $(window).scroll(function() {
+                let image_in_mass = $('.product__img').eq($('.product__img').length -1);
+                let top_photo = $(image_in_mass).offset().top;
+                let height_photo = $(image_in_mass).height();
+                let scroll_top = window.pageYOffset;
 
+                if(scroll_top >= (top_photo+height_photo-252)) {
+                    $('.product__div .photo__div .thing__like').css('position', 'absolute');
+                } else {
+                    $('.product__div .photo__div .thing__like').css('position', 'fixed');
+                }
+            })
+        }
+    };
+    
 });
 
 
@@ -299,6 +314,8 @@ function initProductSlider() {
         adaptiveHeight: false,
         mobileFirst: true,
         respondTo: 'slider',
+        prevArrow: $('.slick-prev'),
+        nextArrow: $('.slick-next')
     });
 }
 
