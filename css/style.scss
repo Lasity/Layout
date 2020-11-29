@@ -1512,7 +1512,6 @@ input[type="radio"].sing-checkbox:checked + label span{
 	}
 
 	.catalog_menu__img {
-		max-width: 160px;
 		width: 160px;
 		margin-left: 18px;
 
@@ -1526,6 +1525,9 @@ input[type="radio"].sing-checkbox:checked + label span{
 		color: $black;
 		@extend %r12;
 		margin-left: 24px;
+		display: flex;
+		flex-direction: column;
+		width: 158px;
 
 		.text-top {
 			margin-top: 24px;
@@ -1540,20 +1542,9 @@ input[type="radio"].sing-checkbox:checked + label span{
 		}
 	}
 
-	.text-size {
-		margin-top: 32px;
-		display: flex;
-		justify-content: space-between;
-
-		a {
-			color: $black;
-			border-bottom: 0.5px solid $black;
-		}
-	}
 
 	.catalog-delete {
 		position: relative;
-		margin-top: 25px;
 
 		.basket-delete__img {
 			width: 16px;
@@ -1564,6 +1555,10 @@ input[type="radio"].sing-checkbox:checked + label span{
 				width: 100%;
 			}
 		}
+	}
+	.basket-delete.catalog-delete {
+		margin-top: auto;
+		margin-bottom: 24px;
 	}
 
 }
@@ -1752,7 +1747,6 @@ input[type="radio"].sing-checkbox:checked + label span{
 
 	.product-top {
 		display: flex;
-		height: calc(100vh - 192px);
 
 		.product__slider {
 			display: flex;
@@ -1762,12 +1756,15 @@ input[type="radio"].sing-checkbox:checked + label span{
 				max-width: 99px;
 				width: 99px;
 				margin-right: 16px;
+				position: sticky;
+				top: 152px;
 
 				img {
 					width: 100%;
 					height: 99px;
 					object-fit: cover;
-					margin-bottom: 12px;
+					margin-bottom: 16px;
+					display: block;
 
 					&:last-child {
 						margin-bottom: 0;
@@ -1778,28 +1775,9 @@ input[type="radio"].sing-checkbox:checked + label span{
 			.product__photo {
 				width: 560px;
 
-				.slick-list {
-					height: 100%;
-
-					.slick-track {
-						height: 100%;
-
-						.slick-slide div {
-							height: 100%;
-						}
-					}
-				}
-				// position: relative;
-
-				// .thing__like {
-				// 	top: 16px;
-				// 	right: 16px;
-				// }
-
 				img {
 					width: 100%;
-					height: 100%;
-					object-fit: cover;
+					display: block;
 				}
 			}
 		}
@@ -1809,6 +1787,8 @@ input[type="radio"].sing-checkbox:checked + label span{
 			justify-content: space-between;
 			margin-top: 32px;
 			flex-grow: 1;
+			position: sticky;
+			top: 184px;
 		}
 
 		.product__specifications, .product__description {
@@ -1883,6 +1863,10 @@ input[type="radio"].sing-checkbox:checked + label span{
 			}
 		}
 	}
+}
+
+.div-stiky {
+	position: relative;
 }
 
 .brand__conteiner {
@@ -2438,6 +2422,10 @@ input[type="radio"].sing-checkbox:checked + label span{
 	background-color: $grey;
 }
 
+.bold {
+	font-weight: bold;
+}
+
 
 
 
@@ -2609,6 +2597,8 @@ input[type="radio"].sing-checkbox:checked + label span{
 
 	.product__div .product-top .product__slider {
 		margin-right: 24px;
+
+
 	}
 
 	.brand-bottom {
@@ -2617,6 +2607,10 @@ input[type="radio"].sing-checkbox:checked + label span{
 		.brand-bottom__img {
 			margin-right: 78px;
 		}
+	}
+
+	.product__div .product-top .product__description {
+		margin-top: 24px;
 	}
 }
 
@@ -2825,6 +2819,7 @@ input[type="radio"].sing-checkbox:checked + label span{
 
 	.catalog-filter {
 		height: calc(100vh - 112px);
+		top: 112px;
 	}
 	.product__div .product-top {
 		height: 100%;
@@ -2932,6 +2927,10 @@ input[type="radio"].sing-checkbox:checked + label span{
 			display: none;
 		}
 	}
+
+	.basket-delete.catalog-delete .basket-delete__text {
+			display: block;
+		}
 
 	.basket-thing__text-color {
 		display: flex;
@@ -3094,6 +3093,23 @@ input[type="radio"].sing-checkbox:checked + label span{
 	.main-baner.wrapper {
 		padding: 0 16px;
 	}
+
+	.product__div .product-top .product__slider .product__photo img {
+		height: 100%;
+		object-fit: cover;
+	}
+
+	.product__div .slick-track {
+		height: calc(100vh - 112px - 72px);
+	}
+
+	.product__div .slick-slide div {
+		height: 100%;
+	}
+
+	.icon_menu {
+		top: 72px;
+	}
 }
 
 @media (max-width: 690px) {
@@ -3181,7 +3197,11 @@ input[type="radio"].sing-checkbox:checked + label span{
 		margin: 0 -16px;
 	}
 
-	.product__div .product-top .product__slider .product__photo, .product__div .product-top .product__text {
+	.product__div .product-top .product__slider .product__photo {
+		width: 100vw;
+	}
+
+	.product__div .product-top .product__text {
 		width: 100%;
 	}
 

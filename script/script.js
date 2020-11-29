@@ -128,6 +128,14 @@ $(document).ready(() => {
             $(".mobile-menu__nav").removeClass("menu__box");
             $('#menu__toggle').prop('checked', false);
         }
+
+        if ($(document).width() < 768 && !$('.product__photo ').hasClass('slick-initialized')) {
+            initProductSlider();
+        } else {
+            if ($('.product__photo ').hasClass('slick-initialized')) {
+                $('.product__photo ').unslick();
+            }
+        }
         
     });
 
@@ -242,39 +250,57 @@ $(document).ready(() => {
 
 
 
-    // $('.slider-for').slick({
-    //     slidesToShow: 1,
-    //     slidesToScroll: 1,
-    //     arrows: false,
-    //     fade: true,
-    //     vertical: false,
-    //     asNavFor: '.slider-nav'
-    // });
+    $('.slider-for').slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        arrows: false,
+        vertical: true,
+        verticalSwiping: true,
+        infinite: false,
+        responsive: [
+            {
+              breakpoint: 1100,
+              settings: "unslick"
+        }]
+    });
 
-    // $('.slider-nav').slick({
-    //     slidesToShow: 3,
-    //     slidesToScroll: 1,
-    //     asNavFor: '.slider-for',
-    //     dots: true,
-    //     // centerMode: true,
-    //     vertical: true,
-    //     focusOnSelect: true
-    // });
 
-    // if($('.product__div').length != 0) {
-    //     var lastScrollTop = 0;
-    //     $(window).scroll(function(event){
-    //         var st = $(this).scrollTop();
-    //         if (st > lastScrollTop){
-    //             // $('.slider-for').slick('slickNext');
-    //         } else {
-    //         // upscroll code
-    //         }
-    //         lastScrollTop = st;
-    //     });
-    // }
+    if ($(document).width() < 768) {
+        initProductSlider();
+    } 
+    
+
+
+    $('.slick-slide').click(function(){
+        let index = $(this).index();
+        let big_photo = $('.product__img').eq(index);
+
+        let scroll_top = window.pageYOffset;
+        let top_bar_height = 152;
+        let big_photo_top = $(big_photo).offset().top;
+
+        $('html, body').animate({
+            scrollTop: big_photo_top-top_bar_height // класс объекта к которому приезжаем
+        }, 600 ); // Скорость прокрутки
+
+        // console.log(scroll_top + ' ' + big_photo_top);
+    });
+
 
 });
+
+
+
+function initProductSlider() {
+    $('.product__photo').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: true,
+        adaptiveHeight: false,
+        mobileFirst: true,
+        respondTo: 'slider',
+    });
+}
 
 function hideSizeTable() {  //закрытие таблицы размеров 
     $(".table__div").slideUp(300);
