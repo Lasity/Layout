@@ -429,7 +429,7 @@ button {
 		display: flex;
 		align-items: center;
 
-		.page{
+		.page {
 			@extend %r14;
 			color: $black;
 			cursor: pointer;
@@ -440,6 +440,10 @@ button {
 				@extend %sb14;
 				display: inline-flex;
 				justify-content: center;
+			}
+
+			a {
+				color: $black;
 			}
 		}
 

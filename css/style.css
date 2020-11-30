@@ -433,6 +433,9 @@ button:-moz-focus-inner {
   display: inline-flex;
   justify-content: center;
 }
+.name-page__div .name__div .page a {
+  color: #232323;
+}
 .name-page__div .name__div .page__arrow-r {
   display: block;
   width: 16px;
