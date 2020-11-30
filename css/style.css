@@ -25,7 +25,7 @@
   line-height: 15px;
 }
 
-.mobile-menu__div .mobile-menu__nav .mobile__ul li a, .history-order, .viewed__conteiner .viewed__conteiner-black a, .product__div .product-top .product__specifications, .product__div .product-top .product__description, .filter__button .filter__button-grey, .catalog-filter .scrol .filter__text .category label.option, .catalog_menu-sum, .order__div .order__text p, .showroom__text p, .count__text, .cost__text, .basket-promo__div-bottom .basket-promo__p p, .button__disabled, .basket-promo__div-top input, .button__white-center, .thing__text .thing__price, .sorting__text, .button_black, .main-contact__div a, .main__p, .main__div_info p, .name-page__div .name__div .page, .phone__text a, .geo__text, .footer-nav__div_left a, .main-baner .main-baner__div .main-nav__text, .header-bottom-nav__menu ul li {
+.mobile-menu__div .mobile-menu__nav .mobile__ul li a, .history-order, .viewed__conteiner .viewed__conteiner-black a, .product__div .product-top .product__specifications, .product__div .product-top .product__description, .filter__button .filter__button-grey, .catalog-filter .scrol .filter__text .category label.option, .catalog_menu-sum, .order__div .order__text p, .showroom__text p, .count__text, .cost__text, .basket-promo__div-bottom .basket-promo__p p, .button__disabled, .basket-promo__div-top input, .button__white-center, .thing__text .thing__price, .sorting__text, .button_black, .main-contact__div a, .main__p, .main__div_info p, .name-page__div .name__div .page h1, .name-page__div .name__div .page, .phone__text a, .geo__text, .footer-nav__div_left a, .main-baner .main-baner__div .main-nav__text, .header-bottom-nav__menu ul li {
   font-family: Montserrat-Regular;
   font-style: normal;
   font-size: 14px;
@@ -425,9 +425,11 @@ button:-moz-focus-inner {
 }
 .name-page__div .name__div .page {
   color: #232323;
-  cursor: pointer;
   display: flex;
   justify-self: center;
+}
+.name-page__div .name__div .page h1 {
+  font-weight: normal;
 }
 .name-page__div .name__div .page span {
   display: inline-flex;
@@ -435,6 +437,7 @@ button:-moz-focus-inner {
 }
 .name-page__div .name__div .page a {
   color: #232323;
+  cursor: pointer;
 }
 .name-page__div .name__div .page__arrow-r {
   display: block;

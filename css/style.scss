@@ -408,13 +408,6 @@ button {
 	margin: 0 auto;
 }
 
-
-
-
-
-
-
-
 .name-page__div {
 	background: $light-grey;
 	height: 40px;
@@ -432,9 +425,13 @@ button {
 		.page {
 			@extend %r14;
 			color: $black;
-			cursor: pointer;
 			display: flex;
 			justify-self: center;
+
+			h1 {
+				@extend %r14;
+				font-weight: normal;
+			}
 
 			span {
 				@extend %sb14;
@@ -444,6 +441,7 @@ button {
 
 			a {
 				color: $black;
+				cursor: pointer;
 			}
 		}
 
