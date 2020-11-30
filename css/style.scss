@@ -1602,12 +1602,22 @@ input[type="radio"].sing-checkbox:checked + label span{
 				}
 			}
 
-			.category div {
+			.category label.option {
 				margin-bottom: 8px;
 				color: $black;
 				@extend %r14;
 				display: flex;
 				align-items: center;
+				cursor: pointer;
+				user-select: none;
+
+				span {
+					display: none;
+				}
+
+				input[type="radio"]:checked ~ span {
+					display: block;
+				}
 
 				&:last-child {
 					margin-bottom: 0;
@@ -1661,17 +1671,19 @@ input[type="radio"].sing-checkbox:checked + label span{
 		display: flex;
 		justify-content: space-between;
 		width: 100%;
+		margin-bottom: 8px;
 
-		input {
+		label {
 			background: $grey;
 			color: $black;
 			@extend %r12;
 			border: none;
 			width: 50%;
-		}
+			user-select: none;
 
-		#amount2 {
-			text-align: right;
+			&.max {
+				text-align: right;
+			}
 		}
 	}
 
@@ -1810,10 +1822,6 @@ input[type="radio"].sing-checkbox:checked + label span{
 		.product__name {
 			margin-bottom: 80px;
 
-			span {
-				@extend %sb14;
-			}
-
 			p {
 				margin-bottom: 16px;
 
@@ -1840,12 +1848,20 @@ input[type="radio"].sing-checkbox:checked + label span{
 				}
 
 				label {
-					padding-left: 12px;
-					padding-right: 12px;
-					margin-right: 4px;
+					span {
+						display: block;
+						padding-left: 12px;
+						padding-right: 12px;
+						margin-right: 4px;
 
-					&:active {
-						margin-left: -2px;
+						&:active {
+							margin-left: -2px;
+						}
+					}
+
+					input[type="radio"]:checked ~ span {
+						background-position: 100% 0;
+						color: $white;
 					}
 				}
 			}

@@ -5,11 +5,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="../css/style.css" rel="stylesheet">
 	<link href="../css/slick.css" rel="stylesheet">
-	<!-- <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/> -->
-	
 	<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
-	<script src="../script/slick.js"></script>
-	<!-- <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> -->
+	<script src="../script/slick.min.js"></script>
 	<script src="../script/script.js"></script>
 
 	<title>Товар</title>
@@ -279,10 +276,10 @@
 					<div class="product__text">
 						<div class="product__specifications">
 							<div class="product__name">
-								<p><span>Платье Liviana Conti</span></p>
-								<p>Производитель: LIVIANA CONTI</p>
-								<p>Модель: F0SA52</p>
-								<p><span>₽ 53.877,00</span></p>
+								<p><span class="bold">Платье Liviana Conti</span></p>
+								<p>Производитель: <span class="uppercase">Liviana Conti</span></p>
+								<p>Модель: <span class="uppercase">F0SA52</span></p>
+								<p><span class="bold">₽ 53.877,00</span></p>
 							</div>
 							<div class="product__color">
 								<p>Цвет: белый с черным</p>
@@ -290,12 +287,18 @@
 							<div class="product__size">
 								<p>Выберите размер:</p>
 								<div class="product__button-size">
-									<input type="radio" name="sizeXXS">
-									<label for="sizeXXS" class="button__white-center">XXS</label>
-									<input type="radio" name="sizeL">
-									<label for="sizeL" class="button__white-center">L</label>
-									<input type="radio" name="sizeXL">
-									<label for="sizeXL" class="button__white-center">XL</label>
+									<label>
+										<input type="radio" name="sizeXXS">
+										<span class="button__white-center">XXS</span>
+									</label>
+									<label>
+										<input type="radio" name="sizeXXS">
+										<span class="button__white-center">L</span>
+									</label>
+									<label>
+										<input type="radio" name="sizeXXS">
+										<span class="button__white-center">XL</span>
+									</label>
 								</div>
 								<div class="size-table">
 									<p>Таблица размеров</p>
