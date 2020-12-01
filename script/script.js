@@ -191,6 +191,7 @@ $(document).ready(() => {
     //     });
     // }
 
+
     // $(document).click(function (e){ // событие клика по веб-документу
     //     let div = $(".catalog-filter"); // тут указываем ID элемента
     //     if (!div.is(e.target) && div.has(e.target).length === 0 && !div.is($('.filter'))) { // и не по его дочерним элементам
@@ -309,6 +310,7 @@ $(document).ready(() => {
             })
         }
     }
+<<<<<<< HEAD
 
     $('.product__photo .product__video').click(function(){    // функция показа video__pop-up
         $('.video__pop-up').css('display','flex');
