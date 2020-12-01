@@ -35,7 +35,7 @@ input {
 }
 
 input:-webkit-autofill {
-    -webkit-box-shadow: inset 0 0 0 50px $white; /* цвет вашего фона */
+	-webkit-box-shadow: inset 0 0 0 50px $white; /* цвет вашего фона */
 }
 
 header {
@@ -97,9 +97,9 @@ button {
 }
 
 .fix {
-  position: fixed;
-  transition:all .5s linear;
-  z-index: 5;
+	position: fixed;
+	transition:all .5s linear;
+	z-index: 5;
 }
 
 .header-top-nav__div {
@@ -408,13 +408,6 @@ button {
 	margin: 0 auto;
 }
 
-
-
-
-
-
-
-
 .name-page__div {
 	background: $light-grey;
 	height: 40px;
@@ -429,17 +422,26 @@ button {
 		display: flex;
 		align-items: center;
 
-		.page{
+		.page {
 			@extend %r14;
 			color: $black;
-			cursor: pointer;
 			display: flex;
 			justify-self: center;
+
+			h1 {
+				@extend %r14;
+				font-weight: normal;
+			}
 
 			span {
 				@extend %sb14;
 				display: inline-flex;
 				justify-content: center;
+			}
+
+			a {
+				color: $black;
+				cursor: pointer;
 			}
 		}
 
@@ -1152,7 +1154,7 @@ form .forget-password p, {
 }
 
 .sing__div-right input:-webkit-autofill {
-    -webkit-box-shadow: inset 0 0 0 50px $grey;
+	-webkit-box-shadow: inset 0 0 0 50px $grey;
 }
 
 
@@ -1334,7 +1336,7 @@ input[type="radio"].sing-checkbox:checked + label span{
 			margin-top: 80px;
 		}
 	}
-		
+
 }
 
 .main-contact__div_left input:focus {
@@ -1444,7 +1446,7 @@ input[type="radio"].sing-checkbox:checked + label span{
 	}
 
 	input:-webkit-autofill {
-    	-webkit-box-shadow: inset 0 0 0 50px $grey;
+		-webkit-box-shadow: inset 0 0 0 50px $grey;
 	}
 
 	.forget-password p{
@@ -1602,12 +1604,22 @@ input[type="radio"].sing-checkbox:checked + label span{
 				}
 			}
 
-			.category div {
+			.category label.option {
 				margin-bottom: 8px;
 				color: $black;
 				@extend %r14;
 				display: flex;
 				align-items: center;
+				cursor: pointer;
+				user-select: none;
+
+				span {
+					display: none;
+				}
+
+				input[type="radio"]:checked ~ span {
+					display: block;
+				}
 
 				&:last-child {
 					margin-bottom: 0;
@@ -1661,17 +1673,19 @@ input[type="radio"].sing-checkbox:checked + label span{
 		display: flex;
 		justify-content: space-between;
 		width: 100%;
+		margin-bottom: 8px;
 
-		input {
+		label {
 			background: $grey;
 			color: $black;
 			@extend %r12;
 			border: none;
 			width: 50%;
-		}
+			user-select: none;
 
-		#amount2 {
-			text-align: right;
+			&.max {
+				text-align: right;
+			}
 		}
 	}
 
@@ -1775,6 +1789,10 @@ input[type="radio"].sing-checkbox:checked + label span{
 			.product__photo {
 				width: 560px;
 
+				.product__video-absolute {
+					background-size: 60px 60px;
+				}
+
 				img {
 					width: 100%;
 					display: block;
@@ -1810,10 +1828,6 @@ input[type="radio"].sing-checkbox:checked + label span{
 		.product__name {
 			margin-bottom: 80px;
 
-			span {
-				@extend %sb14;
-			}
-
 			p {
 				margin-bottom: 16px;
 
@@ -1840,12 +1854,20 @@ input[type="radio"].sing-checkbox:checked + label span{
 				}
 
 				label {
-					padding-left: 12px;
-					padding-right: 12px;
-					margin-right: 4px;
+					span {
+						display: block;
+						padding-left: 12px;
+						padding-right: 12px;
+						margin-right: 4px;
 
-					&:active {
-						margin-left: -2px;
+						&:active {
+							margin-left: -2px;
+						}
+					}
+
+					input[type="radio"]:checked ~ span {
+						background-position: 100% 0;
+						color: $white;
 					}
 				}
 			}
@@ -1878,6 +1900,46 @@ input[type="radio"].sing-checkbox:checked + label span{
 			transform: translateX(-16px);
 			bottom: unset;
 			right: unset;
+		}
+	}
+
+	.product__video {
+		width: 100%;
+		height: 100%;
+		position: relative;
+
+		.product__video-absolute {
+			background-image: url('../img/Ellipse_1.png');
+			background-repeat: no-repeat, repeat;
+			background-position: center center;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(35,35,35, 0.4);
+			position: absolute;
+		}
+	}
+}
+
+.video__pop-up {
+	background-color: rgba(35,35,35, 0.4);
+	height: 100vh;
+	width: 100%;
+	position: fixed;
+	z-index: 7;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	display: none;
+	justify-content: center;
+	align-items: center;
+
+	div {
+		width: 50%;
+		height: 50%;
+
+		iframe {
+			width: 100%;
+			height: 100%;
 		}
 	}
 }
@@ -1918,7 +1980,7 @@ input[type="radio"].sing-checkbox:checked + label span{
 
 	.viewed__conteiner-black {
 		display: flex;
-    	flex-direction: column;
+		flex-direction: column;
 		
 
 		a {
@@ -2405,8 +2467,8 @@ input[type="radio"].sing-checkbox:checked + label span{
 	background-image: linear-gradient(to left,$grey,$grey 50%,$black 50%,$black);
 }
 
- #checkout-address {
- 	padding-bottom: 32px;
+#checkout-address {
+	padding-bottom: 32px;
 }
 
 .recaptcha {
@@ -2847,8 +2909,8 @@ input[type="radio"].sing-checkbox:checked + label span{
 
 		.sing__div-right {
 			justify-content: center;
-    		display: flex;
-    		padding-left: 0;
+			display: flex;
+			padding-left: 0;
 		}
 		.sing__div {
 			margin: 0 auto;
@@ -2943,8 +3005,8 @@ input[type="radio"].sing-checkbox:checked + label span{
 	}
 
 	.basket-delete.catalog-delete .basket-delete__text {
-			display: block;
-		}
+		display: block;
+	}
 
 	.basket-thing__text-color {
 		display: flex;
@@ -3170,9 +3232,9 @@ input[type="radio"].sing-checkbox:checked + label span{
 
 
 	.basket-thing__img {
-	    max-width: 150px;
-	    margin-right: 16px;
-	    max-height: unset;
+		max-width: 150px;
+		margin-right: 16px;
+		max-height: unset;
 	}
 }
 
@@ -3267,8 +3329,8 @@ input[type="radio"].sing-checkbox:checked + label span{
 	}
 
 	.count__input input {
-	    font-size: 20px;
-	    width: 15px;
+		font-size: 20px;
+		width: 15px;
 	}
 
 	.basket-delete .basket-delete__img {

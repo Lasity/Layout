@@ -263,46 +263,45 @@
 						<div class="filter__text">
 							<div class="category">
 								<h3>ТИП ПРОДУКТА</h3>
-								<div>Пальто и куртки <span></span></div>
-								<div>Платья/сарафаны</div>
-								<div>Джемперы/свитшоты</div>
+								<label class="option">
+									<input type="radio" name="filter">
+									Пальто и куртки
+									<span></span>
+								</label>
+								<label class="option">
+									<input type="radio" name="filter">
+									Платья/сарафаны
+									<span></span>
+								</label>
+								<label class="option">
+									<input type="radio" name="filter">
+									Джемперы/свитшоты
+									<span></span>
+								</label>
 							</div>
 							<div class="category">
 								<h3>БРЕНД</h3>
-								<div>Liviana Conti</div>
-								<div>Twinset</div>
-							</div>
-							<div class="category">
-								<h3>ТИП ПРОДУКТА</h3>
-								<div>Пальто и куртки</div>
-								<div>Платья/сарафаны</div>
-								<div>Джемперы/свитшоты</div>
-							</div>
-							<div class="category">
-								<h3>БРЕНД</h3>
-								<div>Liviana Conti</div>
-								<div>Twinset</div>
-							</div>
-							<div class="category">
-								<h3>ТИП ПРОДУКТА</h3>
-								<div>Пальто и куртки</div>
-								<div>Платья/сарафаны</div>
-								<div>Джемперы/свитшоты</div>
-							</div>
-							<div class="category">
-								<h3>БРЕНД</h3>
-								<div>Liviana Conti <span></span></div>
-								<div>Twinset</div>
+								<label class="option">
+									<input type="radio" name="manufacturer">
+									Liviana Conti
+									<span></span>
+								</label>
+								<label class="option">
+									<input type="radio" name="manufacturer">
+									Twinset
+									<span></span>
+								</label>
 							</div>
 
 							<div class="filter-price category">
 								<h3>Цена</h3>
 								<div class="filter-price__input">
-									<input type="text" id="amount1" />
-									<input type="text" id="amount2" />
+									<label class="min"></label>
+									<label class="max"></label>
 								</div>
-								<div id="slider-range"></div>
-								<input type="text" style="display: none" id="input-hidden" data-min="0" data-max="5000"/>
+								<input type="hidden" name="min" id="min-price" value="250"/>
+								<input type="hidden" name="max" id="max-price" value="4000"/>
+								<div id="slider-range" data-min="0" data-max="5000"></div>
 							</div>
 						</div>	
 					</div>	
