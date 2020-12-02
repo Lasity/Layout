@@ -312,10 +312,9 @@ $(document).ready(() => {
     }
 
     $('.product__photo .product__video').click(function(){    // функция показа video__pop-up
-        let link = $(this).attr('data-link');
+        let code = $(this).attr('data-code');
         $('.video__pop-up').css('display','flex');
-        console.log(link);
-        $('.video__pop-up div').html('<iframe src="'+ link +'" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
+        $('.video__pop-up div').html(code);
     });
 
     $(document).mouseup(function (e){ /// функция скрытия video__pop-up при нажатии на любое место на странице
