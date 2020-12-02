@@ -263,36 +263,36 @@ $(document).ready(() => {
         }
     });
 
-    // $('.slider-for').slick({
-    //     slidesToShow: 4,
-    //     slidesToScroll: 1,
-    //     arrows: false,
-    //     vertical: true,
-    //     verticalSwiping: true,
-    //     infinite: false,
-    //     responsive: [
-    //         {
-    //           breakpoint: 1100,
-    //           settings: "unslick"
-    //     }]
-    // });
+    $('.slider-for').slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        arrows: false,
+        vertical: true,
+        verticalSwiping: true,
+        infinite: false,
+        responsive: [
+            {
+              breakpoint: 1100,
+              settings: "unslick"
+        }]
+    });
 
     if ($(document).width() < 768) {
         initProductSlider();
     }
 
-    // $('.slick-slide').click(function(){
-    //     let index = $(this).index();
-    //     let big_photo = $('.product__img').eq(index);
-    //
-    //     let scroll_top = window.pageYOffset;
-    //     let top_bar_height = 152;
-    //     let big_photo_top = $(big_photo).offset().top;
-    //
-    //     $('html, body').animate({
-    //         scrollTop: big_photo_top-top_bar_height // класс объекта к которому приезжаем
-    //     }, 600); // Скорость прокрутки
-    // });
+    $('.slick-slide').click(function(){
+        let index = $(this).index();
+        let big_photo = $('.product__img').eq(index);
+    
+        let scroll_top = window.pageYOffset;
+        let top_bar_height = 152;
+        let big_photo_top = $(big_photo).offset().top;
+    
+        $('html, body').animate({
+            scrollTop: big_photo_top-top_bar_height // класс объекта к которому приезжаем
+        }, 600); // Скорость прокрутки
+    });
 
     if ($('.photo__div').length > 0) {
         if ($(document).width() > 768) {
@@ -312,7 +312,10 @@ $(document).ready(() => {
     }
 
     $('.product__photo .product__video').click(function(){    // функция показа video__pop-up
+        let link = $(this).attr('data-link');
         $('.video__pop-up').css('display','flex');
+        console.log(link);
+        $('.video__pop-up div').html('<iframe src="'+ link +'" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
     });
 
     $(document).mouseup(function (e){ /// функция скрытия video__pop-up при нажатии на любое место на странице
@@ -320,7 +323,7 @@ $(document).ready(() => {
         let div = $(".video__pop-up div"); // тут указываем ID элемента
         if (!div.is(e.target) && div.has(e.target).length === 0) { // и не по его дочерним элементам
             $('.video__pop-up').css('display','none');
-            // $("iframe")[0].contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+            $('.video__pop-up div').html(' ');
         }
     });
 
