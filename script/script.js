@@ -310,7 +310,6 @@ $(document).ready(() => {
             })
         }
     }
-<<<<<<< HEAD
 
     $('.product__photo .product__video').click(function(){    // функция показа video__pop-up
         $('.video__pop-up').css('display','flex');
