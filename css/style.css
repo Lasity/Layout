@@ -122,7 +122,6 @@ button:-moz-focus-inner {
 
 .wrapper {
   padding: 0 40px;
-  max-width: 1440px;
   margin: 0 auto;
 }
 
@@ -721,7 +720,6 @@ button:-moz-focus-inner {
 }
 
 .clothes__div {
-  max-width: 1440px;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -731,7 +729,6 @@ button:-moz-focus-inner {
 }
 
 .thing__div .thing__img {
-  max-height: 480px;
   margin-top: auto;
 }
 .thing__div .thing__img img {
@@ -1082,6 +1079,9 @@ button:-moz-focus-inner {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   color: #232323;
 }
 .showroom__div h4 {
@@ -1472,7 +1472,7 @@ input[type="radio"].sing-checkbox:checked + label span {
 
 .catalog_menu {
   overflow-y: scroll;
-  height: 360px;
+  max-height: 360px;
   margin: -24px -24px 0 -24px;
 }
 
@@ -1777,6 +1777,9 @@ input[type="radio"].sing-checkbox:checked + label span {
 .product__div .product-top .product__specifications .in__basket {
   width: 100%;
 }
+.product__div .product-top .product__specifications .button__white-center.in__basket.button__disabled:hover {
+  color: #232323;
+}
 .product__div .product-top .product__name {
   margin-bottom: 80px;
 }
@@ -1855,6 +1858,12 @@ input[type="radio"].sing-checkbox:checked + label span {
   background-color: rgba(35, 35, 35, 0.4);
   position: absolute;
   background-size: 30px 30px;
+}
+
+.product__div .product-top .product__slider .slider-mini img,
+.product__video {
+  outline: none !important;
+  border: none !important;
 }
 
 .video__pop-up {
