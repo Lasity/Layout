@@ -505,7 +505,7 @@ button:-moz-focus-inner {
   display: block;
   width: 16px;
   height: 16px;
-  background-image: url("../img/page_arrow.png");
+  background-image: url("../image/page_arrow.png");
   background-size: 100% 100%;
 }
 
@@ -691,13 +691,13 @@ button:-moz-focus-inner {
 }
 
 .filter-sorting__img {
-  background-image: url("../img/slider_03.svg");
+  background-image: url("../image/slider_03.svg");
   -webkit-transition: all .5s linear;
   transition: all .5s linear;
 }
 
 .sort__img-off {
-  background-image: url("../img/close_big.png") !important;
+  background-image: url("../image/close_big.png") !important;
   background-size: 100% 100%;
 }
 
@@ -739,14 +739,14 @@ button:-moz-focus-inner {
 }
 
 .thing__like-white {
-  background-image: url("../img/heart_outline_w.png");
+  background-image: url("../image/heart_outline_w.png");
   background-repeat: no-repeat, repeat;
   background-position: right 7px top 50%, 0 0;
   background-color: #232323;
 }
 
 .thing__like-black {
-  background-image: url("../img/heart_outline.png");
+  background-image: url("../image/heart_outline.png");
   background-repeat: no-repeat, repeat;
   background-position: right 7px top 50%, 0 0;
   background-color: #F7F7F7;
@@ -1193,7 +1193,7 @@ input[type="checkbox"].sing-checkbox + label span {
   width: 32px;
   height: 16px;
   vertical-align: middle;
-  background: url("../img/Rectangle85.svg") left top no-repeat;
+  background: url("../image/Rectangle85.svg") left top no-repeat;
   cursor: pointer;
 }
 
@@ -1202,7 +1202,7 @@ input[type="checkbox"].sing-checkbox + label span {
 }
 
 input[type="checkbox"].sing-checkbox:checked + label span {
-  background: url("../img/Rectangle86.svg") left top no-repeat;
+  background: url("../image/Rectangle86.svg") left top no-repeat;
 }
 
 input[type="radio"] {
@@ -1214,12 +1214,12 @@ input[type="radio"].sing-checkbox + label span {
   width: 32px;
   height: 16px;
   vertical-align: middle;
-  background: url("../img/Rectangle85.svg") left top no-repeat;
+  background: url("../image/Rectangle85.svg") left top no-repeat;
   cursor: pointer;
 }
 
 input[type="radio"].sing-checkbox:checked + label span {
-  background: url("../img/Rectangle86.svg") left top no-repeat;
+  background: url("../image/Rectangle86.svg") left top no-repeat;
 }
 
 .checkbox {
@@ -1364,7 +1364,7 @@ input[type="radio"].sing-checkbox:checked + label span {
   text-align: left;
   color: #232323;
   border: 1px solid #232323;
-  background-image: url("../img/chevron_right.png");
+  background-image: url("../image/chevron_right.png");
   background-repeat: no-repeat, repeat;
   background-position: right 11px top 50%, 0 0;
   background-size: 16px auto, 100%;
@@ -1850,7 +1850,7 @@ input[type="radio"].sing-checkbox:checked + label span {
   position: relative;
 }
 .product__div .product__video .product__video-absolute {
-  background-image: url("../img/Ellipse_1.png");
+  background-image: url("../image/Ellipse_1.png");
   background-repeat: no-repeat, repeat;
   background-position: center center;
   width: 100%;
@@ -2046,7 +2046,7 @@ input[type="radio"].sing-checkbox:checked + label span {
           align-items: center;
 }
 .history-order .order-number .arrow_bottom {
-  background-image: url("../img/chevron_right1.png");
+  background-image: url("../image/chevron_right1.png");
   background-repeat: no-repeat, repeat;
   width: 16px;
   height: 16px;
@@ -2263,12 +2263,12 @@ input[type="radio"].sing-checkbox:checked + label span {
 }
 
 .product__photo_arrow-r {
-  background-image: url("../img/chevron_left1.png");
+  background-image: url("../image/chevron_left1.png");
   left: 8px;
 }
 
 .product__photo_arrow-l {
-  background-image: url("../img/chevron_left.png");
+  background-image: url("../image/chevron_left.png");
   right: 8px;
 }
 
@@ -2352,7 +2352,7 @@ input[type="radio"].sing-checkbox:checked + label span {
   z-index: 9;
 }
 .popup .popup-close {
-  background-image: url("../img/close_big.png");
+  background-image: url("../image/close_big.png");
   background-size: 100% 100%;
   width: 14px;
   height: 14px;

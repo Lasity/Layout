@@ -333,6 +333,7 @@ $(document).ready(() => {
         setTimeout(function(){
             $(".in__basket").removeClass('button__disabled');
             $(".in__basket").text('Добавить в корзину');
+            $(".in__basket").prop('disabled', 'false');
         }, 5000);
     });
 
