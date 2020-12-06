@@ -162,20 +162,6 @@ $(document).ready(() => {
         $('.filter-price__input').find('label.max').text($('#slider-range').slider('values', 1) + ' руб');
     }
 
-    $(document).on('click', '.catalog-filter .category label.option', function (event) {
-        let radio = $(this).find('input');
-        if (event.target === event.currentTarget) {
-            if (radio.prop('checked') === true) {
-                radio.data('checked', true);
-            }
-        } else {
-            if (radio.data('checked') === true) {
-                radio.prop('checked', false);
-                radio.removeData('checked');
-            }
-        }
-    });
-
     var player = null;
 
     // function onYouTubePlayerAPIReady() {
