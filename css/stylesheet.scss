@@ -1822,6 +1822,7 @@ input[type="radio"].sing-checkbox:checked + label span{
 				position: absolute;
 				display: none !important;
 				transition: all 0.3 linear;
+				cursor: pointer;
 			}
 
 			.slider-mini-next-prev.slider-mini-prev {

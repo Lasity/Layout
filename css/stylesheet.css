@@ -1770,6 +1770,7 @@ input[type="radio"].sing-checkbox:checked + label span {
   display: none !important;
   -webkit-transition: all 0.3 linear;
   transition: all 0.3 linear;
+  cursor: pointer;
 }
 .product__div .product-top .product__slider .slider-mini-next-prev.slider-mini-prev {
   top: 0;
