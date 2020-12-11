@@ -315,17 +315,6 @@ $(document).ready(() => {
         }
     });
 
-    $(".in__basket").click(function(){
-        $(this).toggleClass('button__disabled');
-        $(this).text('Товар добавлен в корзину');
-        $(this).prop('disabled', 'true');
-        setTimeout(function(){
-            $(".in__basket").removeClass('button__disabled');
-            $(".in__basket").text('Добавить в корзину');
-            $(".in__basket").prop('disabled', 'false');
-        }, 5000);
-    });
-
 });
 
 function initProductSlider() {

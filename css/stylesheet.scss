@@ -2396,7 +2396,7 @@ input[type="radio"].sing-checkbox:checked + label span{
 	position: absolute;
 	top: calc(50% - 12px);
 	display: none;
-	z-index: 5;
+	z-index: 4;
 }
 
 .toggle__button_close:after {
@@ -2680,10 +2680,6 @@ input[type="radio"].sing-checkbox:checked + label span{
 
 	.brand__main-info__text .brand-in-catalog {
 		height: 40px;
-	}
-
-	.product__div .product-top .product__description {
-		margin-top: 0;
 	}
 
 }
@@ -3384,13 +3380,13 @@ input[type="radio"].sing-checkbox:checked + label span{
 	}
 
 	.count__input input {
-		font-size: 20px;
+		font-size: 22px;
 		width: 15px;
 	}
 
 	.basket-delete .basket-delete__img {
-		width: 14px;
-		height: 14px;
+		width: 16px;
+		height: 16px;
 
 		img {
 			width: 100%;
@@ -3413,6 +3409,10 @@ input[type="radio"].sing-checkbox:checked + label span{
 
 	.div-stiky {
 		width: 100%;
+	}
+
+	.brand-info.page-on {
+		display: block !important;
 	}
 }
 
